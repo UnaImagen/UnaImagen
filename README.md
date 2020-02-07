@@ -1,4 +1,4 @@
-# 1 imagen ... sin palabras
+# Una imagen vale más que mil palabras
 
 ![experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 
