@@ -1,9 +1,11 @@
+#=====================#
+#### MAPA VOTACIÓN ####
+#=====================#
 
 ## Librerías usadas -----------
 
 library(tidyverse)
-library(pdftools)
-library(here)
+library(magrittr)
 
 ## Bases de datos de la Corte Electoral ---------------
 
@@ -11,7 +13,7 @@ escrutinio <- readxl::read_xlsx(
    path = here::here("/DataBases/Elecciones2019/Inf_D_Hoja.xlsx"),
    sheet = 1,
    skip = 8
-   ) %>%
+) %>%
    select(
       -ACTO,
       -CONVOCATORIA,
@@ -23,7 +25,7 @@ escrutinio <- readxl::read_xlsx(
       .funs = tolower
    ) %>%
    mutate(
-      es_frente = if_else(lema == "Partido Frente Amplio", "Frente Amplio", "Otro")
+      es_frente = if_else(lema == "Partido Frente Amplio", "frente_amplio", "coalicion")
    ) %>%
    group_by(
       circuito,
@@ -36,10 +38,16 @@ escrutinio <- readxl::read_xlsx(
    pivot_wider(
       names_from = es_frente,
       values_from = cantidad_votos
+   ) %>%
+   ungroup() %>%
+   transmute(
+      votacion = "octubre",
+      circuito,
+      serie = series,
+      frente_amplio,
+      coalicion
    )
 
-
-escrutinio
 
 escrutinio2 <- readxl::read_xlsx(
    path = here::here("/DataBases/Elecciones2019/Inf_D_Lema.xlsx"),
@@ -56,31 +64,28 @@ escrutinio2 <- readxl::read_xlsx(
       -OBSERVADOS,
       -T_EMITIDOS,
       -EN_BLANCO,
-      -ANULADOS)
+      -ANULADOS
+   ) %>%
+   rename_all(
+      .funs = tolower
+   ) %>%
+   rename(
+      frente_amplio = `martínez - villar`,
+      coalicion = `lacalle pou - argimón`
+   ) %>%
+   mutate(
+      votacion = "noviembre"
+   )
 
-x <- colnames(escrutinio)
-
-colnames(escrutinio2) <- x
-
-colnames(escrutinio)[3] <- "FA1a"
-colnames(escrutinio)[4] <- "Coalicion1a"
-colnames(escrutinio2)[3] <- "FA2a"
-colnames(escrutinio2)[4] <- "Coalicion2a"
-
-escrutinio.final <- merge(escrutinio,escrutinio2, by = c("circuito","series")) # Base final: votos por circuito
-
-
+escrutinio %<>%
+   bind_rows(
+      escrutinio2
+   )
 
 ## Información de los circuitos ----------------
 
-setwd()
 
-# No funciona
-pdf1 <- pdf_text(here("DataBases","Elecciones2019","salto.pdf"))
 
-write(pdf1, file = temp.txt, sep = "\t")
-# teams are located on the 6th line
-teams <- read.table(file_name, skip = 5, nrows = 1)
-
-pdf1 <- strsplit(pdf1, '\r\n') %>% unlist
-pdf1 <- read.table(pdf1, skip = 1)
+#===============#
+#### THE END ####
+#===============#
