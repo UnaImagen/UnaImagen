@@ -4,6 +4,7 @@
 
 library(tidyverse, quietly = TRUE)
 library(magrittr, quietly = TRUE)
+library(plotly, quietly = TRUE)
 
 # Parseo datos ------------------------------------------------------------
 datos_aux <- readxl::read_xls(
