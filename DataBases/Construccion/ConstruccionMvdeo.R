@@ -173,6 +173,7 @@ construccion %<>%
             ) ~ "Modificación de obra",
          TRUE ~ tipo
       ),
+      tipo = if_else(tipo == "Incorporación a propiedad horizontal", "IPH", tipo),
       tipo = as_factor(tipo),
       tipo = forcats::fct_relevel(
          .f = tipo,
