@@ -4,7 +4,6 @@
 
 library(tidyverse, quietly = TRUE)
 library(magrittr, quietly = TRUE)
-library(plotly, quietly = TRUE)
 
 # Parseo datos ------------------------------------------------------------
 datos_aux <- readxl::read_xls(
@@ -173,28 +172,31 @@ construccion %<>%
             "Modificación de obra"
             ) ~ "Modificación de obra",
          TRUE ~ tipo
+      ),
+      tipo = as_factor(tipo),
+      tipo = forcats::fct_relevel(
+         .f = tipo,
+         "Otros",
+         after = Inf
+      ),
+      destino = if_else(destino == "sindato", "sin dato", destino),
+      destino = as_factor(destino),
+      destino = forcats::fct_relevel(
+         .f = destino,
+         "vivienda",
+         "comercio",
+         "industria",
+         "varios",
+         "otros",
+         "sin dato"
+      ),
+      destino = forcats::fct_relabel(
+         .f = destino,
+         .fun = ~stringr::str_to_sentence(.)
       )
    )
 
-
-construccion %>%
-   group_by(
-      year,
-      tipo
-   ) %>%
-   summarise(
-      permisos = sum(permisos)
-   ) %>%
-   ungroup() %>%
-   plot_ly() %>%
-   add_trace(
-      x = ~year,
-      y = ~permisos,
-      color = ~tipo,
-      type = "scatter",
-      mode = "lines+markers"
-   )
-
+readr::write_rds(x = construccion, path = "DataBases/Construccion/construccion.rds")
 
 #===============#
 #### THE END ####
