@@ -14,7 +14,7 @@ runtime: shiny
 library(flexdashboard, quietly = TRUE)
 library(plotly, quietly = TRUE)
 library(shiny, quietly = TRUE)
-construccion <- readr::read_rds(path = here::here("/DataBases/Construccion/construccion.rds"))
+construccion <- readr::read_rds(path = here::here("/DataBases/Construccion/app/construccion.rds"))
 ```
 
 ```{r variables_globales}
