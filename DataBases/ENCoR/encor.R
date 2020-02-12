@@ -23,30 +23,31 @@ encor %>%
    ) %>%
    mutate(
       key = case_when(
-         key == "ina44_1" ~ "¿a qué edad le parece que\nuna mujer es demasiado joven para\ntener relaciones sexuales?",
-         key == "ina48_1" ~ "¿a qué edad le parece que\nun hombre es demasiado joven para\ntener relaciones sexuales?"
+         key == "ina44_1" ~ "Mujer", #"¿a qué edad le parece que\nuna mujer es demasiado joven para\ntener relaciones sexuales?",
+         key == "ina48_1" ~ "Hombre", #"¿a qué edad le parece que\nun hombre es demasiado joven para\ntener relaciones sexuales?"
       ),
       sexo = as_factor(sexo),
       sexo = forcats::fct_recode(
          .f = sexo,
-         "Mujer" = "mujer",
-         "Hombre" = "hombre"
+         "La encuestada es mujer" = "mujer",
+         "El encuestado es hombre" = "hombre"
       )
    ) %>%
    ggplot() +
    geom_bar(
-      aes(x = value, y = ..prop.., fill = as_factor(sexo), weight = peso),
+      aes(x = value, y = ..prop.., fill = key, weight = peso),
       alpha = 1/2,
       position = "dodge"
    ) +
    facet_wrap(
-      facets = ~key
+      facets = ~sexo
       ) +
    labs(
       x = "Edad",
-      y = "Proporción",
-      fill = "Sexo del encuestado"
+      y = "Porcentaje\n",
+      fill = "Pregunta sobre ..."
    ) +
+   scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
    ggthemes::theme_economist() +
    theme(
       legend.position = "bottom",
