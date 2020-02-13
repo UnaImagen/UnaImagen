@@ -2,10 +2,34 @@
 #### ENCoR ####
 #=============#
 
+library(survey)
 library(tidyverse)
 
 # Carga datos -------------------------------------------------------------
 encor <- haven::read_sav(file = "DataBases/ENCoR/Base ENCoR terceros.sav")
+
+
+# Genera objeto survey ----------------------------------------------------
+ps <- survey::svydesign(
+   ids = ~1,
+   weights = ~peso,
+   data = encor
+)
+
+summary(ps)
+
+survey::svymean(
+   x = encor$ina48_1,
+   design = ps,
+   na.rm = TRUE
+)
+
+survey::svymean(
+   x = encor$ina44_1,
+   design = ps,
+   na.rm = TRUE
+)
+
 
 # Ideas, Normas y Actitudes -----------------------------------------------
 encor %>%
@@ -16,15 +40,15 @@ encor %>%
       peso
    ) %>%
    gather(
-      key = key,
-      value = value,
+      key = pregunta,
+      value = edad,
       -sexo,
       -peso
    ) %>%
    mutate(
-      key = case_when(
-         key == "ina44_1" ~ "Mujer", #"¿a qué edad le parece que\nuna mujer es demasiado joven para\ntener relaciones sexuales?",
-         key == "ina48_1" ~ "Hombre", #"¿a qué edad le parece que\nun hombre es demasiado joven para\ntener relaciones sexuales?"
+      pregunta = case_when(
+         pregunta == "ina44_1" ~ "Mujer", #"¿a qué edad le parece que\nuna mujer es demasiado joven para\ntener relaciones sexuales?",
+         pregunta == "ina48_1" ~ "Hombre", #"¿a qué edad le parece que\nun hombre es demasiado joven para\ntener relaciones sexuales?"
       ),
       sexo = as_factor(sexo),
       sexo = forcats::fct_recode(
@@ -35,13 +59,13 @@ encor %>%
    ) %>%
    ggplot() +
    geom_bar(
-      aes(x = value, y = ..prop.., fill = key, weight = peso),
+      aes(x = edad, y = ..prop.., fill = pregunta, weight = peso),
       alpha = 1/2,
       position = "dodge"
    ) +
    facet_wrap(
       facets = ~sexo
-      ) +
+   ) +
    labs(
       x = "Edad",
       y = "Porcentaje\n",
