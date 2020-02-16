@@ -80,7 +80,9 @@ ggplot_bars_sex_questions <- function(hombre, mujer) {
          y = "Porcentaje\n",
          fill = legend_title
       ) +
-      scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+      scale_y_continuous(
+         labels = scales::percent_format(accuracy = 1)
+         ) +
       ggthemes::theme_economist() +
       theme(
          legend.position = "bottom",
@@ -117,6 +119,59 @@ ggplot_bars_sex_questions(
    mujer = "ina47_1"
 )
 
+
+# Edad materinidad --------------------------------------------------------
+encor %>%
+   select(
+      sexo,
+      ina52_1,
+      peso
+   ) %>%
+   group_by(
+      sexo,
+      ina52_1
+   ) %>%
+   summarise(
+      cantidad = sum(peso)
+   ) %>%
+   ungroup() %>%
+   mutate(
+      proporcion = cantidad / sum(cantidad),
+      ina52_1 = as_factor(ina52_1),
+      ina52_1 = fct_relevel(
+         .f = ina52_1,
+         "en desacuerdo",
+         "de acuerdo"
+      ),
+      sexo = as_factor(sexo),
+      sexo = fct_recode(
+         .f = sexo,
+         "Mujer" = "mujer",
+         "Hombre" = "hombre"
+      )
+   ) %>%
+   ggplot() +
+   geom_col(
+      aes(x = ina52_1, y = proporcion, fill = sexo),
+      position = "dodge"
+   ) +
+   labs(
+      title = "¿Una mujer puede ser madre antes de los 18?",
+      x = NULL,
+      y = "Porcentaje\n",
+      fill = "Sexo del encuestado"
+   ) +
+   scale_y_continuous(
+      labels = scales::percent_format(accuracy = 1)
+      ) +
+   ggthemes::theme_economist() +
+   theme(
+      legend.position = "bottom",
+      axis.title = element_text(face = "bold"),
+      strip.text = element_text(face = "bold"),
+      legend.title = element_text(face = "bold"),
+      plot.title = element_text(hjust = 0.5)
+   )
 
 #===============#
 #### THE END ####
