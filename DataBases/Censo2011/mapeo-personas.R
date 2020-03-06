@@ -3,7 +3,7 @@ library(dplyr)
 library(leaflet)
 setwd("c://Users/leandro/Dropbox/Docs/1imagen-data/ine/")
 
-# direcci?n datos vectoriales: http://ine.gub.uy/documents/10181/18006/Mapas+Vectoriales+a%C3%B1o+2011/97dbcd58-80a8-472c-86cc-e8ecdaafef99
+# direccion datos vectoriales: http://ine.gub.uy/documents/10181/18006/Mapas+Vectoriales+a%C3%B1o+2011/97dbcd58-80a8-472c-86cc-e8ecdaafef99
 
 ### Levanto mapa del INE con los pol?gonos -----------------------------
 
@@ -16,6 +16,7 @@ mapaUy <- readOGR(
 
 class(mapaUy)
 names(mapaUy)
+
 
 #### Intengo poner en mapa
 
@@ -58,6 +59,7 @@ m # funciona
 
 #### ------------------- si funciona lo anterior ----------------
 
+
 mapaUy$CODSEG <- formatC(mapaUy$CODSEG, width=7, flag="0") # fix 8 numbers
 
 
@@ -76,6 +78,7 @@ personas$SEGM <- formatC(personas$SEGM, width=3, flag="0") # fix 3 numbers
 
 personas$CODSEG <- paste0(personas$DPTO,personas$SECC,personas$SEGM)
 length(table(personas$CODSEG))
+
 
 
 #### Calculo la variable de inter?s
@@ -101,8 +104,7 @@ sum(is.na(prueba$pob))
 plot(prueba$pob)
 
 
-
-#### ----------------- Grafico -----------------
+#### ----------------- Gr?fico -----------------
 
 cuts <- quantile(prueba$pob, probs = seq(0,1, by=0.05, na.rm=T))
 
@@ -119,9 +121,6 @@ m <- leaflet(prueba) %>%
   addPolygons()
 
 m
-
-
-
 
 
 
