@@ -1,0 +1,11 @@
+
+------------------- TRACEBACK -------------------------
+Module "RLib " Message  13: file ".\err.c   " line 645
+Module "Msw  " Message   0: file ".\msw.c   " line 475
+Module "Draw " Message  -1: file ".\drawmsw.c" line 4853
+Module "Draw " Message  -1: file ".\drawinva.c" line 54
+Module "Event" Message  -1: file ".\event.c " line 2594
+Module "Appl " Message  -1: file "..\appl\appl.c" line 2144
+Module "Err  " Message  -1: file ".\err.c   " line 2009
+-------------------------------------------------------
+FATAL ERROR     Failure during error recovery
