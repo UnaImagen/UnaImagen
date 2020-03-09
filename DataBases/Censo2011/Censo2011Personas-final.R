@@ -35,7 +35,12 @@ m <- leaflet(prueba) %>%
          color = "#666",
          dashArray = "",
          fillOpacity = 0.7,
-         bringToFront = TRUE)) %>%
+         bringToFront = TRUE),
+      label = ~personaskm,
+      labelOptions = labelOptions(
+         style = list("font-weight" = "normal", padding = "3px 8px"),
+         textsize = "15px",
+         direction = "auto")) %>%
    addLegend(pal = pal, values = ~pob, opacity = 0.7, title = NULL,
              position = "bottomright")
 m
