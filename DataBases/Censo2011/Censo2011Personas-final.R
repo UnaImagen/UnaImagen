@@ -4,8 +4,8 @@ library(leaflet)
 library(sf)
 
 
-setwd("c://Users/leandro/Dropbox/Docs/1imagen-data/ine/")
-setwd("~/Dropbox/Docs/1imagen-data/ine/")
+setwd("c://Users/leandro/Dropbox/Docs/github/UnaImagen/DataBases/Censo2011/")
+setwd("~/Dropbox/Docs/github/UnaImagen/DataBases/Censo2011/")
 
 
 prueba <- read_sf("basefinal.shp")
