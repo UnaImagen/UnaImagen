@@ -3,6 +3,8 @@ library(dplyr)
 library(leaflet)
 library(sf)
 library(haven)
+library(colorspace)
+library(RColorBrewer)
 
 setwd("c://Users/leandro/Dropbox/Docs/1imagen-data/ine/")
 setwd("~/Dropbox/Docs/1imagen-data/ine/")
@@ -12,7 +14,8 @@ setwd("~/Dropbox/Docs/1imagen-data/ine/")
 ### Levanto mapa del INE con los poligonos -----------------------------
 
 mapaUy <- read_sf("ine_seg_11.shp")
-mapaUy <- mapaUy[,8]
+colnames(mapaUy)
+mapaUy <- mapaUy[,c(1,8)]
 mapaUy <- mapaUy[!duplicated(mapaUy$CODSEG),]
 mapaUy = st_set_crs(mapaUy, "+proj=utm +zone=21 +south")
 st_crs(mapaUy)
@@ -51,7 +54,7 @@ colnames(data)[1] <- "CODSEG"
 # data$CODSEG <- as.integer(factor(data$CODSEG))
 
 data$pob <- by(personas$PERPH02, personas$CODSEG, nrow)
-data$pob <- data$pob / max(data$pob)
+#data$pob <- data$pob / max(data$pob)
 # rm(personas)
 
 
@@ -61,20 +64,23 @@ prueba <- merge(mapaUy,data,by="CODSEG")
 names(prueba)
 sum(is.na(prueba$pob))
 plot(prueba$pob) # chequeo que este todo ok
+prueba$AREA2 <- (prueba$AREA)/1000000
+prueba$personaskm <-  round(prueba$pob / prueba$AREA2, digits = 0)
 st_write(prueba, "basefinal.shp")
 
 
 #### ----------------- Grafico -----------------
 
-cuts <- quantile(prueba$pob, probs = seq(0,1, by=0.2))
-pal <- colorBin("YlOrRd", domain = prueba$pob, bins = cuts)
+cuts <- quantile(prueba$personaskm, probs = seq(0,1, by=0.1))
+display.brewer.all()
+pal <- colorBin("RdYlBu", domain = prueba$personaskm, bins = cuts, reverse = T)
 
 
 m <- leaflet(prueba) %>%
   addTiles() %>%
-  setView(-56.1, -32, zoom = 6)  %>%
+  setView(-56.1, -32, zoom = 7)  %>%
   addPolygons(
-    fillColor = ~pal(pob),
+    fillColor = ~pal(personaskm),
     weight = 2,
     opacity = 1,
     color = "white",
