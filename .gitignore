@@ -45,9 +45,6 @@ DataBases/ECH/2018/HyP_2018_Terceros.dat
 DataBases/ECH/2018/P_2018_Terceros.dat
 
 # DataBses/Censo2011/ine
-DataBases/Censo2011/ine/ine_seccen.shp
-DataBases/Censo2011/ine/ine_seg_11.shp
-DataBases/Censo2011/ine/ine_zonas_11.shp
-DataBases/Censo2011/ine/personas.rds
+DataBases/Censo2011/ine/
 
 
