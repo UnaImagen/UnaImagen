@@ -5,22 +5,18 @@ library(sf)
 library(RColorBrewer)
 
 
-setwd("c://Users/leandro/Dropbox/Docs/github/UnaImagen/DataBases/Censo2011/")
-setwd("~/Dropbox/Docs/github/UnaImagen/DataBases/Censo2011/")
-
-
-prueba <- read_sf("basefinal.shp")
+ShapeCenso2011 <- read_sf("ShapeCenso2011.shp")
 
 
 #### ----------------- Grafico -----------------
 
 
-cuts <- quantile(prueba$personaskm, probs = seq(0,1, by=0.1))
-display.brewer.all()
-pal <- colorBin("RdYlBu", domain = prueba$personaskm, bins = cuts, reverse = T)
+cuts <- quantile(ShapeCenso2011$personaskm, probs = seq(0,1, by=0.1))
+#display.brewer.all()
+pal <- colorBin("RdYlBu", domain = ShapeCenso2011$personaskm, bins = cuts, reverse = T)
 
 
-m <- leaflet(prueba) %>%
+m <- leaflet(ShapeCenso2011) %>%
    addTiles() %>%
    setView(-56.1, -32, zoom = 7)  %>%
    addPolygons(
