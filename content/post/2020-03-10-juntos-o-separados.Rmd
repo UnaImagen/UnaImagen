@@ -14,7 +14,7 @@ keywords:
 <!--more-->
 
 
-Población por kilómetro cuadrado según zona censal, en base al Censo 2011 de población del INE.
+Densidad poblacional (población por kilómetro cuadrado) según zona censal. En base al Censo 2011 de población del INE.
 
 
 ```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
@@ -30,7 +30,7 @@ ShapeCenso2011 <- read_sf(here::here("./DataBases/Censo2011/ShapeCenso2011.shp")
 
 ```
 
-```{r mapadensidadpoblacional, echo=FALSE, warning=FALSE, message=FALSE}
+```{r mapadensidadpoblacional, echo=FALSE, warning=FALSE, message=FALSE, fig.height = 8, fig.width = 10}
 
 
 #### ----------------- Grafico -----------------
