@@ -27,7 +27,7 @@ mapaUy$CODSEG <- formatC(mapaUy$CODSEG, width=7, flag="0") # codigo segmento con
 
 # Base censo: http://www.ine.gub.uy/c/document_library/get_file?uuid=23d15ef3-e5ed-46e8-9bec-bff7ecc604d2&groupId=10181
 
-personas <- readRDS("personas.rds")
+personas <- readr::read_rds(here::here("./DataBases/Censo2011/personas.rds"))
 personas <- as.data.frame(personas)
 head(personas)
 colnames(personas)
