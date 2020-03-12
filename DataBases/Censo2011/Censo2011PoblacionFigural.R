@@ -16,7 +16,7 @@ cuts <- quantile(ShapeCenso2011$personaskm, probs = seq(0,1, by=0.1))
 pal <- colorBin("RdYlBu", domain = ShapeCenso2011$personaskm, bins = cuts, reverse = T)
 
 
-m <- leaflet(ShapeCenso2011) %>%
+leaflet(ShapeCenso2011) %>%
    addTiles() %>%
    setView(-56.1, -32, zoom = 7)  %>%
    addPolygons(
@@ -39,6 +39,3 @@ m <- leaflet(ShapeCenso2011) %>%
          direction = "auto")) %>%
    addLegend(pal = pal, values = ~pob, opacity = 0.7, title = NULL,
              position = "bottomright")
-m
-
-
