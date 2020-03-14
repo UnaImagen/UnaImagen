@@ -14,7 +14,7 @@ languageCode = "es-es"
 defaultContentLanguage = "es-es"
 title = "Una Imagen"
 theme = "hugo-tranquilpeak-theme"
-disqusShortname = "hugo-tranquilpeak-theme"
+# disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
@@ -29,8 +29,8 @@ canonifyurls = true
 
 [author]
   name = "Una imagen vale más que mil palabras"
-  #bio = "Super bio with markdown support **COOL**"
-  #job = "Your job title"
+  # bio = "Super bio with markdown support **COOL**"
+  # job = "Your job title"
   location = "Uruguay"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = "thibaud.lepretre@gmail.com"
