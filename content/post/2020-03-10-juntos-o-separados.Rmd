@@ -72,4 +72,6 @@ m <- leaflet::leaflet(
    )
 ```
 
+<!--more-->
+
 Fuente: elaborado en base al Censo 2011 del INE.
