@@ -11,6 +11,10 @@ keywords:
   - tech
 ---
 
+Densidad poblacional (población por kilómetro cuadrado) según zona censal. En base al Censo 2011 de población del INE.
+
+<!--more-->
+
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
    echo = FALSE,
@@ -70,8 +74,7 @@ m <- leaflet::leaflet(
       title = NULL,
       position = "bottomright"
    )
+m
 ```
-
-<!--more-->
 
 Fuente: elaborado en base al Censo 2011 del INE.
