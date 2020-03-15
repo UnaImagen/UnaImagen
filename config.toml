@@ -74,26 +74,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   name = "About"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
   url = "/#about"
-
 [[menu.links]]
-  weight = 1
+  weight = 6
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
   url = "https://github.com/daczarne/UnaImagen"
-#[[menu.links]]
-#  weight = 2
-# identifier = "stackoverflow"
-#  name = "Stack Overflow"
-#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
-#  url = "https://stackoverflow.com/users/636472/kakawait"
-
-#[[menu.misc]]
-#  weight = 1
-#  identifier = "rss"
-#  name = "RSS"
-#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
-#  url = "/index.xml"
 
 [params]
   # Customize date format use to render blog post date, categories and other
@@ -116,7 +102,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Hugo tranquilpeak theme demo"
+  description = "Una imagen"
 
   # Customization
   # Define the behavior of the sidebar
@@ -138,7 +124,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   imageGallery = true
 
   # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
-  thumbnailImage = true
+  thumbnailImage = false
   # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
   # Set this value to `right` if you have old posts to keep the old style on them
   # and define `thumbnailImagePosition` on a post to overwrite this setting
@@ -146,7 +132,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image
   # Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image
   # and set `autoThumbnailImage` to `false` on a post to overwrite this setting
-  autoThumbnailImage = true
+  autoThumbnailImage = false
 
   # Your favicon path, default is "/favicon.png"
   favicon = "chart-pie-solid.ico"
