@@ -33,10 +33,10 @@ canonifyurls = true
   # job = "Your job title"
   location = "Uruguay"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  # gravatarEmail = "thibaud.lepretre@gmail.com"
+  # gravatarEmail = "daniel.czarnievicz@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  picture = "gravatar.svg"
   # Your Twitter username without the @. E.g : thibaudlepretre
   # twitter = "thibaudlepretre"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
@@ -148,20 +148,18 @@ canonifyurls = true
   autoThumbnailImage = true
 
   # Your favicon path, default is "/favicon.png"
-  # favicon = "/favicon.png"
   favicon = "chart-pie-solid.ico"
 
   # Header configuration
-  # The link at the right of the header is customizable
-  # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
+  # The link at the right of the header is customizable. You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
   # By default, author's gravatar or author's picture is displayed.
-  #     url: /#search
-  #     icon: search
-  #     class: st-search-show-outputs
+  # url: /#search
+  # icon: search
+  # class: st-search-show-outputs
 
   # Display `Next` on left side of the pagination, and `Prev` on right side one.
   # If you set this value to `true`, these positions swap.
-  # swapPaginator = true
+  swapPaginator = true
 
   # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
   # they have to be referred from static root. Example
@@ -175,8 +173,9 @@ canonifyurls = true
 
   # Sharing options
   # Comment and uncomment to enable or disable sharing options
-  # If you wanna add a sharing option, read user documentation :
+  # If you wanna add a sharing option, read user documentation:
   # Tranquilpeak configuration > Theme configuration > sharing-options
+
   # [[params.sharingOptions]]
   #  name = "Facebook"
   #  icon = "fa-facebook-official"

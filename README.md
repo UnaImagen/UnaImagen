@@ -6,4 +6,4 @@
 
 En este reporsitorio podrás encontrar todos los datos y códigos con los que se construyeron las imágenes publicadas en nuestra página. También podrás encontrar el código que construye la página. Los datos son libres y abiertos, así como también el código, por lo que sientete libre de forkear el repo y generar tus propios gráficos.
 
-El favicon y el ícono de la página están licenciados bajo Creatuve Commons. La licencia puede hallarse en el siguiente [link](https://fontawesome.com/license).
+El favicon y el gravatar de la página están licenciados bajo Creative Commons. La licencia puede hallarse en el siguiente [link](https://fontawesome.com/license).
