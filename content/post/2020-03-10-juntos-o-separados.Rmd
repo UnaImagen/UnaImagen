@@ -9,7 +9,6 @@ tags:
   - población
 keywords:
   - tech
-#featuredImage: "img/cover.jpg"
 ---
 
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
@@ -32,7 +31,7 @@ pal <- leaflet::colorBin("RdYlBu", domain = ShapeCenso2011$personaskm, bins = cu
 Densidad poblacional (población por kilómetro cuadrado) según zona censal. En base al Censo 2011 de población del INE.
 
 ```{r mapa_densidad_poblacional, fig.height = 8, fig.width = 10}
-leaflet::leaflet(
+m <- leaflet::leaflet(
    data = ShapeCenso2011
 ) %>%
    leaflet::addTiles() %>%
