@@ -1,5 +1,5 @@
 ---
-title: Juntos o separados
+title: ¿Juntos o separados?
 author: Leandro Zipitria
 date: '2020-03-10'
 slug: juntos-o-separados
@@ -9,62 +9,68 @@ tags:
   - población
 keywords:
   - tech
+#featuredImage: "img/cover.jpg"
 ---
 
-<!--more-->
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+   echo = FALSE,
+   message = FALSE,
+   warning = FALSE,
+   eval = TRUE,
+   error = FALSE
+)
+library(magrittr, quietly = TRUE)
+```
 
+```{r carga_datos}
+ShapeCenso2011 <- sf::read_sf(here::here("./DataBases/Censo2011/ShapeCenso2011.shp"))
+cuts <- stats::quantile(ShapeCenso2011$personaskm, probs = base::seq(0, 1, by = 0.1))
+pal <- leaflet::colorBin("RdYlBu", domain = ShapeCenso2011$personaskm, bins = cuts, reverse = TRUE)
+```
 
 Densidad poblacional (población por kilómetro cuadrado) según zona censal. En base al Censo 2011 de población del INE.
 
-
-```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
-
-library(rgdal)
-library(dplyr)
-library(leaflet)
-library(sf)
-library(RColorBrewer)
-
-
-ShapeCenso2011 <- read_sf(here::here("./DataBases/Censo2011/ShapeCenso2011.shp"))
-
-```
-
-```{r mapadensidadpoblacional, echo=FALSE, warning=FALSE, message=FALSE, fig.height = 8, fig.width = 10}
-
-
-#### ----------------- Grafico -----------------
-
-
-cuts <- quantile(ShapeCenso2011$personaskm, probs = seq(0,1, by=0.1))
-#display.brewer.all()
-pal <- colorBin("RdYlBu", domain = ShapeCenso2011$personaskm, bins = cuts, reverse = T)
-
-
-leaflet(ShapeCenso2011) %>%
-   addTiles() %>%
-   setView(-56.1, -32, zoom = 7)  %>%
-   addPolygons(
+```{r mapa_densidad_poblacional, fig.height = 8, fig.width = 10}
+leaflet::leaflet(
+   data = ShapeCenso2011
+) %>%
+   leaflet::addTiles() %>%
+   leaflet::setView(
+      lng = -56.1,
+      lat =  -32,
+      zoom = 7
+   ) %>%
+   leaflet::addPolygons(
       fillColor = ~pal(personaskm),
       weight = 2,
       opacity = 1,
       color = "white",
       dashArray = "3",
       fillOpacity = 0.7,
-      highlight = highlightOptions(
+      highlight = leaflet::highlightOptions(
          weight = 5,
          color = "#666",
          dashArray = "",
          fillOpacity = 0.7,
          bringToFront = TRUE),
       label = ~personaskm,
-      labelOptions = labelOptions(
-         style = list("font-weight" = "normal", padding = "3px 8px"),
+      labelOptions = leaflet::labelOptions(
+         style = base::list(
+            "font-weight" = "normal",
+            padding = "3px 8px"
+         ),
          textsize = "15px",
-         direction = "auto")) %>%
-   addLegend(pal = pal, values = ~pob, opacity = 0.7, title = NULL,
-             position = "bottomright")
-
+         direction = "auto"
+      )
+   ) %>%
+   leaflet::addLegend(
+      pal = pal,
+      values = ~pob,
+      opacity = 0.7,
+      title = NULL,
+      position = "bottomright"
+   )
 ```
 
 Fuente: elaborado en base al Censo 2011 del INE.
