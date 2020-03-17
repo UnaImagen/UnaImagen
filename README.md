@@ -5,10 +5,13 @@
 ![github contributors](https://img.shields.io/github/contributors/daczarne/UnaImagen)
 ![github last commit](https://img.shields.io/github/last-commit/daczarne/UnaImagen)
 ![github commit activity](https://img.shields.io/github/commit-activity/w/daczarne/UnaImagen)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e78c0174-3c1b-4832-8d4b-e7cab20ff756/deploy-status)](https://app.netlify.com/sites/unaimagen/deploys)
 
 ![github issues open](https://img.shields.io/github/issues/daczarne/UnaImagen)
 ![github issues closed](https://img.shields.io/github/issues-closed/daczarne/UnaImagen)
+![github pull request open](https://img.shields.io/github/issues-pr/daczarne/UnaImagen)
+![github pull request closed](https://img.shields.io/github/issues-pr-closed/daczarne/UnaImagen)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e78c0174-3c1b-4832-8d4b-e7cab20ff756/deploy-status)](https://app.netlify.com/sites/unaimagen/deploys)
 
 ![github social forks](https://img.shields.io/github/forks/daczarne/UnaImagen?label=Forks&style=social)
 ![github social stars](https://img.shields.io/github/stars/daczarne/UnaImagen?style=social)
