@@ -1,6 +1,6 @@
 # Una imagen vale más que mil palabras
 
-![experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg) ![licence](https://img.shields.io/github/license/daczarne/UnaImagen)
+![experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg) ![licence](https://img.shields.io/github/license/daczarne/UnaImagen) ![netlify passing](https://img.shields.io/netlify/e78c0174-3c1b-4832-8d4b-e7cab20ff756)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e78c0174-3c1b-4832-8d4b-e7cab20ff756/deploy-status)](https://app.netlify.com/sites/unaimagen/deploys)
 
