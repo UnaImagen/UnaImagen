@@ -11,55 +11,58 @@ keywords:
   - tech
 ---
 
+Ingresos promedio en dólares del año 2018, por departamento y barrio para Montevideo.
+
 <!--more-->
 
 Ingresos promedio en dólares del año 2018, por departamento y barrio para Montevideo. 
 
-
-```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
-
-library(rgdal)
-library(dplyr)
-library(leaflet)
-library(sf)
-library(RColorBrewer)
-
-
-mapa <- read_sf(here::here("./DataBases/ECH/2018/ShapeECH2018.shp"))
-
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+   echo = FALSE,
+   message = FALSE,
+   warning = FALSE,
+   eval = TRUE,
+   error = FALSE
+)
+library(magrittr, quietly = TRUE)
 ```
 
-```{r mapadensidadpoblacional, echo=FALSE, warning=FALSE, message=FALSE, fig.height = 8, fig.width = 10}
+```{r carga_datos}
+mapa <- sf::read_sf(here::here("./DataBases/ECH/2018/ShapeECH2018.shp"))
+pal <- leaflet::colorNumeric(palette = "Blues", domain = mapa$ingUSD)
+```
 
-
-#### ----------------- Grafico -----------------
-
-
-pal <- colorNumeric(palette = "Blues", domain = mapa$ingUSD)
-
-leaflet(mapa) %>%
-   addTiles() %>%
-   setView(-56.1, -32, zoom = 7)  %>%
-   addPolygons(
+```{r mapadensidadpoblacional, fig.height = 8, fig.width = 10}
+m <- leaflet::leaflet(
+   data = mapa
+) %>%
+   leaflet::addTiles() %>%
+   leaflet::setView(
+      lng = -56.1,
+      lat =  -32,
+      zoom = 7
+   ) %>%   leaflet::addPolygons(
       fillColor = ~pal(ingUSD),
       weight = 2,
       opacity = 1,
       color = "white",
       dashArray = "3",
       fillOpacity = 0.7,
-      highlight = highlightOptions(
+      highlight = leaflet::highlightOptions(
          weight = 5,
          color = "#666",
          dashArray = "",
          fillOpacity = 0.7,
-         bringToFront = TRUE),
-      label = sprintf(paste0("%s: %s"," ", "UDS"), mapa$NOMBRE, mapa$ingUSD),
-      labelOptions = labelOptions(
-         style = list("font-weight" = "normal", padding = "3px 8px"),
+         bringToFront = TRUE
+      ),
+      label = base::sprintf(base::paste0("%s: %s"," ", "UDS"), mapa$NOMBRE, mapa$ingUSD),
+      labelOptions = leaflet::labelOptions(
+         style = base::list("font-weight" = "normal", padding = "3px 8px"),
          textsize = "15px",
-         direction = "auto"))
-
-
+         direction = "auto"
+      )
+   )
 ```
 
 Fuente: elaborado en base a la Encuesta Continua de Hogares del 2018 del INE.
