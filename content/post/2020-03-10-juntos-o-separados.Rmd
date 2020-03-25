@@ -35,7 +35,7 @@ pal <- leaflet::colorBin("RdYlBu", domain = ShapeCenso2011$personaskm, bins = cu
 Densidad poblacional (población por kilómetro cuadrado) según zona censal. En base al Censo 2011 de población del INE.
 
 ```{r mapa_densidad_poblacional, fig.height = 8, fig.width = 10}
-m <- leaflet::leaflet(
+leaflet::leaflet(
    data = ShapeCenso2011
 ) %>%
    leaflet::addTiles() %>%
@@ -74,7 +74,6 @@ m <- leaflet::leaflet(
       title = NULL,
       position = "bottomright"
    )
-m
 ```
 
 Fuente: elaborado en base al Censo 2011 del INE.
