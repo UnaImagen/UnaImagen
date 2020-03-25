@@ -211,7 +211,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     async = false
     defer = false
 
-  # jQuery
+  # jquery
   [[params.customJS]]
     src = "/rmarkdown-libs/jquery/jquery.min.js"
     async = false

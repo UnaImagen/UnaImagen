@@ -33,7 +33,7 @@ mapa <- sf::read_sf(here::here("./DataBases/ECH/2018/ShapeECH2018.shp"))
 pal <- leaflet::colorNumeric(palette = "Blues", domain = mapa$ingUSD)
 ```
 
-```{r mapadensidadpoblacional, fig.height = 8, fig.width = 10}
+```{r mapa_ingresos, fig.height = 8, fig.width = 10}
 leaflet::leaflet(
    data = mapa
 ) %>%
