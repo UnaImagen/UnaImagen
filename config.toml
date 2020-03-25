@@ -194,94 +194,94 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # crosstalk
   [[params.customJS]]
     src = "/rmarkdown-libs/crosstalk/js/crosstalk.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
   [[params.customJS]]
     src = "/rmarkdown-libs/crosstalk/js/crosstalk.js.map"
-    async = false
-    defer = false
+    async = true
+    defer = true
   [[params.customJS]]
     src = "/rmarkdown-libs/crosstalk/js/crosstalk.min.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
   [[params.customJS]]
     src = "/rmarkdown-libs/crosstalk/js/crosstalk.min.js.map"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # htmlwidgets
   [[params.customJS]]
     src = "/rmarkdown-libs/htmlwidgets/htmlwidgets.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # jquery
   [[params.customJS]]
     src = "/rmarkdown-libs/jquery/jquery.min.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # leaflet
   [[params.customJS]]
     src = "/rmarkdown-libs/leaflet/leaflet.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # leaflet-binding
   [[params.customJS]]
     src = "/rmarkdown-libs/leaflet-binding/leaflet.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # leafletfix
 
   # plotly-binding
   [[params.customJS]]
     src = "/rmarkdown-libs/plotly-binding/plotly.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # plotly-htmlwidgets-css
 
   # plotly-main
   [[params.customJS]]
     src = "/rmarkdown-libs/plotly-main/plotly-latest.min.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # Proj4Leaflet
   [[params.customJS]]
     src = "/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
   [[params.customJS]]
     src = "/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # pymjs
   [[params.customJS]]
     src = "/rmarkdown-libs/pymjs/pym.v1.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
   [[params.customJS]]
     src = "/rmarkdown-libs/pymjs/pym.v1.min.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # rstudio_leaflet
 
   # typedarray
   [[params.customJS]]
     src = "/rmarkdown-libs/typedarray/typedarray.min.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # widgetframe-binding
   [[params.customJS]]
     src = "/rmarkdown-libs/widgetframe-binding/widgetframe.js"
-    async = false
-    defer = false
+    async = true
+    defer = true
 
   # Sharing options
   # Comment and uncomment to enable or disable sharing options
