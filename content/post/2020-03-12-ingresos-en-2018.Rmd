@@ -34,7 +34,7 @@ pal <- leaflet::colorNumeric(palette = "Blues", domain = mapa$ingUSD)
 ```
 
 ```{r mapadensidadpoblacional, fig.height = 8, fig.width = 10}
-m <- leaflet::leaflet(
+leaflet::leaflet(
    data = mapa
 ) %>%
    leaflet::addTiles() %>%
