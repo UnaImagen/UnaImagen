@@ -190,98 +190,61 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # widgetframe-binding
 
   # Custom JS. Put here your custom JS files. They are loaded after the theme JS; they have to be referred from static root.
-
-  # crosstalk
+  # jquery
   [[params.customJS]]
-    src = "/rmarkdown-libs/crosstalk/js/crosstalk.js"
-    async = true
-    defer = true
-  [[params.customJS]]
-    src = "/rmarkdown-libs/crosstalk/js/crosstalk.js.map"
-    async = true
-    defer = true
-  [[params.customJS]]
-    src = "/rmarkdown-libs/crosstalk/js/crosstalk.min.js"
-    async = true
-    defer = true
-  [[params.customJS]]
-    src = "/rmarkdown-libs/crosstalk/js/crosstalk.min.js.map"
-    async = true
-    defer = true
+    src = "/rmarkdown-libs/jquery/jquery.min.js"
 
   # htmlwidgets
   [[params.customJS]]
     src = "/rmarkdown-libs/htmlwidgets/htmlwidgets.js"
-    async = true
-    defer = true
 
-  # jquery
+  # widgetframe-binding
   [[params.customJS]]
-    src = "/rmarkdown-libs/jquery/jquery.min.js"
-    async = true
-    defer = true
+    src = "/rmarkdown-libs/widgetframe-binding/widgetframe.js"
+
+  # crosstalk
+  [[params.customJS]]
+    src = "/rmarkdown-libs/crosstalk/js/crosstalk.js"
+
+  [[params.customJS]]
+    src = "/rmarkdown-libs/crosstalk/js/crosstalk.min.js"
 
   # leaflet
   [[params.customJS]]
     src = "/rmarkdown-libs/leaflet/leaflet.js"
-    async = true
-    defer = true
 
   # leaflet-binding
   [[params.customJS]]
     src = "/rmarkdown-libs/leaflet-binding/leaflet.js"
-    async = true
-    defer = true
 
   # leafletfix
 
   # plotly-binding
   [[params.customJS]]
     src = "/rmarkdown-libs/plotly-binding/plotly.js"
-    async = true
-    defer = true
 
   # plotly-htmlwidgets-css
 
   # plotly-main
   [[params.customJS]]
     src = "/rmarkdown-libs/plotly-main/plotly-latest.min.js"
-    async = true
-    defer = true
 
   # Proj4Leaflet
   [[params.customJS]]
     src = "/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"
-    async = true
-    defer = true
+
   [[params.customJS]]
     src = "/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"
-    async = true
-    defer = true
 
   # pymjs
   [[params.customJS]]
-    src = "/rmarkdown-libs/pymjs/pym.v1.js"
-    async = true
-    defer = true
-  [[params.customJS]]
     src = "/rmarkdown-libs/pymjs/pym.v1.min.js"
-    async = true
-    defer = true
 
   # rstudio_leaflet
 
   # typedarray
   [[params.customJS]]
     src = "/rmarkdown-libs/typedarray/typedarray.min.js"
-    async = true
-    defer = true
-
-  # widgetframe-binding
-  [[params.customJS]]
-    src = "/rmarkdown-libs/widgetframe-binding/widgetframe.js"
-    async = true
-    defer = true
 
   # Sharing options
   # Comment and uncomment to enable or disable sharing options
