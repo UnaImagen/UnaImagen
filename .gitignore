@@ -38,6 +38,9 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
+# public sub directory
+/public/
+
 # DataBases/ECH/2018
 DataBases/ECH/2018/Bases ECH 2018_DAT.zip.rar
 DataBases/ECH/2018/H_2018_Terceros.dat
