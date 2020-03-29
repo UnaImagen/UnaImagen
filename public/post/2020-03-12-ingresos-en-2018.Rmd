@@ -1,21 +1,17 @@
 ---
-title: Ingresos en 2018
-author: Leandro Zipitria
+title: "Ingresos en 2018"
+author: "Leandro Zipitria"
 date: '2020-03-12'
 slug: ingresos-en-2018
 categories: []
 tags:
-  - ingresos
-  - uruguay
-keywords:
-  - tech
+- ingresos
+- uruguay
+keywords: tech
 ---
 
-Ingresos promedio en dólares del año 2018, por departamento y barrio para Montevideo.
-
-<!--more-->
-
 Ingresos promedio en dólares del año 2018, por departamento y barrio para Montevideo. 
+
 
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
@@ -34,7 +30,7 @@ pal <- leaflet::colorNumeric(palette = "Blues", domain = mapa$ingUSD)
 ```
 
 ```{r mapadensidadpoblacional, fig.height = 8, fig.width = 10}
-m <- leaflet::leaflet(
+leaflet::leaflet(
    data = mapa
 ) %>%
    leaflet::addTiles() %>%
@@ -56,13 +52,14 @@ m <- leaflet::leaflet(
          fillOpacity = 0.7,
          bringToFront = TRUE
       ),
-      label = base::sprintf(base::paste0("%s: %s"," ", "UDS"), mapa$NOMBRE, mapa$ingUSD),
+      label = base::sprintf(base::paste0("%s: %s"," ", "dólares"), mapa$NOMBRE, mapa$ingUSD),
       labelOptions = leaflet::labelOptions(
          style = base::list("font-weight" = "normal", padding = "3px 8px"),
          textsize = "15px",
          direction = "auto"
       )
    )
+
 ```
 
 Fuente: elaborado en base a la Encuesta Continua de Hogares del 2018 del INE.
