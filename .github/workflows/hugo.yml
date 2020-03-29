@@ -10,7 +10,7 @@ jobs:
           persist-credentials: false
 
       - name: Build 🔧
-      - uses: jakejarvis/hugo-build-action@master
+        uses: jakejarvis/hugo-build-action@master
         with:
           args: --minify --buildDrafts
 
