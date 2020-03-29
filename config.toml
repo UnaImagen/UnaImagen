@@ -153,7 +153,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
   # crosstalk
   [[params.customCSS]]
-    href = "/rmarkdown-libs/crosstalk/css/crosstalk.css"
+    href = "rmarkdown-libs/crosstalk/css/crosstalk.css"
 
   # htmlwidgets
 
@@ -161,19 +161,19 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
   # leaflet
   [[params.customCSS]]
-    href = "/rmarkdown-libs/leaflet/leaflet.css"
+    href = "rmarkdown-libs/leaflet/leaflet.css"
 
   # leaflet-binding
 
   # leafletfix
   [[params.customCSS]]
-    href = "/rmarkdown-libs/leafletfix/leafletfix.css"
+    href = "rmarkdown-libs/leafletfix/leafletfix.css"
 
   # plotly-binding
 
   # plotly-htmlwidgets-css
   [[params.customCSS]]
-    href = "/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css"
+    href = "rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css"
 
   # plotly-main
 
@@ -183,7 +183,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
   # rstudio_leaflet
   [[params.customCSS]]
-    href = "/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css"
+    href = "rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css"
 
   # typedarray
 
@@ -192,59 +192,59 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Custom JS. Put here your custom JS files. They are loaded after the theme JS; they have to be referred from static root.
   # jquery
   [[params.customJS]]
-    src = "/rmarkdown-libs/jquery/jquery.min.js"
+    src = "rmarkdown-libs/jquery/jquery.min.js"
 
   # htmlwidgets
   [[params.customJS]]
-    src = "/rmarkdown-libs/htmlwidgets/htmlwidgets.js"
+    src = "rmarkdown-libs/htmlwidgets/htmlwidgets.js"
 
   # widgetframe-binding
   [[params.customJS]]
-    src = "/rmarkdown-libs/widgetframe-binding/widgetframe.js"
+    src = "rmarkdown-libs/widgetframe-binding/widgetframe.js"
 
   # crosstalk
   [[params.customJS]]
-    src = "/rmarkdown-libs/crosstalk/js/crosstalk.js"
+    src = "rmarkdown-libs/crosstalk/js/crosstalk.js"
 
   [[params.customJS]]
-    src = "/rmarkdown-libs/crosstalk/js/crosstalk.min.js"
+    src = "rmarkdown-libs/crosstalk/js/crosstalk.min.js"
 
   # leaflet
   [[params.customJS]]
-    src = "/rmarkdown-libs/leaflet/leaflet.js"
+    src = "rmarkdown-libs/leaflet/leaflet.js"
 
   # leaflet-binding
   [[params.customJS]]
-    src = "/rmarkdown-libs/leaflet-binding/leaflet.js"
+    src = "rmarkdown-libs/leaflet-binding/leaflet.js"
 
   # leafletfix
 
   # plotly-binding
   [[params.customJS]]
-    src = "/rmarkdown-libs/plotly-binding/plotly.js"
+    src = "rmarkdown-libs/plotly-binding/plotly.js"
 
   # plotly-htmlwidgets-css
 
   # plotly-main
   [[params.customJS]]
-    src = "/rmarkdown-libs/plotly-main/plotly-latest.min.js"
+    src = "rmarkdown-libs/plotly-main/plotly-latest.min.js"
 
   # Proj4Leaflet
   [[params.customJS]]
-    src = "/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"
+    src = "rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"
 
   [[params.customJS]]
-    src = "/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"
+    src = "rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"
 
   # pymjs
   [[params.customJS]]
-    src = "/rmarkdown-libs/pymjs/pym.v1.min.js"
+    src = "rmarkdown-libs/pymjs/pym.v1.min.js"
 
   # rstudio_leaflet
 
   # typedarray
   [[params.customJS]]
-    src = "/rmarkdown-libs/typedarray/typedarray.min.js"
+    src = "rmarkdown-libs/typedarray/typedarray.min.js"
 
   # Sharing options
   # Comment and uncomment to enable or disable sharing options
