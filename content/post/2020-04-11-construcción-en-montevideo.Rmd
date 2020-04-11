@@ -22,6 +22,6 @@ Evolución de la emisión de permisos de construcción en Montevideo.
 
 <iframe src="https://daczarne.shinyapps.io/DashConstruccion/" style="height:800px; width:1000px;"></iframe>
 
-Visite el app haciendo click en el siguiente [link](https://daczarne.shinyapps.io/DashConstruccion/)
+Visite el app haciendo click en el siguiente [link](https://daczarne.shinyapps.io/DashConstruccion/).
 
-Fuente: Instituto Nacional de Estadística
+Elaborado en base a datos del Instituto Nacional de Estadística (INE).
