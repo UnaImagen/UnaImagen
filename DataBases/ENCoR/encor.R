@@ -8,37 +8,14 @@ library(tidyverse)
 # Carga datos -------------------------------------------------------------
 encor <- haven::read_sav(file = "DataBases/ENCoR/Base ENCoR terceros.sav")
 
-
-# Genera objeto survey ----------------------------------------------------
-# ps <- survey::svydesign(
-#    ids = ~1,
-#    weights = ~peso,
-#    data = encor
-# )
-
-# summary(ps)
-
-# survey::svymean(
-#    x = encor$ina48_1,
-#    design = ps,
-#    na.rm = TRUE
-# )
-
-# survey::svymean(
-#    x = encor$ina44_1,
-#    design = ps,
-#    na.rm = TRUE
-# )
-
-
 # Plots -------------------------------------------------------------------
 ggplot_bars_sex_questions <- function(hombre, mujer) {
 
    legend_title <- dplyr::case_when(
-      hombre == "ina48_1" ~ "Edad límite inferior para...",
-      hombre == "ina49_1" ~ "Edad límite inferior para...",
-      hombre == "ina50_1" ~ "Edad límite superior para...",
-      hombre == "ina51_1" ~ "Edad límite inferior para..."
+      hombre == "ina48_1" ~ "Edad límite inferior para tener relaciones sexuales",
+      hombre == "ina49_1" ~ "Edad límite inferior para tener hijos",
+      hombre == "ina50_1" ~ "Edad límite superior para tener hijos",
+      hombre == "ina51_1" ~ "Edad límite inferior para abandonar estudios"
    )
 
    encor %>%
@@ -68,15 +45,14 @@ ggplot_bars_sex_questions <- function(hombre, mujer) {
       ) %>%
       ggplot() +
       geom_bar(
-         aes(x = edad, y = ..prop.., fill = pregunta, weight = peso),
-         alpha = 1/2,
+         aes(x = edad, y = ..prop.., fill = pregunta),
          position = "dodge"
       ) +
       facet_wrap(
          facets = ~sexo
       ) +
       labs(
-         x = "Edad",
+         x = "\nRespuesta (en años)",
          y = "Porcentaje\n",
          fill = legend_title
       ) +
@@ -93,32 +69,36 @@ ggplot_bars_sex_questions <- function(hombre, mujer) {
 
 }
 
+sex_plots <- list()
 
 # Edad límite inferior para iniciación sexual --------------------------------------
-ggplot_bars_sex_questions(
+sex_plots[[1]] <- ggplot_bars_sex_questions(
    hombre = "ina48_1",
    mujer = "ina44_1"
 )
 
 
 # Edad límite inferior para tener hijos -----------------------------------
-ggplot_bars_sex_questions(
+sex_plots[[2]] <- ggplot_bars_sex_questions(
    hombre = "ina49_1",
    mujer = "ina45_1"
 )
 
+
 # Edad límite superior para tener hijos -----------------------------------
-ggplot_bars_sex_questions(
+sex_plots[[3]] <- ggplot_bars_sex_questions(
    hombre = "ina50_1",
    mujer = "ina46_1"
 )
 
+
 # Edad límite inferior para abandonar estudios -----------------------------------
-ggplot_bars_sex_questions(
+sex_plots[[4]] <- ggplot_bars_sex_questions(
    hombre = "ina51_1",
    mujer = "ina47_1"
 )
 
+readr::write_rds(x = sex_plots, path = "DataBases/ENCoR/sex_plots.rds")
 
 # Edad materinidad --------------------------------------------------------
 encor %>%
