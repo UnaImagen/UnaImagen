@@ -1,0 +1,42 @@
+---
+title: Edades normativas y sexualidad en Uruguay
+author: Daniel Czarnievicz
+date: '2020-02-15'
+slug: edades-normativas-y-sexualidad-en-uruguay
+categories: []
+tags:
+  - uruguay
+  - población
+  - sexualidad
+keywords:
+  - tech
+---
+
+¿A qué edad los uruguayos consideramos que se es demasiado joven para tener relaciones sexuales? ¿y para tener hijos?
+
+<!--more-->
+
+¿A qué edad los uruguayos consideramos que se es demasiado joven para tener relaciones sexuales? ¿y para tener hijos?
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+   echo = FALSE,
+   include = TRUE,
+   warning = FALSE
+   )
+sex_plots <- readr::read_rds(path = here::here("/DataBases/ENCoR/sex_plots.rds"))
+```
+
+```{r, fig.align="center", out.width="100%"}
+sex_plots[[1]]
+```
+
+```{r, fig.align="center", out.width="100%"}
+sex_plots[[2]]
+```
+
+```{r, fig.align="center", out.width="100%"}
+sex_plots[[3]]
+```
+
+Elaboración propia en base a la Encuesta Nacional de Comportamientos Reproductivos (ENCoR) elaborada por el Instituto Nacional de Estadística durante 2015.
