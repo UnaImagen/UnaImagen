@@ -13,7 +13,6 @@ keywords:
 
 Densidad poblacional (población por kilómetro cuadrado) según zona censal. En base al Censo 2011 de población del INE.
 
-<!--more-->
 
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
@@ -24,57 +23,81 @@ knitr::opts_chunk$set(
    error = FALSE
 )
 library(magrittr, quietly = TRUE)
+library(rgdal)
+library(dplyr)
+library(leaflet)
+library(sf)
+library(RColorBrewer)
+library(here)
+library(widgetframe)
 ```
 
 ```{r carga_datos}
 ShapeCenso2011 <- sf::read_sf(here::here("./DataBases/Censo2011/ShapeCenso2011.shp"))
-cuts <- stats::quantile(ShapeCenso2011$personaskm, probs = base::seq(0, 1, by = 0.1))
-pal <- leaflet::colorBin("RdYlBu", domain = ShapeCenso2011$personaskm, bins = cuts, reverse = TRUE)
+ShapeCenso2011$personaskm <- round(ShapeCenso2011$personaskm, digits = 0)
+cuts <- stats::quantile(ShapeCenso2011$personaskm,
+                        probs = base::c(0, 0.3, 0.4, 0.6, 0.8, 0.85, 0.9, 0.95, 0.96, 0.99, 0.995, 1))
+pal <- colorBin("RdYlBu", domain = ShapeCenso2011$personaskm, bins = cuts, reverse = T)
+
 ```
 
-Densidad poblacional (población por kilómetro cuadrado) según zona censal. En base al Censo 2011 de población del INE.
 
-```{r mapa_densidad_poblacional, out.width="100%"}
-l <- leaflet::leaflet(
-   data = ShapeCenso2011
-) %>%
-   leaflet::addTiles() %>%
-   leaflet::setView(
-      lng = -56.1,
-      lat =  -32,
-      zoom = 7
-   ) %>%
-   leaflet::addPolygons(
+
+```{r mapa_densidad_poblacional}
+
+l <- leaflet(ShapeCenso2011) %>%
+   addTiles() %>%
+   setView(-56.1, -32, zoom = 7)  %>%
+   addPolygons(
       fillColor = ~pal(personaskm),
       weight = 2,
       opacity = 1,
       color = "white",
       dashArray = "3",
       fillOpacity = 0.7,
-      highlight = leaflet::highlightOptions(
+      highlight = highlightOptions(
          weight = 5,
          color = "#666",
          dashArray = "",
          fillOpacity = 0.7,
          bringToFront = TRUE),
       label = ~personaskm,
-      labelOptions = leaflet::labelOptions(
-         style = base::list(
-            "font-weight" = "normal",
-            padding = "3px 8px"
-         ),
+      labelOptions = labelOptions(
+         style = list("font-weight" = "normal", padding = "3px 8px"),
          textsize = "15px",
-         direction = "auto"
-      )
-   ) %>%
-   leaflet::addLegend(
-      pal = pal,
-      values = ~pob,
-      opacity = 0.7,
-      title = NULL,
-      position = "bottomright"
-   )
+         direction = "auto")) %>%
+   addLegend(pal = pal, values = ~pob, opacity = 0.7, title = NULL,
+             position = "bottomright")
+
 widgetframe::frameWidget(l, height = '700')
 ```
 
 Fuente: elaborado en base al Censo 2011 del INE.
+
+Notas: la construcción de los intervalos busco diferenciar aquellos segmentos censales con mayor cantidad de personas por kilómetro cuadrado. Para ello, la distribución de los segmentos fue la siguiente:
+
+- primer grupo: 30% de los segmentos censales
+
+- segundo grupo: siguiente 10% de los segmentos censales
+
+- tercer grupo: siguiente 20% de los segmentos censales
+
+- cuarto grupo: siguiente 20% de los segmentos censales
+
+- quinto grupo: siguiente 5% de los segmentos censales
+
+- sexto grupo: siguiente 5% de los segmentos censales
+
+- séptimo grupo: siguiente 5% de los segmentos censales
+
+- octavo grupo: siguiente 1% de los segmentos censales
+
+- noveno grupo: siguiente 3% de los segmentos censales
+
+- décimo grupo: siguiente 0,5% de los segmentos censales
+
+- undécimo grupo: siguiente 0,5% de los segmentos censales
+
+\
+
+La distribución de la cantidad de personas por kilómetro cuadrado --censurada en 30.000-- se puede ver [aqui](https://raw.githubusercontent.com/UnaImagen/UnaImagen/master/DataBases/Censo2011/DistribucionPobKm2.jpeg).
