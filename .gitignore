@@ -41,13 +41,15 @@ vignettes/*.pdf
 # public sub directory
 /public/
 
-# DataBases/ECH/2018
-DataBases/ECH/2018/Bases ECH 2018_DAT.zip.rar
-DataBases/ECH/2018/H_2018_Terceros.dat
-DataBases/ECH/2018/HyP_2018_Terceros.dat
-DataBases/ECH/2018/P_2018_Terceros.dat
+# Encuesta Continua de Hogares 2018
+/DataBases/ECH/2018/Bases ECH 2018_DAT.zip.rar
+/DataBases/ECH/2018/H_2018_Terceros.dat
+/DataBases/ECH/2018/HyP_2018_Terceros.dat
+/DataBases/ECH/2018/P_2018_Terceros.dat
 
-# DataBses/Censo2011/ine
-DataBases/Censo2011/ine/
+# Encuesta Nacional de Gastos e Ingresos de los Hogares de 2016-2017
+/DataBases/ENGIH/ENGIH 2016 Base de Datos Gastos.sav
+/DataBases/ENGIH/ENGIH 2016 Base de Datos Personas.sav
 
-
+# Otros
+InfoServidores.PNG
