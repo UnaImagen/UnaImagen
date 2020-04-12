@@ -55,15 +55,24 @@ l <- leaflet::leaflet(ShapeCenso2011) %>%
       ),
       label = ~personaskm,
       labelOptions = leaflet::labelOptions(
-         style = base::list("font-weight" = "normal", padding = "3px 8px"),
+         style = base::list(
+            "font-weight" = "normal",
+            padding = "3px 8px"
+         ),
          textsize = "15px",
-         direction = "auto")) %>%
+         direction = "auto"
+      )
+   ) %>%
    leaflet::addLegend(
       pal = pal,
       values = ~pob,
       opacity = 0.7,
       title = NULL,
-      position = "bottomright"
+      position = "bottomright",
+      labFormat = leaflet::labelFormat(
+         digits = 0L,
+         big.mark = "."
+      )
    )
 widgetframe::frameWidget(l, height = '700')
 ```
