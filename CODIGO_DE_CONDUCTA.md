@@ -3,7 +3,7 @@
 
 ## 1. Objetivo
 
-El principal objetivo de "Una Imagen" es ser inclusive en el mayor número de colaboradores, con los más variados y diversos antedecentes posibles. 
+El principal objetivo de "Una Imagen" es incluir al mayor número de colaboradores, con los más variados y diversos antedecentes posibles. 
 Como resultado, nos comprometemos a proveer un entorno amigable, seguro y acogedor para todos, independientemente de su género, orientación sexual, habilidades, etnia, estatus socioeconómico, orientación política o religión (o falta de).
 
 El presente código de conducta presenta un resumen del comportamiento esperado para todos los participantes en la comunidad, así como las consecuencias de aquellos comportamientos inaceptables.
@@ -51,7 +51,7 @@ Los siguientes comportamientos se consideran acoso y son inaceptables dentro de 
  * La manipulación intencional de códigos, páginas o bases de datos con el objetivo de destruir, falsear, ocultar o inutilizar la información presentada en ellas. 
 
 
-## 5. Consequences of Unacceptable Behavior
+## 5. Consecuencias del comportamiento inaceptable
 
 No se tolerará el comportamiento inaceptable de ningún miembro de la comunidad, incluidos los patrocinadores y aquellos con autoridad para tomar decisiones.
 
