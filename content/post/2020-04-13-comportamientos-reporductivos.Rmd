@@ -1,0 +1,26 @@
+---
+title: Comportamientos Reporductivos
+author: Daniel Czarnievicz
+date: '2020-04-13'
+slug: comportamientos-reporductivos
+categories: []
+tags:
+  - uruguay
+  - población
+keywords:
+  - tech
+---
+
+¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijos? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijes que deseamos tener? ¿Los tenemos a la edad que los deseamos tener? Respuestas a esto y mucho más encontrarás en nuestra App.
+
+<!--more-->
+
+¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijos? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijes que deseamos tener? ¿Los tenemos a la edad que los deseamos tener? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta Nacional de Comportamientos Reproductivos del Instituto Nacional de Estadística (INE).
+
+<br>
+
+<iframe src="https://daczarne.shinyapps.io/AppENCoR/" style="height:800px; width:1000px;" allowfullscreen></iframe>
+
+Visite el app haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppENCoR/).
+
+Elaborado en base a datos del Instituto Nacional de Estadística (INE).
