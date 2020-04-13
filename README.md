@@ -10,6 +10,8 @@
 ![github issues closed](https://img.shields.io/github/issues-closed/daczarne/UnaImagen)
 ![github pull request open](https://img.shields.io/github/issues-pr/daczarne/UnaImagen)
 ![github pull request closed](https://img.shields.io/github/issues-pr-closed/daczarne/UnaImagen)
+![github repo size](https://img.shields.io/github/repo-size/UnaImagen/UnaImagen)
+![github code size](https://img.shields.io/github/languages/code-size/UnaImagen/UnaImagen)
 
 ![github social forks](https://img.shields.io/github/forks/daczarne/UnaImagen?label=Forks&style=social)
 ![github social stars](https://img.shields.io/github/stars/daczarne/UnaImagen?style=social)
