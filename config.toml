@@ -86,7 +86,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "conduct"
   name = "Conducta"
   pre = "<i class=\"sidebar-button-icon fa fa-code\"></i>"
-  url = "https://github.com/UnaImagen/UnaImagen/blob/master/CODIGO_DE_CONDUCTA.md"
+  url = "https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md"
 
 [params]
   # Customize date format use to render blog post date, categories and other
