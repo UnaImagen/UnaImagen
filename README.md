@@ -1,6 +1,6 @@
 # Una imagen vale más que mil palabras
 
-![maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
+![stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)
 ![licence](https://img.shields.io/github/license/daczarne/UnaImagen)
 ![github contributors](https://img.shields.io/github/contributors/daczarne/UnaImagen)
 ![github last commit](https://img.shields.io/github/last-commit/daczarne/UnaImagen)
