@@ -84,7 +84,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[menu.misc]]
   weight = 2
   identifier = "conduct"
-  name = "Conducta"
+  name = "de conducta"
   pre = "<i class=\"sidebar-button-icon fa fa-code\"></i>"
   url = "https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md"
 
