@@ -47,7 +47,7 @@ Es importante notar que tu mismo puedes bajar la información y realizar los cam
     - La información presentada no es correcta.  
     - El código utilizado no es claro.  
     
-    _Procedimiento_. La forma más sencilla es contactarnos a través del [siguiente correo](mailto:unaimagen.uy@gmail.com?subject=[Una Imagen]%20Corrección%20a%20página...). En particular, le pedimos que:
+    _Procedimiento_. La forma más sencilla es contactarnos a través del correo [unaimagen.uy@gmail.com](mailto:unaimagen.uy@gmail.com?subject=[Una%20Imagen]%20Corrección%20a%20página). En particular, le pedimos que:
     - Indique el nombre del post que requiere corrección.
     - Sea específico con relación al problema detectado (redacción, información, código, etc.).
     - Detalle de la forma más precisa posible la corrección propuesta.
@@ -64,7 +64,7 @@ Es importante notar que tu mismo puedes bajar la información y realizar los cam
     - Incorporar información a páginas ya existentes.
     - Diseñar nuevas páginas.
     
-La mejor forma es contactarnos a través del [siguiente correo](mailto:unaimagen.uy@gmail.com?subject=[Una Imagen]%20Quiero%20colaborar%20con%20UnaImagen). En el correo te pedimos que nos digas un breve detalle de la colaboración y nos indiques tu nombre de usuario de Github para poder agregarte.
+La mejor forma es contactarnos a través del correo [unaimagen.uy@gmail.com](mailto:unaimagen.uy@gmail.com?Subject=[Una%20Imagen]%20Quiero%20colaborar%20con%20UnaImagen). En el correo te pedimos que nos digas un breve detalle de la colaboración y nos indiques tu nombre de usuario de Github para poder agregarte.
 
 ## Te necesitamos
 
