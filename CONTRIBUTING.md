@@ -35,12 +35,13 @@ Por tanto, en todo momento se puede visualizar qué hizo el autor del post para 
 
 Hay múltiples formas de contribuir. Si bien cada autor pone su mayor esfuerzo en que el trabajo quede de la mejor manera, los errores son posibles y de distintos tipos.
 Aquí les presentamos una lista de las posibles colaboraciones.
-Es importante notar que tu mismo puedes bajar la información y realizar los cambios. **Tu colaboración es muy importante!**
+Es importante notar que tu mismo puedes bajar la información y realizar los cambios. **¡Tu colaboración es muy importante!**
 
-1. **Correcciones**. La forma más fácil es contactar al autor, en los siguientes casos:
-  * Errores de tipeo.
-  * La información presentada no es correcta.
-  * El código utilizado no es claro.
+1. **Correcciones**. La forma más fácil es contactar al autor, en los siguientes casos:  
+
+  * Errores de tipeo.  
+  * La información presentada no es correcta.  
+  * El código utilizado no es claro.  
 
 2. **Modificaciones**. En estos casos, lo mejor es que **tú mismo** hagas los cambios! La información debe estar disponible para realizarlo.
   * La información se puede presentar de forma diferente.
