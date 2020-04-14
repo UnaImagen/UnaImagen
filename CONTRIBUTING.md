@@ -14,10 +14,12 @@ Los lineamientos a continuación son una guía para colaborar, no son reglas.
 
 [Te necesitamos](#Te-necesitamos)
 
+
 ## Código de conducta
 
 Este proyecto y todos los que participan de el deben cumplir con el [Código de Conducta](CODE_OF_CONDUCT.md). Al participar, se espera que usted cumpla con este código.
 Cualquier comportamiento o contenido inapropiado debe ser reportado a [leandro.zipitria@gmail.com](mailto:leandro.zipitria@gmail.com).
+
 
 ## ¿Qué debo saber antes de empezar?
 
@@ -33,6 +35,7 @@ Todos los códigos de las páginas así como de las bases de datos están dispon
 
 Por tanto, en todo momento se puede visualizar qué hizo el autor del post para crear la visualización (qué bases utilizó y de dónde las obtuvo, cómo las procesó, y qué tipo de mapa utilizó).
 
+
 ## ¿Cómo puedo contribuir?
 
 Hay múltiples formas de contribuir. Si bien cada autor pone su mayor esfuerzo en que el trabajo quede de la mejor manera, los errores son posibles y de distintos tipos.
@@ -43,10 +46,17 @@ Es importante notar que tu mismo puedes bajar la información y realizar los cam
     - Errores de tipeo.  
     - La información presentada no es correcta.  
     - El código utilizado no es claro.  
+    
+    _Procedimiento_. En estos casos, la mejor forma de colaborar es abrir un "issue" en la siguiente ["página"](https://github.com/UnaImagen/UnaImagen/issues). 
+    A la derecha se presiona el botón "New issue". Allí se puede poner el título (ej. "Cambiar redacción página X", o "Información del año 2015 está incorrecta") y luego la descripción detallada del problema, principalmente sugierendo la corrección. 
+    Si se conoce el autor original del post, usted puede asignar a su autor el asunto, utilizando la opción "Assignees" que aparece a la derecha del campo para escribir el comentario. Ello permitirá que quién redactó el post pueda recibir el comentario y hacer las correcciones rápidamente.
 
 2. **Modificaciones**. En estos casos, lo mejor es que **tú mismo** hagas los cambios! La información debe estar disponible para realizarlo.
     - La información se puede presentar de forma diferente.
     - Se quiere agregar otras variables a la figura.
+    
+    _Procedimiento_. En estos casos, lo mejor es ir a la página principal del proyecto ["Una Imagen"](https://github.com/UnaImagen/UnaImagen) en Github y presionar el botón "Clone or download" que aparece en color verde a la derecha. Ello permite bajar en formato .zip todas las carpetas para realizar las modificaciones.
+    Una alternativa, si ya eres usuario de Github, es copiar todo el proyecto a tu propio repositorio. Ello se logra presionando el botón "Fork" que está arriba a la derecha de la página principal del proyecto.
   
 3. **Contribuciones**. ¿Tienes ideas para nuevas figuras/mapas/cuadros? ¡Pues adelante! La plataforma está pensada para que puedas utilizarla.
     - Nuevas presentaciones de información existente.
