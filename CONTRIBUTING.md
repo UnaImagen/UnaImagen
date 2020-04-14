@@ -25,9 +25,11 @@ Cualquier comportamiento o contenido inapropiado debe ser reportado a [leandro.z
 Cada uno de los colaboradores elige el tipo de información que quiere presentar y la forma de hacerlo. La idea general es que la misma sea autocontenida.
 Todos los códigos de las páginas así como de las bases de datos están disponibles.
 
-1. Las bases de datos están disponibles en la carpeta [DataBases](https://github.com/UnaImagen/UnaImagen/tree/master/DataBases). 
+1. Todas las bases son públicas y abiertas. Las mismas las puedes descargar de los organismos o páginas institucionales citadas en los post correspondientes. Adicionalmente, intentamos que todas esten disponibles en la carpeta [DataBases](https://github.com/UnaImagen/UnaImagen/tree/master/DataBases). Las bases de datos que no se encuentran allí es por que son demasiado grandes para subirlas a GitHub. No dudes en solicitarlas a [daniel.czarnievicz@gmail.com](mailto:daniel.czarnievicz@gmail.com) o [leandro.zipitria@gmail.com](mailto:leandro.zipitria@gmail.com).
 
-1. Todas las entradas del blog están disponibles en la carpeta [/content/post](https://github.com/UnaImagen/UnaImagen/tree/master/content/post).
+1. Dentro de la carpeta [DataBases](https://github.com/UnaImagen/UnaImagen/tree/master/DataBases) cada base tiene su propia carpeta. Allí podrás encontrar tanto los datos como los archivos de pre-procesado de los datos.
+
+1. Todas las entradas del blog están disponibles en la carpeta [/content/post](https://github.com/UnaImagen/UnaImagen/tree/master/content/post). Cuando los post contienen Apps, las mismas tienen su propio repositorio dentro de la organización, los cuales también son libres y abiertos.
 
 Por tanto, en todo momento se puede visualizar qué hizo el autor del post para crear la visualización (qué bases utilizó y de dónde las obtuvo, cómo las procesó, y qué tipo de mapa utilizó).
 
