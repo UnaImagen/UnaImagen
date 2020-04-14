@@ -38,23 +38,19 @@ Aquí les presentamos una lista de las posibles colaboraciones.
 Es importante notar que tu mismo puedes bajar la información y realizar los cambios. **¡Tu colaboración es muy importante!**
 
 1. **Correcciones**. La forma más fácil es contactar al autor, en los siguientes casos:  
+    - Errores de tipeo.  
+    - La información presentada no es correcta.  
+    - El código utilizado no es claro.  
 
-  - Errores de tipeo.  
-  
-  - La información presentada no es correcta.  
-  
-  - El código utilizado no es claro.  
-
-1. **Modificaciones**. En estos casos, lo mejor es que **tú mismo** hagas los cambios! La información debe estar disponible para realizarlo.
-  * La información se puede presentar de forma diferente.
-  * Se quiere agregar otras variables a la figura.
+2. **Modificaciones**. En estos casos, lo mejor es que **tú mismo** hagas los cambios! La información debe estar disponible para realizarlo.
+    - La información se puede presentar de forma diferente.
+    - Se quiere agregar otras variables a la figura.
   
 3. **Contribuciones**. ¿Tienes ideas para nuevas figuras/mapas/cuadros? Pues adelante! La plataforma está pensada para que puedas utilizarla.
-  * Nuevas presentaciones de información existente.
-  * Incorporar información a páginas ya existentes.
-  * Diseñar nuevas páginas.
-  
-  
+    - Nuevas presentaciones de información existente.
+    - Incorporar información a páginas ya existentes.
+    - Diseñar nuevas páginas.
+
 ## Te necesitamos
 
 La plataforma está disponible. Queremos que tu la utilices. También queremos que nos ayudes a expandirla. Uruguay tiene mucha información útil para la toma de decisiones.
