@@ -39,11 +39,13 @@ Es importante notar que tu mismo puedes bajar la información y realizar los cam
 
 1. **Correcciones**. La forma más fácil es contactar al autor, en los siguientes casos:  
 
-  * Errores de tipeo.  
-  * La información presentada no es correcta.  
-  * El código utilizado no es claro.  
+  - Errores de tipeo.  
+  
+  - La información presentada no es correcta.  
+  
+  - El código utilizado no es claro.  
 
-2. **Modificaciones**. En estos casos, lo mejor es que **tú mismo** hagas los cambios! La información debe estar disponible para realizarlo.
+1. **Modificaciones**. En estos casos, lo mejor es que **tú mismo** hagas los cambios! La información debe estar disponible para realizarlo.
   * La información se puede presentar de forma diferente.
   * Se quiere agregar otras variables a la figura.
   
