@@ -1,4 +1,4 @@
-# Como contribuir con "Una Imagen"
+# ¿Cómo contribuir con "Una Imagen"?
 
 En primer lugar, muchas gracias por contribuir con "Una Imagen". 
 Somos un proyecto colectivo con el objetivo de visualizar información sobre Uruguay.
@@ -46,7 +46,7 @@ Es importante notar que tu mismo puedes bajar la información y realizar los cam
     - La información se puede presentar de forma diferente.
     - Se quiere agregar otras variables a la figura.
   
-3. **Contribuciones**. ¿Tienes ideas para nuevas figuras/mapas/cuadros? Pues adelante! La plataforma está pensada para que puedas utilizarla.
+3. **Contribuciones**. ¿Tienes ideas para nuevas figuras/mapas/cuadros? ¡Pues adelante! La plataforma está pensada para que puedas utilizarla.
     - Nuevas presentaciones de información existente.
     - Incorporar información a páginas ya existentes.
     - Diseñar nuevas páginas.
