@@ -47,9 +47,10 @@ Es importante notar que tu mismo puedes bajar la información y realizar los cam
     - La información presentada no es correcta.  
     - El código utilizado no es claro.  
     
-    _Procedimiento_. En estos casos, la mejor forma de colaborar es abrir un "issue" en la siguiente ["página"](https://github.com/UnaImagen/UnaImagen/issues). 
-    A la derecha se presiona el botón "New issue". Allí se puede poner el título (ej. "Cambiar redacción página X", o "Información del año 2015 está incorrecta") y luego la descripción detallada del problema, principalmente sugierendo la corrección. 
-    Si se conoce el autor original del post, usted puede asignar a su autor el asunto, utilizando la opción "Assignees" que aparece a la derecha del campo para escribir el comentario. Ello permitirá que quién redactó el post pueda recibir el comentario y hacer las correcciones rápidamente.
+    _Procedimiento_. La forma más sencilla es contactarnos a través del [siguiente correo](mailto:unaimagen.uy@gmail.com?subject=[Una Imagen]%20Corrección%20a%20página...). En particular, le pedimos que:
+    - Indique el nombre del post que requiere corrección.
+    - Sea específico con relación al problema detectado (redacción, información, código, etc.).
+    - Detalle de la forma más precisa posible la corrección propuesta.
 
 2. **Modificaciones**. En estos casos, lo mejor es que **tú mismo** hagas los cambios! La información debe estar disponible para realizarlo.
     - La información se puede presentar de forma diferente.
@@ -62,6 +63,8 @@ Es importante notar que tu mismo puedes bajar la información y realizar los cam
     - Nuevas presentaciones de información existente.
     - Incorporar información a páginas ya existentes.
     - Diseñar nuevas páginas.
+    
+La mejor forma es contactarnos a través del [siguiente correo](mailto:unaimagen.uy@gmail.com?subject=[Una Imagen]%20Quiero%20colaborar%20con%20UnaImagen). En el correo te pedimos que nos digas un breve detalle de la colaboración y nos indiques tu nombre de usuario de Github para poder agregarte.
 
 ## Te necesitamos
 
