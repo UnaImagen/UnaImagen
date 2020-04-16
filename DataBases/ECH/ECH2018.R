@@ -8,41 +8,61 @@ library(haven)
 
 ### ------------ Poligonos vectoriales del INE -----------------------------
 
-# Disponible en: http://ine.gub.uy/documents/10181/18006/Mapas+Vectoriales+a%C3%B1o+2011/97dbcd58-80a8-472c-86cc-e8ecdaafef99
+# Archivo de polígonos vectoriales disponible en:
+# http://ine.gub.uy/documents/10181/18006/Mapas+Vectoriales+a%C3%B1o+2011/97dbcd58-80a8-472c-86cc-e8ecdaafef99
 
-# Departamentos
+
+## - Información de departamentos -
+
+# carga de la base
 mapaUydeptos <- read_sf(here::here("./DataBases/IneShapeFiles/ine_depto.shp"))
 colnames(mapaUydeptos)
-st_crs(mapaUydeptos) # no hay información
-mapaUydeptos = st_set_crs(mapaUydeptos, "+proj=utm +zone=21 +south") # no esta establecido el tipo de información
-st_crs(mapaUydeptos) # ahora si
-mapaUydeptos <- st_transform(mapaUydeptos, "+proj=longlat +datum=WGS84") # transformo info utm a lat long
+# no hay información sobre el tipo de información geográfica
+st_crs(mapaUydeptos)
+# fija el tipo de información de acuerdo al INE
+mapaUydeptos = st_set_crs(mapaUydeptos, "+proj=utm +zone=21 +south")
+# verifico informacion geográfica
+st_crs(mapaUydeptos)
+# transforma información utm a lat long
+mapaUydeptos <- st_transform(mapaUydeptos, "+proj=longlat +datum=WGS84")
 
-# Barrios de Montevideo
+
+## - Infromación de barrios de Montevideo -
+
+# carga de la base
 mapaMdeoBarrios <- read_sf(here::here("./DataBases/IneShapeFiles/ine_barrios_mvd_nbi85.shp"))
 colnames(mapaMdeoBarrios)
-st_crs(mapaMdeoBarrios) # no hay información
-mapaMdeoBarrios = st_set_crs(mapaMdeoBarrios, "+proj=utm +zone=21 +south") # no esta establecido el tipo de información
-st_crs(mapaMdeoBarrios) # ahora si
-mapaMdeoBarrios<- st_transform(mapaMdeoBarrios, "+proj=longlat +datum=WGS84") # transformo info utm a lat long
+# no hay información sobre el tipo de información geográfica
+st_crs(mapaMdeoBarrios)
+# fija el tipo de información de acuerdo al INE
+mapaMdeoBarrios = st_set_crs(mapaMdeoBarrios, "+proj=utm +zone=21 +south")
+# verifico informacion geográfica
+st_crs(mapaMdeoBarrios)
+# transforma información utm a lat long
+mapaMdeoBarrios<- st_transform(mapaMdeoBarrios, "+proj=longlat +datum=WGS84")
 
-# Union de shape files
+## - Union de shape files de departamentos y barrios -
+
 head(mapaUydeptos)
 colnames(mapaUydeptos)
 head(mapaMdeoBarrios)
 colnames(mapaMdeoBarrios)
+# asigno el mismo nombre a las variables
 colnames(mapaUydeptos)[1] <- colnames(mapaMdeoBarrios)[1]
+# restrinjo la información necesaria
 mapaUydeptos <- mapaUydeptos[,c(1,4,6)]
 mapaMdeoBarrios <- mapaMdeoBarrios[,c(1,2,4)]
+# asigno mismo nombre a variables
 colnames(mapaMdeoBarrios)[2] <- colnames(mapaUydeptos)[2]
+# eliminamos límite contestado del mapa
 mapaUydeptos <- mapaUydeptos[-which(mapaUydeptos$NOMBRE == "LIMITE CONTESTADO"),]
+# eliminamos Montevideo como departamento, para usar los barrios de la ciudad
 mapaUydeptos <- mapaUydeptos[-which(mapaUydeptos$NOMBRE == "MONTEVIDEO"),]
 
+# se crea el mapa
 mapa <- rbind(mapaUydeptos,mapaMdeoBarrios)
-
-# plot(mapa)
-#
-# mapaUy$CODSEG <- formatC(mapaUy$CODSEG, width=7, flag="0") # codigo segmento con 7 numeros
+# verifico que el mapa tenga la información
+plot(mapa)
 
 
 ### ------------ Información ECH 2018 -----------------------------
@@ -53,66 +73,43 @@ mapa <- rbind(mapaUydeptos,mapaMdeoBarrios)
 ing <- read_sav(here::here("./DataBases/ECH/2018/H_2018_Terceros.sav"))
 colnames(ing)
 
+# Utilizo las variables de interés, de acuerdo a la información de códigos
+# del archivo "Diccionario de Variables ECH 2018.xls"
 ing <- ing[,c(3,4,5,10,12,16,160)]
 head(ing)
 
-prueba <- ing %>% group_by(nomdpto) %>%
+# promedios de ingreso por departamento
+info_depto <- ing %>% group_by(nomdpto) %>%
    summarise(x = weighted.mean(YSVL, pesoano))
 
-prueba2 <- ing %>% group_by(nombarrio) %>%
+# promedios de ingreso por barrio de montevideo
+info_barrio <- ing %>% group_by(nombarrio) %>%
    summarise(x = weighted.mean(YSVL, pesoano))
-prueba2 <- prueba2[-1,]
+info_barrio <- info_barrio[-1,]
 
 # Arreglo nombre de barrios
-prueba2$NOMBRE <- sort(mapaMdeoBarrios$NOMBRE)
+info_barrio$NOMBRE <- sort(mapaMdeoBarrios$NOMBRE)
 
-prueba$ingUSD <- round(prueba$x / 30.725, digits = 0) # Dolar promedio tomado del Banco Mundial
-prueba2$ingUSD <- round(prueba2$x / 30.725, digits = 0)
+# Pas ingresos de pesos a dólares (dolar promedio 2018 tomado del Banco Mundial)
+info_depto$ingUSD <- round(info_depto$x / 30.725, digits = 0)
+info_barrio$ingUSD <- round(info_barrio$x / 30.725, digits = 0)
 
-# ajusto nombre de las bases
-colnames(prueba)[1] <- "NOMBRE"
-colnames(prueba2)[1] <- "NOMBRE"
+# ajusto nombre de las variables
+colnames(info_depto)[1] <- "NOMBRE"
+colnames(info_barrio)[1] <- "NOMBRE"
 
-base <- rbind(prueba, prueba2)
+# uno las bases de barrios y departamentos
+base <- rbind(info_depto, info_barrio)
 colnames(base)[2] <- "IngPesos"
 rm(ing)
 
 
-### ------------ Merge de bases  -----------------------------
+### ------------ Merge de bases de shape e información  -----------------------------
 
-
+# merge de bases de shape e información
 mapa <- merge(mapa, base, by = "NOMBRE")
+# guardar base final
 st_write(mapa, (here::here("./DataBases/ECH/2018/ShapeECH2018.shp")))
 
 
-#### ----------------- Grafico -----------------
-
-
-mapa <- read_sf(here::here("./DataBases/ECH/2018/ShapeECH2018.shp"))
-
-# display.brewer.all()
-pal <- colorNumeric(palette = "Blues", domain = mapa$ingUSD)
-
-leaflet(mapa) %>%
-   addTiles() %>%
-   setView(-56.1, -32, zoom = 7)  %>%
-   addPolygons(
-      fillColor = ~pal(ingUSD),
-      weight = 2,
-      opacity = 1,
-      color = "white",
-      dashArray = "3",
-      fillOpacity = 0.7,
-      highlight = highlightOptions(
-         weight = 5,
-         color = "#666",
-         dashArray = "",
-         fillOpacity = 0.7,
-         bringToFront = TRUE),
-      label = sprintf(paste0("%s: %s"," ", "UDS"), mapa$NOMBRE, mapa$ingUSD),
-      labelOptions = labelOptions(
-         style = list("font-weight" = "normal", padding = "3px 8px"),
-         textsize = "15px",
-         direction = "auto"))
-   # addLegend(pal = pal, values = ~pob, opacity = 0.7, title = NULL,
-   #           position = "bottomright")
+### ----------------- Fin de código -----------------
