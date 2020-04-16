@@ -83,7 +83,7 @@ Este código de conducta y sus procedimientos relacionados también se aplican a
 
 ## 9. Información de contacto
 
-leandro.zipitria@gmail.com, daniel.czarnievicz@gmail.com
+Correo electrónico de [Una Imagen](mailto:unaimagen.uy@gmail.com?Subject=[Una%20Imagen]%20Información)
 
 
 ## 10. Licencia and atribución
