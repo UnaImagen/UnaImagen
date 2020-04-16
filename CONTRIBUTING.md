@@ -65,10 +65,9 @@ Es importante notar que tu mismo puedes bajar la información y realizar los cam
     - Diseñar nuevas páginas.
     
 La mejor forma es contactarnos a través del correo [unaimagen.uy@gmail.com](mailto:unaimagen.uy@gmail.com?Subject=[Una%20Imagen]%20Quiero%20colaborar%20con%20UnaImagen). En el correo te pedimos que:
-
-    - nos indiques tu disposición a colaborar
-    - hagas un breve detalle de la colaboración que pretendes realizar (actualizar datos, crear nuevos cuadros, a via de ejemplo) 
-    - nos indiques tu nombre de usuario de Github para poder agregarte.
+* nos indiques tu disposición a colaborar
+* hagas un breve detalle de la colaboración que pretendes realizar (ej.: actualizar datos, crear nuevos cuadros) 
+* nos indiques tu nombre de usuario de Github para poder agregarte.
     
 La información que solicitamos es simplemente para llevar un registro de los compromisos asumidos por los colaboradores. Salvo que se violen las disposiciones del [Código de Conducta](CODE_OF_CONDUCT.md), no hay restricciones al ingreso.
 
