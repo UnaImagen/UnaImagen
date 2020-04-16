@@ -17,7 +17,7 @@
 ![github social stars](https://img.shields.io/github/stars/daczarne/UnaImagen?style=social)
 ![github social watchers](https://img.shields.io/github/watchers/daczarne/UnaImagen?label=Watchers&style=social)
 
-En este reporsitorio podrás encontrar todos los datos y códigos con los que se construyeron las visualizaciones publicadas en nuestra página. También podrás encontrar el código que construye la página. Los datos son libres y abiertos, así como también el código, por lo que sientete libre de forkear el repo y generar tus propios gráficos, mapas, y/o apps.
+En este reporsitorio podrás encontrar todos los datos y códigos con los que se construyeron las visualizaciones publicadas en nuestra página. También podrás encontrar el código que construye la página. Los datos son libres y abiertos, así como también el código, por lo que siéntete libre de forkear el repo y generar tus propios gráficos, mapas, y/o apps.
 
 Nuestro código de conducta está diponible en la siguiente [página](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md).
 

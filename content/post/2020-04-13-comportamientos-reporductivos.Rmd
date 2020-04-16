@@ -1,8 +1,8 @@
 ---
-title: Comportamientos Reporductivos
+title: Comportamientos Reproductivos
 author: Daniel Czarnievicz
 date: '2020-04-13'
-slug: comportamientos-reporductivos
+slug: comportamientos-reproductivos
 draft: false
 categories: []
 tags:
