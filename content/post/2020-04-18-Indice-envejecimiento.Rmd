@@ -73,6 +73,7 @@ l <- leaflet::leaflet(ShapeCenso2011) %>%
       opacity = 0.7,
       title = NULL,
       position = "bottomright",
+      na.label = "Sin dato",
       labFormat = leaflet::labelFormat(
          digits = 2L,
          big.mark = "."
@@ -87,7 +88,7 @@ Notas:
 
    * Los primeros 9 grupos tienen el 90% de las zonas censales en intervalos de 10% cada uno, mientras que los dos últimos grupos contienen el 10% restante. 
 
-   * NA indica aquellas zonas censales donde no hay personas en alguno o ambos grupos.
+   * Sin dato: indica aquellas zonas censales donde no hay personas en alguno o ambos grupos.
 
 
 La distribución del índice de envejecimiento --censurado en 6-- se puede ver [aqui](https://raw.githubusercontent.com/UnaImagen/UnaImagen/master/DataBases/Censo2011/IndiceEnvejecimiento.jpeg).
