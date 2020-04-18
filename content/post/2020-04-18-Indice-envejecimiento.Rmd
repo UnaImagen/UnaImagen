@@ -1,5 +1,5 @@
 ---
-title: Índice de envejecimiento
+title: "Uruguay: ¿país de viejos?"
 author: Leandro Zipitria
 date: '2020-04-18'
 slug: indice-envejecimiento
@@ -16,7 +16,10 @@ keywords:
 
 <!--more-->
 
-Índice de envejecimiento (población mayor de 65 años sobre población menor de 15 años) según zona censal. En base al Censo 2011 de población del INE.
+Índice de envejecimiento (población mayor de 65 años sobre población menor de 15 años) según zona censal.
+
+
+Valores menores a 1 indican que en ese segmento censal el número de adultos mayores es menor al de menores de 15, y a la inversa para valores mayores a 1.
 
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
@@ -80,8 +83,11 @@ widgetframe::frameWidget(l, height = '700')
 
 Fuente: elaborado en base al Censo 2011 del INE.
 
-Nota: Los primeros 9 grupos tienen el 90% de las zonas censales en intervalos de 10% cada uno, mientras que los dos últimos grupos contienen el 10% restante. NA indica aquellas zonas censales donde no hay personas en alguno o ambos grupos.
+Notas: 
 
-<br>
+   * Los primeros 9 grupos tienen el 90% de las zonas censales en intervalos de 10% cada uno, mientras que los dos últimos grupos contienen el 10% restante. 
+
+   * NA indica aquellas zonas censales donde no hay personas en alguno o ambos grupos.
+
 
 La distribución del índice de envejecimiento --censurado en 6-- se puede ver [aqui](https://raw.githubusercontent.com/UnaImagen/UnaImagen/master/DataBases/Censo2011/IndiceEnvejecimiento.jpeg).
