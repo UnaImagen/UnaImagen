@@ -210,7 +210,7 @@ htmltools::div(
 )
 ```
 
-**Para los uruguayos, ¿el cuidado debe ser tarea principalmente de la mujer?**
+**Para los uruguayos, ¿el cuidado de los hijos debe ser tarea principalmente de la mujer?**
 
 ```{r}
 htmltools::div(
