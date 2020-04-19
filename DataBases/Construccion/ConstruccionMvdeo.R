@@ -197,7 +197,7 @@ construccion %<>%
       )
    )
 
-readr::write_rds(x = construccion, path = "DataBases/Construccion/app/construccion.rds")
+readr::write_rds(x = construccion, path = "DataBases/Construccion/construccion.rds")
 
 #===============#
 #### THE END ####
