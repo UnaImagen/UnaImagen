@@ -191,7 +191,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
   # widgetframe-binding
 
+
+
+
   # Custom JS. Put here your custom JS files. They are loaded after the theme JS; they have to be referred from static root.
+
+  # d3
+  [[params.customJS]]
+    src = "rmarkdown-libs/d3/d3.min.js"
+
   # jquery
   [[params.customJS]]
     src = "rmarkdown-libs/jquery/jquery.min.js"
@@ -227,6 +235,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
   # plotly-htmlwidgets-css
 
+  # plotly-locale-es
+  [[params.customJS]]
+    src = "rmarkdown-libs/plotly-locale-es/es.js"
+
   # plotly-main
   [[params.customJS]]
     src = "rmarkdown-libs/plotly-main/plotly-latest.min.js"
@@ -243,6 +255,16 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     src = "rmarkdown-libs/pymjs/pym.v1.min.js"
 
   # rstudio_leaflet
+
+  # sankey
+  [[params.customJS]]
+    src = "rmarkdown-libs/sankey/sankey.js"
+  [[params.customJS]]
+    src = "rmarkdown-libs/sankey/d3-4.5.0/d3.min.js"
+
+  # sankeyNetwork-binding
+  [[params.customJS]]
+    src = "rmarkdown-libs/sankeyNetwork-binding/sankeyNetwork.js"
 
   # typedarray
   [[params.customJS]]
