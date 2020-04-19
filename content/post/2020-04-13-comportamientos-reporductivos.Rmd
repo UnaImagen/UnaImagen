@@ -12,16 +12,232 @@ keywords:
   - tech
 ---
 
-¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijes? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijes que deseamos tener? ¿Los tenemos a la edad que los deseamos tener? Respuestas a esto y mucho más encontrarás en nuestra App.
+¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijos? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijos que deseamos tener? ¿Los tenemos a la edad que los deseamos tener? Respuestas a esto y mucho más encontrarás en nuestra App.
 
 <!--more-->
 
-¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijes? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijes que deseamos tener? ¿Los tenemos a la edad que los deseamos tener? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta Nacional de Comportamientos Reproductivos del Instituto Nacional de Estadística (INE).
+¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijos? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijos que deseamos tener? ¿Los tenemos a la edad que los deseamos tener? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta Nacional de Comportamientos Reproductivos del Instituto Nacional de Estadística (INE).
+
+```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+   echo = FALSE,
+   message = FALSE,
+   warning = FALSE,
+   eval = TRUE,
+   error = FALSE
+)
+library(magrittr, quietly = TRUE)
+```
+
+```{r}
+encor <- readr::read_rds(path = here::here("./DataBases/ENCoR/encor.rds"))
+metodos_anticonceptivos <- readr::read_rds(path = here::here("./DataBases/ENCoR/metodos_anticonceptivos.rds"))
+```
+
+```{r functions}
+plotly_questions_one <- function(q, th) {
+   
+   titulo <- dplyr::case_when(
+      q == "cantidad_ideal_hijos" ~ "<b>Cantidad ideal de hijos</b>",
+      q == "edad_ideal_primer_hijo" ~ "<b>Edad ideal para primer hijo</b>"
+   )
+   
+   encor %>%
+      dplyr::mutate(
+         variable := !!rlang::sym(q)
+      ) %>%
+      dplyr::filter(
+         tuvo_hijos == th
+      ) %>%
+      base::droplevels() %>%
+      dplyr::group_by(
+         sexo,
+         variable
+      ) %>%
+      dplyr::summarise(
+         n = dplyr::n()
+      ) %>%
+      dplyr::mutate(
+         prop = n / base::sum(n)
+      ) %>%
+      plotly::plot_ly() %>%
+      plotly::add_trace(
+         x = ~variable,
+         y = ~prop,
+         color = ~sexo,
+         type = "bar",
+         hovertemplate = ~base::paste0(
+            "%{y:0.2%}"
+         )
+      ) %>%
+      plotly::layout(
+         xaxis = base::list(
+            title = titulo
+         ),
+         yaxis = base::list(
+            title = "<b>Porcentaje</b>",
+            tickformat = "%"
+         ),
+         legend = base::list(
+            title = base::list(
+               text = "<b>Sexo de quien<br>responde<b>"
+            ),
+            bgcolor = "#E2E2E2",
+            orientation = "h",
+            yanchor = "bottom",
+            xanchor = "left",
+            y = -.40
+         ),
+         hovermode = "x"
+      ) %>%
+      plotly::config(
+         locale = "es",
+         displayModeBar = TRUE
+      )
+   
+}
+
+plotly_question_motherhood <- function(q) {
+   
+   encor %>%
+      dplyr::mutate(
+         variable := !!rlang::sym(q)
+      ) %>%
+      dplyr::group_by(
+         sexo,
+         variable
+      ) %>%
+      dplyr::tally() %>%
+      dplyr::mutate(
+         prop = n / sum(n)
+      ) %>%
+      plotly::plot_ly() %>%
+      plotly::add_trace(
+         x = ~variable,
+         y = ~prop,
+         color = ~sexo,
+         type = "bar",
+         hovertemplate = ~base::paste0(
+            "%{y:0.2%}"
+         )
+      ) %>%
+      plotly::layout(
+         xaxis = base::list(
+            title = NA
+         ),
+         yaxis = base::list(
+            title = "<b>Porcentaje</b>",
+            tickformat = "%"
+         ),
+         legend = base::list(
+            title = base::list(
+               text = "<b>Sexo de quien<br>responde<b>"
+            ),
+            bgcolor = "#E2E2E2",
+            orientation = "h",
+            yanchor = "bottom",
+            xanchor = "left",
+            y = -.40
+         ),
+         hovermode = "x"
+      ) %>%
+      plotly::config(
+         locale = "es",
+         displayModeBar = TRUE
+      )
+   
+}
+
+generar_sankey <- function(.data, var_1, var_2) {
+   
+   var_1 <- "metodo_primera_relacion"
+   
+   var_2 <- "metodo_ultima_relacion"
+   
+   aux_data <- .data %>%
+      dplyr::group_by(
+         var_1 := !!rlang::sym(var_1),
+         var_2 := !!rlang::sym(var_2)
+      ) %>%
+      dplyr::summarise(
+         n = dplyr::n()
+      ) %>%
+      dplyr::ungroup() %>%
+      dplyr::filter(
+         stats::complete.cases(.)
+      ) %>%
+      dplyr::transmute(
+         source = var_1,
+         target = stringr::str_c(var_2, " "),
+         value = n
+      )
+   
+   # Define nodos
+   nodes <- base::data.frame(name = base::c(base::as.character(aux_data$source), base::as.character(aux_data$target)) %>% base::unique())
+   
+   # Agrega IDs con 0 indexing (porque JS usa 0 indexing)
+   aux_data$IDsource <- base::match(aux_data$source, nodes$name) - 1
+   aux_data$IDtarget <- base::match(aux_data$target, nodes$name) - 1
+   
+   # Construye el Sankey
+   networkD3::sankeyNetwork(
+      Links = base::as.data.frame(aux_data),
+      Nodes = nodes,
+      Source = "IDsource",
+      Target = "IDtarget",
+      Value = "value",
+      NodeID = "name",
+      sinksRight = FALSE,
+      nodeWidth = 40,
+      fontSize = 13,
+      nodePadding = 20
+   )
+   
+}
+```
 
 <br>
 
-<iframe src="https://daczarne.shinyapps.io/AppENCoR/" style="height:800px; width:1000px;" allowfullscreen></iframe>
+**¿Cuál es la cantidad ideal de hijos que los uruguayos queremos tener?**
 
-Visite el app haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppENCoR/).
+```{r}
+htmltools::div(
+   class = "row",
+   plotly_questions_one(
+      q = "cantidad_ideal_hijos",
+      th = "Sí"
+   )
+)
+```
+
+**Para los uruguayos, ¿el cuidado debe ser tarea principalmente de la mujer?**
+
+```{r}
+htmltools::div(
+   class = "row",
+   plotly_question_motherhood(
+      q = "cuidado_hijos_mujer_ppal"
+   )
+)
+```
+
+**¿Qué métodos anticonceptivos utilizamos los uruguayos?** (comparación entre los métodos utilizados en la primer y la última relación al momento de realizada la encuesta)
+
+```{r}
+htmltools::div(
+   class = "row",
+   generar_sankey(
+      .data = metodos_anticonceptivos,
+      var_1 = "Primer relación",
+      var_2 = "Última relación"
+   )
+)
+```
+
+<br>
+
+**¿Querés saber más?**
+
+Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppENCoR/). Tú elegís las preguntas, el App te da las respuestas.
 
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
