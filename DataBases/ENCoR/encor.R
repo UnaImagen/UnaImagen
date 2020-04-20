@@ -211,7 +211,8 @@ encor %<>%
       ## Un hombre se realiza plenamente cuando es padre
       varon_se_realiza_cuando_es_padre = forcats::as_factor(ina52_10),
 
-
+      ## ponderadores
+      peso
    ) %>%
    dplyr::select(
       sexo,
@@ -239,12 +240,13 @@ encor %<>%
       cuidado_hijos_mujer_ppal,
       mujer_se_realiza_cuando_es_madre,
       mujer_trabaja_full_perjudica_flia,
-      varon_se_realiza_cuando_es_padre
+      varon_se_realiza_cuando_es_padre,
 
+      peso
    ) %>%
    dplyr::distinct()
 
-readr::write_rds(x = encor, path = here::here("encore.rds"))
+readr::write_rds(x = encor, path = here::here("encor.rds"))
 
 
 # Métodos anticonceptivos -------------------------------------------------
@@ -287,6 +289,7 @@ metodos_anticonceptivos <- haven::read_sav(
    dplyr::select(
       numero,
       nper,
+      peso,
       sexo,
       tuvo_hijos,
       rango_edad,
@@ -302,6 +305,7 @@ primera_relacion <- metodos_anticonceptivos %>%
    dplyr::select(
       numero,
       nper,
+      peso,
       sexo,
       tuvo_hijos,
       rango_edad,
@@ -316,7 +320,8 @@ primera_relacion <- metodos_anticonceptivos %>%
       .funs = ~forcats::as_factor(stringr::str_to_sentence(forcats::as_factor(.)))
    ) %>%
    dplyr::mutate(
-      edad_primera_relacion = base::as.integer(base::as.character(edad_primera_relacion))
+      edad_primera_relacion = base::as.integer(base::as.character(edad_primera_relacion)),
+      peso = base::as.integer(base::as.character(peso))
    ) %>%
    tidyr::pivot_longer(
       cols = tidyselect::starts_with("ma25_"),

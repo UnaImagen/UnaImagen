@@ -55,7 +55,7 @@ plotly_questions_one <- function(q, th) {
          variable
       ) %>%
       dplyr::summarise(
-         n = dplyr::n()
+         n = base::sum(peso, na.rm = TRUE)
       ) %>%
       dplyr::mutate(
          prop = n / base::sum(n)
@@ -107,7 +107,9 @@ plotly_question_motherhood <- function(q) {
          sexo,
          variable
       ) %>%
-      dplyr::tally() %>%
+      dplyr::summarise(
+         n = base::sum(peso, na.rm = TRUE)
+      ) %>%
       dplyr::mutate(
          prop = n / sum(n)
       ) %>%
@@ -160,7 +162,7 @@ generar_sankey <- function(.data, var_1, var_2) {
          var_2 := !!rlang::sym(var_2)
       ) %>%
       dplyr::summarise(
-         n = dplyr::n()
+         n = base::sum(peso, na.rm = TRUE)
       ) %>%
       dplyr::ungroup() %>%
       dplyr::filter(
@@ -169,7 +171,7 @@ generar_sankey <- function(.data, var_1, var_2) {
       dplyr::transmute(
          source = var_1,
          target = stringr::str_c(var_2, " "),
-         value = n
+         value = n / base::sum(n)
       )
    
    # Define nodos
