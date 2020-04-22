@@ -22,3 +22,5 @@ En este reporsitorio podrás encontrar todos los datos y códigos con los que se
 Nuestro código de conducta está diponible en la siguiente [página](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md).
 
 El favicon y el gravatar de la página están licenciados bajo Creative Commons. La licencia puede hallarse en el siguiente [link](https://fontawesome.com/license). La imágen del Palacio Salvo fue tomada de [Wikipedia](https://en.wikipedia.org/wiki/Palacio_Salvo). Esta página fue construida utilizando [R blogdown](https://github.com/rstudio/blogdown) y [Hugo Tranquilpeak theme](https://github.com/kakawait/hugo-tranquilpeak-theme).
+
+![]("UmaImagen - Logo.jpeg")
