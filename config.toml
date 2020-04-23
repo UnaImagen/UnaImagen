@@ -30,18 +30,16 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [author]
   name = "Una imagen vale más que mil palabras"
-  # bio = "Super bio with markdown support **COOL**"
-  # job = "Your job title"
+  # bio = " "
+  # job = "Uruguay, en gráficos estadísticos"
   location = "Uruguay"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  # gravatarEmail = "daniel.czarnievicz@gmail.com"
+  # gravatarEmail = "unaimagen.uy@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "gravatar.svg"
   # Your Twitter username without the @. E.g : thibaudlepretre
   # twitter = "thibaudlepretre"
-  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
-  # googlePlus = "+ThibaudLepretre"
 
 # Menu Configuration
 [[menu.main]]
@@ -138,7 +136,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   autoThumbnailImage = false
 
   # Your favicon path, default is "/favicon.png"
-  favicon = "favicon.ico"
+  favicon = "una_imagen.ico"
 
   # Header configuration
   # The link at the right of the header is customizable. You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
