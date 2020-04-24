@@ -25,7 +25,7 @@ eutic %>%
       sexo = forcats::as_factor(p12),
       edad = base::as.integer(p13),
 
-      ## Uso de TIC
+      ## Uso de celular
       uso_celular = forcats::as_factor(p23),
       uso_smart_phone = forcats::as_factor(p23_1),
       uso_smart_phone = forcats::fct_collapse(
@@ -33,8 +33,14 @@ eutic %>%
          "Sí" = "Sí",
          "No" = "No",
          other_level = "Ns/Nc"
-      )
+      ),
+
+      ## Uso de tablet
+      uso_tablet = forcats::as_factor(p26),
+
+
    )
+
 
 x %>%
    group_by(
@@ -47,7 +53,7 @@ x %>%
    type = "bar"
 )
 
-table(eutic$p23_1, useNA = "always")
+table(eutic$p26, useNA = "always")
 levels(x$uso_smart_phone)
 
 #===============#
