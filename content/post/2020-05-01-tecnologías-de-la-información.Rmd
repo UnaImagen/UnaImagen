@@ -11,11 +11,11 @@ keywords:
   - tech
 ---
 
-¿Qué tecnologías de la información utilizamos los uruguayos? ¿Cuánto utilizamos Internet? ¿y las redes sociales?
+¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales?
 
 <!--more-->
 
-¿Qué tecnologías de la información utilizamos los uruguayos? ¿Cuánto utilizamos Internet? ¿y las redes sociales? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta de Usos de las Tecnologías de la Información y Comunicación del Instituto Nacional de Estadística (INE).
+¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta de Usos de las Tecnologías de la Información y Comunicación del Instituto Nacional de Estadística (INE).
 
 ```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
