@@ -22,6 +22,6 @@
 
 En este reporsitorio podrás encontrar todos los datos y códigos con los que se construyeron las visualizaciones publicadas en nuestra página. También podrás encontrar el código que construye la página. Los datos son libres y abiertos, así como también el código, por lo que siéntete libre de forkear el repo y generar tus propios gráficos, mapas, y/o apps.
 
-Nuestro código de conducta está diponible en la siguiente [página](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md).
+Nuestro código de conducta está diponible en la siguiente [página](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md). También puedes encontrar una guía explicativa de nuestro flujo de trabajo [aquí](https://github.com/UnaImagen/UnaImagen/blob/master/Flow.png).
 
 El favicon y el gravatar de la página están licenciados bajo Creative Commons. La licencia puede hallarse en el siguiente [link](https://fontawesome.com/license). La imágen del Palacio Salvo fue tomada de [Wikipedia](https://en.wikipedia.org/wiki/Palacio_Salvo). Esta página fue construida utilizando [R blogdown](https://github.com/rstudio/blogdown) y [Hugo Tranquilpeak theme](https://github.com/kakawait/hugo-tranquilpeak-theme).
