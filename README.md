@@ -12,6 +12,7 @@
 ![github issues closed](https://img.shields.io/github/issues-closed/UnaImagen/UnaImagen)
 ![github pull request open](https://img.shields.io/github/issues-pr/UnaImagen/UnaImagen)
 ![github pull request closed](https://img.shields.io/github/issues-pr-closed/UnaImagen/UnaImagen)
+
 ![github repo size](https://img.shields.io/github/repo-size/UnaImagen/UnaImagen)
 ![github code size](https://img.shields.io/github/languages/code-size/UnaImagen/UnaImagen)
 
