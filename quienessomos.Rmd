@@ -29,5 +29,7 @@ Una imagen es:
 
 **Leandro Zipitría** 
 
+![foto leandro](/Imagenes/lz.jpg){height=100px width=100px}
+
 Leandro es Doctor en Economía. Está afiliado al Departamento de Economía, Facultad de Ciencias Sociales, UdelaR. Trabaja principalmente en temas de regulacion, organización industrial y defensa de la competencia. Es investigador Nivel I por la ANII. Su página web está disponible [aquí](https://leandro-zipitria.com/).
 
