@@ -85,6 +85,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   name = "de conducta"
   pre = "<i class=\"sidebar-button-icon fa fa-code\"></i>"
   url = "https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md"
+[[menu.misc]]
+  weight = 3
+  identifier = "quienes-somos"
+  name = "¿Quiénes somos?"
+  pre = "<i class=\"sidebar-button-icon fas fa-user\"></i>"
+  url = "/page/quienes-somos/index.html"
 
 [params]
   # Customize date format use to render blog post date, categories and other
