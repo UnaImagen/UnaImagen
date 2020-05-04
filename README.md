@@ -2,7 +2,6 @@
 
 ![stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)
 ![licence](https://img.shields.io/github/license/daczarne/UnaImagen)
-![languages](https://img.shields.io/github/languages/count/UnaImagen/UnaImagen)
 
 ![github contributors](https://img.shields.io/github/contributors/daczarne/UnaImagen)
 ![github last commit](https://img.shields.io/github/last-commit/daczarne/UnaImagen)
@@ -15,6 +14,7 @@
 
 ![github repo size](https://img.shields.io/github/repo-size/UnaImagen/UnaImagen)
 ![github code size](https://img.shields.io/github/languages/code-size/UnaImagen/UnaImagen)
+![languages](https://img.shields.io/github/languages/count/UnaImagen/UnaImagen)
 
 ![github social forks](https://img.shields.io/github/forks/UnaImagen/UnaImagen?label=Forks&style=social)
 ![github social stars](https://img.shields.io/github/stars/UnaImagen/UnaImagen?style=social)
