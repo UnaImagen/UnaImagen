@@ -1,26 +1,93 @@
 ---
-title: "Quienes somos"
-author: "Una imagen"
-output: html_document
+title: "¿Quiénes somos?"
+showTags: false
+showPagination: false
+showSocial: false
+showDate: false
+comments: false
+showMeta: false
+showActions: false
 ---
 
-Bienvenidos a "Una imagen". Nuestro objetivo es hacer visible información sobre Uruguay, de forma que sea fácilmente interpretable. Trabajamos en [R](https://www.r-project.org/) utilizando la interfase [RStudio](https://rstudio.com/). Tenemos un [código de conducta](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md) que rije nuestro trabajo y el relacionamiento con los colaboradores.
+```{css, echo=FALSE}
+.miembro h2 {
 
-Todos los códigos están disponibles en el repositorio de ["Una imagen"](https://github.com/UnaImagen/UnaImagen) en Github, para ser visualizados y adaptados.
+   display: inline-block;
+   
+}
 
-Este es un repositorio abierto. Si quieres colaborar con nosotros, eres bienvenido o bienvenida! [Aquí](https://github.com/UnaImagen/UnaImagen/blob/master/CONTRIBUTING.md) puedes encontrar una guía de como colaborar con el Proyecto "Una imagen".
+.miembro img {
+   
+   height: 80px;
+   width: 80px;
+   border-radius: 50%;
+   display: inline-block;
+   float: left;
+   
+}
+```
+
+Bienvenidos a UnaImagen.uy!!
+
+Nuestro objetivo es hacer visible información sobre Uruguay, de forma que sea fácilmente interpretable. Tenemos un [código de conducta](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md) que rije nuestro trabajo y el relacionamiento con los colaboradores.
+
+Todos los códigos están disponibles en el repositorio de [UnaImagen.uy](https://github.com/UnaImagen/UnaImagen) en Github, para ser visualizados y adaptados.
+
+Este es un proyecto abierto. Si quieres colaborar con nosotros, eres bienvenido o bienvenida! [Aquí](https://github.com/UnaImagen/UnaImagen/blob/master/CONTRIBUTING.md) puedes encontrar la guía de colaboración con el proyecto UnaImagen.uy.
 
 Una imagen es:
 
-**Lucila Bonilla** (agregar foto y breve CV)
+<div class="miembro">
+   <img src="/img/LucilaBonilla.jpg"/>&nbsp;&nbsp;&nbsp;
+   <h2>Lucila Bonilla</h2>
+</div>
 
-**Daniel Czarnievicz** (agregar foto y breve CV)
+<div>
+Lula's bio
+</div>
 
-**Iael Klaczo** (agregar foto y breve CV)
+<br>
 
-**Paula Pereda**
+<div class="miembro">
+   <img src="/img/DanielCzarnievicz.jpg"/>&nbsp;&nbsp;&nbsp;
+   <h2>Daniel Czarnievicz</h2>
+</div>
 
-**Leandro Zipitría** 
+<div>
+Daniel es Licenciado en Economía (y próximamente en Estadística también). Ha trabajado en analítica tanto en el sector público como en el privado. Actualmente forma parte del equipo de estadística de PedidosYa.
+</div>
 
-Leandro es Doctor en Economía. Está afiliado al Departamento de Economía, Facultad de Ciencias Sociales, UdelaR. Trabaja principalmente en temas de regulacion, organización industrial y defensa de la competencia. Es investigador Nivel I por la ANII. Su página web está disponible [aquí](https://leandro-zipitria.com/).
+<br>
+
+<div class="miembro">
+   <img src="/img/IaelKlaczo.jpg"/>&nbsp;&nbsp;&nbsp;
+   <h2>Iael Klaczo</h2>
+</div>
+
+<div>
+Iael's bio
+</div>
+
+<br>
+
+<div class="miembro">
+   <img src="/img/PaulaPereda.jpg"/>&nbsp;&nbsp;&nbsp;
+   <h2>Paula Pereda</h2>
+</div>
+
+<div>
+Pau's bio
+</div>
+
+<br>
+
+<div class="miembro">
+   <img src="/img/LeandroZipitria.jpg"/>&nbsp;&nbsp;&nbsp;
+   <h2>Leandro Zipitría</h2>
+</div>
+
+<div>
+Leandro es Doctor en Economía. Está afiliado al Departamento de Economía, Facultad de Ciencias Sociales, UdelaR. Trabaja principalmente en temas de regulación, organización industrial y defensa de la competencia. Es investigador Nivel I por la ANII. Su página web está disponible [aquí](https://leandro-zipitria.com/).
+</div>
+
 
