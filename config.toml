@@ -88,8 +88,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[menu.misc]]
   weight = 3
   identifier = "quienes-somos"
-  name = "¿Quiénes somos?"
-  pre = "<i class=\"sidebar-button-icon fas fa-user\"></i>"
+  name = "Hay equipo!"
+  pre = "<i class=\"sidebar-button-icon fa fa-users\"></i>"
   url = "/page/quienes-somos/index.html"
 
 [params]
