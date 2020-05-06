@@ -27,13 +27,13 @@ showActions: false
 }
 ```
 
-Bienvenidos a UnaImagen.uy!!
+¡Bienvenidos a UnaImagen.uy!
 
-Nuestro objetivo es hacer visible información sobre Uruguay, de forma que sea fácilmente interpretable. Tenemos un [código de conducta](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md) que rije nuestro trabajo y el relacionamiento con los colaboradores.
+Nuestro objetivo es hacer visible información sobre Uruguay, de forma que sea fácilmente interpretable. Tenemos un [código de conducta](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md) que rige nuestro trabajo y el relacionamiento con los colaboradores.
 
 Todos los códigos están disponibles en el repositorio de [UnaImagen.uy](https://github.com/UnaImagen/UnaImagen) en Github, para ser visualizados y adaptados.
 
-Este es un proyecto abierto. Si quieres colaborar con nosotros, eres bienvenido o bienvenida! [Aquí](https://github.com/UnaImagen/UnaImagen/blob/master/CONTRIBUTING.md) puedes encontrar la guía de colaboración con el proyecto UnaImagen.uy.
+Este es un proyecto abierto. Si quieres colaborar con nosotros, ¡eres bienvenido o bienvenida! [Aquí](https://github.com/UnaImagen/UnaImagen/blob/master/CONTRIBUTING.md) puedes encontrar la guía de colaboración con el proyecto UnaImagen.uy.
 
 Una imagen es:
 
@@ -76,7 +76,7 @@ Iael's bio
 </div>
 
 <div>
-Pau's bio
+Paula es Licenciada en Economía y se encuentra cursando la Maestría en Economía en la FCEA. Actualmente trabaja en la Unidad de Evaluación y Monitoreo de la Secretaría de Transformación Productiva y Competitividad. Además es co-organizadora de [R-Ladies Montevideo](https://twitter.com/RLadiesMVD) y del [Grupo de Usuarios de R en Uruguay](https://twitter.com/gurumvd). Su página web está disponible [aquí](https://paubgood.com/).
 </div>
 
 <br>
