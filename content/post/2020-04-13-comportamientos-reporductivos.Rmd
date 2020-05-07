@@ -247,4 +247,4 @@ Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shiny
 
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
 
-Foto área de Punta del Este cortesia de Jimmy Baikovicius. Podes encontrar otras asombrosas fotos de nuestro país en su perfil de [flickr](https://www.flickr.com/photos/jikatu/).
+Foto aérea de Punta del Este cortesía de Jimmy Baikovicius. Podes encontrar otras asombrosas fotos de nuestro país en su perfil de [flickr](https://www.flickr.com/photos/jikatu/).

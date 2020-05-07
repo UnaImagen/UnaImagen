@@ -29,4 +29,4 @@ Visite el app haciendo click en el siguiente [link](https://daczarne.shinyapps.i
 
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
 
-Foto de la construcción de la rambla sur de Montevideo tomada del [Centro de Fotografía](http://cdf.montevideo.gub.uy/exposicion/rambla-sur-1923-1935-fotografias-del-cdf#) de la IMM.
+Foto de la construcción de la Rambla Sur de Montevideo tomada del [Centro de Fotografía](http://cdf.montevideo.gub.uy/exposicion/rambla-sur-1923-1935-fotografias-del-cdf#) de la IMM.
