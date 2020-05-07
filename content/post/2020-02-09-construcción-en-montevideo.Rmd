@@ -10,6 +10,9 @@ tags:
   - economía
 keywords:
   - tech
+coverImage: img/construccion-rambla-sur.jpg
+thumbnailImage: img/construccion-rambla-sur.jpg
+thumbnailImagePosition: left
 ---
 
 Evolución de la emisión de permisos de construcción en Montevideo.
@@ -25,3 +28,5 @@ Evolución de la emisión de permisos de construcción en Montevideo.
 Visite el app haciendo click en el siguiente [link](https://daczarne.shinyapps.io/DashConstruccion/).
 
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
+
+Foto de la construcción de la rambla sur de Montevideo tomada del [Centro de Fotografía](http://cdf.montevideo.gub.uy/exposicion/rambla-sur-1923-1935-fotografias-del-cdf#) de la IMM.
