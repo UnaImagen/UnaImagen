@@ -43,7 +43,7 @@ Una imagen es:
 </div>
 
 <div>
-Lula's bio
+Lucila es Licenciada en Economía por la UDELAR y próximamente estudiante de Maestría en Economía y Políticas Públicas. Trabajó como consultora y asistente de investigación en el sector público, organismos internacionales y sociedad civil. Actualmente forma parte del equipo de investigación de CERES.
 </div>
 
 <br>
