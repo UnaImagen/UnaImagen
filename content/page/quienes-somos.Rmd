@@ -37,15 +37,6 @@ Este es un proyecto abierto. Si quieres colaborar con nosotros, ¡eres bienvenid
 
 Una imagen es:
 
-<div class="miembro">
-   <img src="/img/LucilaBonilla.jpg"/>&nbsp;&nbsp;&nbsp;
-   <h2>Lucila Bonilla</h2>
-</div>
-
-<div>
-Lula's bio
-</div>
-
 <br>
 
 <div class="miembro">
@@ -55,28 +46,6 @@ Lula's bio
 
 <div>
 Daniel es Licenciado en Economía (y próximamente en Estadística también). Ha trabajado en analítica tanto en el sector público como en el privado. Actualmente forma parte del equipo de estadística de PedidosYa.
-</div>
-
-<br>
-
-<div class="miembro">
-   <img src="/img/IaelKlaczo.jpg"/>&nbsp;&nbsp;&nbsp;
-   <h2>Iael Klaczo</h2>
-</div>
-
-<div>
-Iael's bio
-</div>
-
-<br>
-
-<div class="miembro">
-   <img src="/img/PaulaPereda.jpg"/>&nbsp;&nbsp;&nbsp;
-   <h2>Paula Pereda</h2>
-</div>
-
-<div>
-Paula es Licenciada en Economía y se encuentra cursando la Maestría en Economía en la FCEA. Actualmente trabaja en la Unidad de Evaluación y Monitoreo de la Secretaría de Transformación Productiva y Competitividad. Además es co-organizadora de [R-Ladies Montevideo](https://twitter.com/RLadiesMVD) y del [Grupo de Usuarios de R en Uruguay](https://twitter.com/gurumvd). Su página web está disponible [aquí](https://paubgood.com/).
 </div>
 
 <br>
