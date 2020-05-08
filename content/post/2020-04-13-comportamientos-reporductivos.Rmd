@@ -10,6 +10,9 @@ tags:
   - población
 keywords:
   - tech
+coverImage: img/punta-del-este.jpg
+thumbnailImage: img/punta-del-este.jpg
+thumbnailImagePosition: left
 ---
 
 ¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijos? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijos que deseamos tener? ¿Los tenemos a la edad que los deseamos tener?
@@ -243,3 +246,5 @@ htmltools::div(
 Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppENCoR/). Tú elegís las preguntas, el App te da las respuestas.
 
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
+
+Foto aérea de Punta del Este cortesía de Jimmy Baikovicius. Podes encontrar otras asombrosas fotos de nuestro país en su perfil de [flickr](https://www.flickr.com/photos/jikatu/).

@@ -2,7 +2,6 @@
 
 ![stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)
 ![licence](https://img.shields.io/github/license/daczarne/UnaImagen)
-![languages](https://img.shields.io/github/languages/count/UnaImagen/UnaImagen)
 
 ![github contributors](https://img.shields.io/github/contributors/daczarne/UnaImagen)
 ![github last commit](https://img.shields.io/github/last-commit/daczarne/UnaImagen)
@@ -15,6 +14,7 @@
 
 ![github repo size](https://img.shields.io/github/repo-size/UnaImagen/UnaImagen)
 ![github code size](https://img.shields.io/github/languages/code-size/UnaImagen/UnaImagen)
+![languages](https://img.shields.io/github/languages/count/UnaImagen/UnaImagen)
 
 ![github social forks](https://img.shields.io/github/forks/UnaImagen/UnaImagen?label=Forks&style=social)
 ![github social stars](https://img.shields.io/github/stars/UnaImagen/UnaImagen?style=social)
@@ -24,4 +24,4 @@ En este reporsitorio podrás encontrar todos los datos y códigos con los que se
 
 Nuestro código de conducta está diponible en la siguiente [página](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md). También puedes encontrar una guía explicativa de nuestro flujo de trabajo [aquí](https://github.com/UnaImagen/UnaImagen/blob/master/Flow.png).
 
-El favicon y el gravatar de la página están licenciados bajo Creative Commons. La licencia puede hallarse en el siguiente [link](https://fontawesome.com/license). La imágen del Palacio Salvo fue tomada de [Wikipedia](https://en.wikipedia.org/wiki/Palacio_Salvo). Esta página fue construida utilizando [R blogdown](https://github.com/rstudio/blogdown) y [Hugo Tranquilpeak theme](https://github.com/kakawait/hugo-tranquilpeak-theme).
+El favicon y el gravatar de la página fueron diseñados por miembros de nuestro equipo. La imágen del Palacio Salvo fue tomada de [Wikipedia](https://en.wikipedia.org/wiki/Palacio_Salvo). La fuente de las imágenes de Uruguay utilizadas en los post figura al final de cada uno. Esta página fue construida utilizando [R blogdown](https://github.com/rstudio/blogdown) y [Hugo Tranquilpeak theme](https://github.com/kakawait/hugo-tranquilpeak-theme).

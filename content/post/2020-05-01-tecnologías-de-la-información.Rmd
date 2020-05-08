@@ -9,6 +9,9 @@ tags:
   - tecnología
 keywords:
   - tech
+coverImage: img/palmares-de-rocha.jpg
+thumbnailImage: img/palmares-de-rocha.jpg
+thumbnailImagePosition: left
 ---
 
 ¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales?
@@ -386,3 +389,5 @@ htmltools::div(
 Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppEUTIC/). Tú elegís las preguntas, el App te da las respuestas.
 
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
+
+Foto de los palmares de Rocha tomada del [portal oficial de turismo en Rocha](http://turismorocha.gub.uy/atractivos/naturaleza/palmares-de-rocha).
