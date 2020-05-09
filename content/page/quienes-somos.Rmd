@@ -65,7 +65,7 @@ Daniel es Licenciado en Economía (y próximamente en Estadística también). Ha
 </div>
 
 <div>
-Iael's bio
+Iael es Licenciada en Economía. Se encuentra terminando su tesis de maestría. Ha trabajado como analista de datos en el sector privado. Actualmente forma parte del Departamento de Economía de la Facultad de Ciencias Sociales y se desempeña como consultora independiente en análisis de datos. 
 </div>
 
 <br>
