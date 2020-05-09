@@ -89,5 +89,3 @@ Paula es Licenciada en Economía y se encuentra cursando la Maestría en Econom�
 <div>
 Leandro es Doctor en Economía. Está afiliado al Departamento de Economía, Facultad de Ciencias Sociales, UdelaR. Trabaja principalmente en temas de regulación, organización industrial y defensa de la competencia. Es investigador Nivel I por la ANII. Su página web está disponible [aquí](https://leandro-zipitria.com/).
 </div>
-
-
