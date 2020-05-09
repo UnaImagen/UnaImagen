@@ -53,3 +53,5 @@ vignettes/*.pdf
 
 # Otros
 InfoServidores.PNG
+*.DS_Store
+
