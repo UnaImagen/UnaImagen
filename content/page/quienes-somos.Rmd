@@ -76,7 +76,7 @@ Iael's bio
 </div>
 
 <div>
-Paula es Licenciada en Economía y se encuentra cursando la Maestría en Economía en la FCEA. Actualmente trabaja en la Unidad de Evaluación y Monitoreo de la Secretaría de Transformación Productiva y Competitividad. Además es co-organizadora de [R-Ladies Montevideo](https://twitter.com/RLadiesMVD) y del [Grupo de Usuarios de R en Uruguay](https://twitter.com/gurumvd). Su página web está disponible [aquí](https://paubgood.com/).
+Paula es Licenciada en Economía y se encuentra cursando la Maestría en Economía en la UDELAR. Actualmente trabaja en la Unidad de Evaluación y Monitoreo de la Secretaría de Transformación Productiva y Competitividad. Además es co-organizadora de [R-Ladies Montevideo](https://twitter.com/RLadiesMVD) y del [Grupo de Usuarios de R en Uruguay](https://twitter.com/gurumvd). Su página web está disponible [aquí](https://paubgood.com/).
 </div>
 
 <br>
