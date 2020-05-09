@@ -37,6 +37,8 @@ Este es un proyecto abierto. Si quieres colaborar con nosotros, ¡eres bienvenid
 
 Una imagen es:
 
+<br>
+
 <div class="miembro">
    <img src="/img/LucilaBonilla.jpg"/>&nbsp;&nbsp;&nbsp;
    <h2>Lucila Bonilla</h2>
@@ -87,5 +89,5 @@ Paula es Licenciada en Economía y se encuentra cursando la Maestría en Econom�
 </div>
 
 <div>
-Leandro es Doctor en Economía. Está afiliado al Departamento de Economía, Facultad de Ciencias Sociales, UdelaR. Trabaja principalmente en temas de regulación, organización industrial y defensa de la competencia. Es investigador Nivel I por la ANII. Su página web está disponible [aquí](https://leandro-zipitria.com/).
+Leandro es Doctor en Economía. Está afiliado al Departamento de Economía, Facultad de Ciencias Sociales, UdelaR. Trabaja principalmente en temas de regulación, organización industrial y defensa de la competencia. Es investigador Nivel I por el Sistema Nacional de Investigadores. Su página web está disponible [aquí](https://leandro-zipitria.com/).
 </div>

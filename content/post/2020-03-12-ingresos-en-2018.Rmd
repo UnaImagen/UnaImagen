@@ -33,8 +33,8 @@ mapa <- sf::read_sf(here::here("./DataBases/ECH/2018/ShapeECH2018.shp"))
 pal <- leaflet::colorNumeric(palette = "Blues", domain = mapa$ingUSD)
 ```
 
-```{r mapa_ingresos, fig.height = 8, fig.width = 10}
-leaflet::leaflet(
+```{r mapa_ingresos}
+l <- leaflet::leaflet(
    data = mapa
 ) %>%
    leaflet::addTiles() %>%
@@ -73,15 +73,16 @@ leaflet::leaflet(
             digits = 0L,
             big.mark = ".",
             decimal.mark = ","
-            ),
-         " dólares"
          ),
+         " dólares"
+      ),
       labelOptions = leaflet::labelOptions(
          style = base::list("font-weight" = "normal", padding = "3px 8px"),
          textsize = "15px",
          direction = "auto"
       )
    )
+widgetframe::frameWidget(l, height = '700')
 ```
 
 Fuente: elaborado en base a la Encuesta Continua de Hogares del 2018 del INE.
