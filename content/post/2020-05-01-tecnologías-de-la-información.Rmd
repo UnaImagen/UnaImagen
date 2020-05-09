@@ -18,6 +18,24 @@ thumbnailImagePosition: left
 
 <!--more-->
 
+```{css, echo=FALSE}
+td {
+   
+   white-space: nowrap;
+   text-align: left;
+   float: left;
+   
+}
+
+.miembro img {
+   
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   
+}
+```
+
 ¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta de Usos de las Tecnologías de la Información y Comunicación del Instituto Nacional de Estadística (INE).
 
 ```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
@@ -391,3 +409,14 @@ Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shiny
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
 
 Foto de los palmares de Rocha tomada del [portal oficial de turismo en Rocha](http://turismorocha.gub.uy/atractivos/naturaleza/palmares-de-rocha).
+
+***
+
+Publicado por:
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/DanielCzarnievicz.jpg"/></td>
+      <td class="miembro"><h6>Daniel Czarnievicz</h6></td>
+   </tr>
+<table>

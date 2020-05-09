@@ -19,6 +19,24 @@ thumbnailImagePosition: left
 
 <!--more-->
 
+```{css, echo=FALSE}
+td {
+   
+   white-space: nowrap;
+   text-align: left;
+   float: left;
+   
+}
+
+.miembro img {
+   
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   
+}
+```
+
 ¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijos? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijos que deseamos tener? ¿Los tenemos a la edad que los deseamos tener? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta Nacional de Comportamientos Reproductivos del Instituto Nacional de Estadística (INE).
 
 ```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
@@ -248,3 +266,14 @@ Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shiny
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
 
 Foto aérea de Punta del Este cortesía de Jimmy Baikovicius. Podes encontrar otras asombrosas fotos de nuestro país en su perfil de [flickr](https://www.flickr.com/photos/jikatu/).
+
+***
+
+Publicado por:
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/DanielCzarnievicz.jpg"/></td>
+      <td class="miembro"><h6>Daniel Czarnievicz</h6></td>
+   </tr>
+<table>
