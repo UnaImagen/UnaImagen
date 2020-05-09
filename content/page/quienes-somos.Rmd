@@ -61,7 +61,7 @@ Daniel es Licenciado en Economía (y próximamente en Estadística también). Ha
 
 <div class="miembro">
    <img src="/img/IaelKlaczo.jpg"/>&nbsp;&nbsp;&nbsp;
-   <h2>Iael Klaczo</h2>
+   <h2>Iael Klaczko</h2>
 </div>
 
 <div>
