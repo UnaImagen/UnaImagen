@@ -37,6 +37,8 @@ Este es un proyecto abierto. Si quieres colaborar con nosotros, ¡eres bienvenid
 
 Una imagen es:
 
+<br>
+
 <div class="miembro">
    <img src="/img/LucilaBonilla.jpg"/>&nbsp;&nbsp;&nbsp;
    <h2>Lucila Bonilla</h2>
