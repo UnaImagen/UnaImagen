@@ -52,7 +52,6 @@ library(magrittr, quietly = TRUE)
 
 ```{r}
 construccion <- readr::read_rds(path = here::here("DataBases/Construcción/construccion.rds"))
-yaxis2_title <- base::paste0("Superficie (en miles de ", expression("m"^"2"), ")")
 ```
 
 ```{r}
@@ -102,7 +101,7 @@ htmltools::div(
             title = NA
          ),
          yaxis = base::list(
-            title = "<b>Permisos</b>"
+            title = "<b>Permisos emitidos</b>"
          ),
          yaxis2 = base::list(
             title = base::paste0("<b>", "Superficie (en miles de m2)", "</b>"),
