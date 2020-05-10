@@ -10,23 +10,131 @@ tags:
   - economía
 keywords:
   - tech
-coverImage: img/construccion-rambla-sur.jpg
+coverImage: img/pocitos-areal.jpg
 thumbnailImage: img/construccion-rambla-sur.jpg
 thumbnailImagePosition: left
 ---
 
-Evolución de la emisión de permisos de construcción en Montevideo.
+¿Cuánto se construye en Montevideo? ¿Con qué fin?
 
 <!--more-->
 
-Evolución de la emisión de permisos de construcción en Montevideo.
+```{css, echo=FALSE}
+td {
+   
+   white-space: nowrap;
+   text-align: left;
+   float: left;
+   
+}
 
-<br>
+.miembro img {
+   
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   
+}
+```
 
-<iframe src="https://daczarne.shinyapps.io/DashConstruccion/" style="height:800px; width:1000px;" allowfullscreen></iframe>
+¿Cuánto se construye en Montevideo? ¿Con qué fin?
 
-Visite el app haciendo click en el siguiente [link](https://daczarne.shinyapps.io/DashConstruccion/).
+```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+   echo = FALSE,
+   message = FALSE,
+   warning = FALSE,
+   eval = TRUE,
+   error = FALSE
+)
+library(magrittr, quietly = TRUE)
+```
+
+```{r}
+construccion <- readr::read_rds(path = here::here("DataBases/Construcción/construccion.rds"))
+yaxis2_title <- base::paste0("Superficie (en miles de ", expression("m"^"2"), ")")
+```
+
+```{r}
+htmltools::div(
+   class = "row",
+   construccion %>% 
+      dplyr::group_by(
+         year
+      ) %>% 
+      dplyr::summarise(
+         permisos = base::sum(permisos, na.rm = TRUE),
+         superficie = base::sum(superficie, na.rm = TRUE)
+      ) %>% 
+      plotly::plot_ly() %>% 
+      plotly::add_trace(
+         x = ~year,
+         y = ~permisos,
+         type = "bar",
+         hovertemplate = ~base::paste0(
+            formattable::comma(
+               x = permisos,
+               digits = 0L,
+               big.mark = ".",
+               decimal.mark = ","
+            )
+         ),
+         name = "Permisos"
+      ) %>% 
+      plotly::add_trace(
+         x = ~year,
+         y = ~superficie / 1e3,
+         type = "scatter",
+         mode = "markers+lines",
+         yaxis = "y2",
+         hovertemplate = ~base::paste0(
+            formattable::comma(
+               x = superficie,
+               digits = 0L,
+               big.mark = ".",
+               decimal.mark = ","
+            )
+         ),
+         name = "Superficie"
+      ) %>% 
+      plotly::layout(
+         xaxis = base::list(
+            title = NA
+         ),
+         yaxis = base::list(
+            title = "<b>Permisos</b>"
+         ),
+         yaxis2 = base::list(
+            title = base::paste0("<b>", "Superficie (en miles de m2)", "</b>"),
+            overlaying = "y",
+            side = "right",
+            automargin = TRUE
+         ),
+         legend = base::list(
+            orientation = "h"
+         ),
+         hovermode = "x"
+      ) %>% 
+      plotly::config(
+         locale = "es",
+         displayModeBar = TRUE
+      )
+)
+```
+
+¿Te gustaría saber cómo se distribuyeron los permisos? Visitá nuestra App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/DashConstruccion/).
 
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
 
-Foto de la construcción de la Rambla Sur de Montevideo tomada del [Centro de Fotografía](http://cdf.montevideo.gub.uy/exposicion/rambla-sur-1923-1935-fotografias-del-cdf#) de la IMM.
+Foto aérea de Pocitos cortesía de Jimmy Baikovicius. Podes encontrar otras asombrosas fotos de nuestro país en su perfil de [flickr](https://www.flickr.com/photos/jikatu/).
+
+***
+
+Publicado por:
+
+<table>
+<tr>
+<td class="miembro"><img src="/img/DanielCzarnievicz.jpg"/></td>
+<td class="miembro"><h6>Daniel Czarnievicz</h6></td>
+</tr>
+<table>
