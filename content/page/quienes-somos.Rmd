@@ -9,24 +9,6 @@ showMeta: false
 showActions: false
 ---
 
-```{css, echo=FALSE}
-.miembro h2 {
-
-   display: inline-block;
-   
-}
-
-.miembro img {
-   
-   height: 80px;
-   width: 80px;
-   border-radius: 50%;
-   display: inline-block;
-   float: left;
-   
-}
-```
-
 ¡Bienvenidos a UnaImagen.uy!
 
 Nuestro objetivo es hacer visible información sobre Uruguay, de forma que sea fácilmente interpretable. Tenemos un [código de conducta](https://github.com/UnaImagen/UnaImagen/blob/master/CODE_OF_CONDUCT.md) que rige nuestro trabajo y el relacionamiento con los colaboradores.
@@ -91,3 +73,21 @@ Paula es Licenciada en Economía y se encuentra cursando la Maestría en Econom�
 <div>
 Leandro es Doctor en Economía. Está afiliado al Departamento de Economía, Facultad de Ciencias Sociales, UdelaR. Trabaja principalmente en temas de regulación, organización industrial y defensa de la competencia. Es investigador Nivel I por el Sistema Nacional de Investigadores. Su página web está disponible [aquí](https://leandro-zipitria.com/).
 </div>
+
+```{css, echo=FALSE}
+.miembro h2 {
+
+   display: inline-block;
+   
+}
+
+.miembro img {
+   
+   height: 80px;
+   width: 80px;
+   border-radius: 50%;
+   display: inline-block;
+   float: left;
+   
+}
+```
