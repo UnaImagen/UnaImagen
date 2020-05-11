@@ -36,7 +36,7 @@ td {
 }
 ```
 
-¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta de Usos de las Tecnologías de la Información y Comunicación del Instituto Nacional de Estadística (INE).
+¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta de Usos de las Tecnologías de la Información y Comunicación (edición 2016) del Instituto Nacional de Estadística ([INE](http://www.ine.gub.uy/)) y la Agencia de Gobierno Electrónico y Sociedad de la Información y del Conocimiento ([AGESIC](https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/)). 
 
 ```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
@@ -405,8 +405,6 @@ htmltools::div(
 **¿Querés saber más?**
 
 Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppEUTIC/). Tú elegís las preguntas, el App te da las respuestas.
-
-Elaborado en base a datos del Instituto Nacional de Estadística (INE).
 
 Foto de los palmares de Rocha tomada del [portal oficial de turismo en Rocha](http://turismorocha.gub.uy/atractivos/naturaleza/palmares-de-rocha).
 
