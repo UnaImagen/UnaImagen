@@ -414,13 +414,13 @@ htmltools::div(
 
 **¿Querés saber más?**
 
-Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppEUTIC/). Tú elegís las preguntas, el App te da las respuestas.
+Vistiá mi App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppEUTIC/). Tú elegís las preguntas, el App te da las respuestas.
 
 Foto de los palmares de Rocha tomada del [portal oficial de turismo en Rocha](http://turismorocha.gub.uy/atractivos/naturaleza/palmares-de-rocha).
 
 ***
 
-Publicado por:
+Publicación y App por:
 
 <table>
    <tr>
@@ -428,7 +428,6 @@ Publicado por:
       <td class="miembro"><h6>Daniel Czarnievicz</h6></td>
    </tr>
 <table>
-
 
 ```{r, include=FALSE}
 base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")

@@ -271,13 +271,13 @@ htmltools::div(
 
 **¿Querés saber más?**
 
-Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppENCoR/). Tú elegís las preguntas, el App te da las respuestas.
+Vistiá mi App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppENCoR/). Tú elegís las preguntas, el App te da las respuestas.
 
 Foto aérea de Punta del Este cortesía de Jimmy Baikovicius. Podes encontrar otras asombrosas fotos de nuestro país en su perfil de [flickr](https://www.flickr.com/photos/jikatu/).
 
 ***
 
-Publicado por:
+Publicación y App por:
 
 <table>
    <tr>
@@ -285,7 +285,6 @@ Publicado por:
       <td class="miembro"><h6>Daniel Czarnievicz</h6></td>
    </tr>
 <table>
-
 
 ```{r, include=FALSE}
 base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")

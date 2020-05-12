@@ -188,7 +188,7 @@ htmltools::div(
 )
 ```
 
-¿Te gustaría saber cómo se distribuyeron los permisos? Visitá nuestra App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/DashConstruccion/).
+¿Te gustaría saber cómo se distribuyeron los permisos? Visitá mi App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/DashConstruccion/).
 
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
 
@@ -196,7 +196,7 @@ Foto aérea de Pocitos cortesía de Jimmy Baikovicius. Podés encontrar esta y o
 
 ***
 
-Publicado por:
+Publicación y App por:
 
 <table>
    <tr>
