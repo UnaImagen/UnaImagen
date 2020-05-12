@@ -119,7 +119,7 @@ Notas:
    * Sin dato: indica aquellas zonas censales donde no hay personas en alguno o ambos grupos.
 
 
-La distribución del índice de envejecimiento --censurado en 6-- se puede ver [aqui](https://raw.githubusercontent.com/UnaImagen/UnaImagen/master/DataBases/Censo2011/IndiceEnvejecimiento.jpeg).
+La distribución del índice de envejecimiento --censurado en 6-- se puede ver [aqui](https://raw.githubusercontent.com/UnaImagen/UnaImagen/master/DataBases/Censo2011/IndiceEnvejecimiento.jpeg). 
 
 
 ***
