@@ -36,7 +36,16 @@ td {
 }
 ```
 
-¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta de Usos de las Tecnologías de la Información y Comunicación (edición 2016) del Instituto Nacional de Estadística ([INE](http://www.ine.gub.uy/)) y la Agencia de Gobierno Electrónico y Sociedad de la Información y del Conocimiento ([AGESIC](https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/)). 
+```{js, echo=FALSE}
+(function() {
+   var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+   link.rel = 'icon';
+   link.href = 'https://www.unaimagen.uy/una_imagen.ico';
+   document.getElementsByTagName('head')[0].appendChild(link);
+})();
+```
+
+¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta de Usos de las Tecnologías de la Información y Comunicación (2016) del Instituto Nacional de Estadística ([INE](http://www.ine.gub.uy/)) y la Agencia de Gobierno Electrónico y Sociedad de la Información y del Conocimiento ([AGESIC](https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/)). 
 
 ```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
@@ -44,7 +53,8 @@ knitr::opts_chunk$set(
    message = FALSE,
    warning = FALSE,
    eval = TRUE,
-   error = FALSE
+   error = FALSE,
+   comment = ""
 )
 library(magrittr, quietly = TRUE)
 ```
@@ -418,3 +428,12 @@ Publicado por:
       <td class="miembro"><h6>Daniel Czarnievicz</h6></td>
    </tr>
 <table>
+
+
+```{r, include=FALSE}
+base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
+```
+
+```{r}
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de %B de %Y")))
+```
