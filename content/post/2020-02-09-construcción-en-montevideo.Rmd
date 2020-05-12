@@ -19,7 +19,7 @@ thumbnailImagePosition: left
 
 <!--more-->
 
-<link rel="icon" href="http://www.unaimagen.uy/una_imagen.ico"/>
+<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
 
 ```{css, echo=FALSE}
 td {
@@ -37,6 +37,15 @@ td {
    border-radius: 50%;
    
 }
+```
+
+```{js, echo=FALSE}
+(function() {
+    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.rel = 'icon';
+    link.href = 'https://www.unaimagen.uy/una_imagen.ico';
+    document.getElementsByTagName('head')[0].appendChild(link);
+})();
 ```
 
 ¿Cuánto se construye en Montevideo? ¿Con qué fin?
