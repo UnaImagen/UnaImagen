@@ -37,7 +37,16 @@ td {
 }
 ```
 
-¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijos? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijos que deseamos tener? ¿Los tenemos a la edad que los deseamos tener? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta Nacional de Comportamientos Reproductivos del Instituto Nacional de Estadística (INE).
+```{js, echo=FALSE}
+(function() {
+   var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+   link.rel = 'icon';
+   link.href = 'https://www.unaimagen.uy/una_imagen.ico';
+   document.getElementsByTagName('head')[0].appendChild(link);
+})();
+```
+
+¿Qué ideales y actitudes tenemos los uruguayos sobre la fecundidad y la crianza de los hijos? ¿Qué métodos anticonceptivos utilizamos? ¿Tenemos la cantidad de hijos que deseamos tener? ¿Los tenemos a la edad que los deseamos tener? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta Nacional de Comportamientos Reproductivos (2015) del Instituto Nacional de Estadística ([INE](http://www.ine.gub.uy/)).
 
 ```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
@@ -45,7 +54,8 @@ knitr::opts_chunk$set(
    message = FALSE,
    warning = FALSE,
    eval = TRUE,
-   error = FALSE
+   error = FALSE,
+   comment = ""
 )
 library(magrittr, quietly = TRUE)
 ```
@@ -263,8 +273,6 @@ htmltools::div(
 
 Vistiá nuestra App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppENCoR/). Tú elegís las preguntas, el App te da las respuestas.
 
-Elaborado en base a datos del Instituto Nacional de Estadística (INE).
-
 Foto aérea de Punta del Este cortesía de Jimmy Baikovicius. Podes encontrar otras asombrosas fotos de nuestro país en su perfil de [flickr](https://www.flickr.com/photos/jikatu/).
 
 ***
@@ -277,3 +285,12 @@ Publicado por:
       <td class="miembro"><h6>Daniel Czarnievicz</h6></td>
    </tr>
 <table>
+
+
+```{r, include=FALSE}
+base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
+```
+
+```{r}
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de %B de %Y")))
+```
