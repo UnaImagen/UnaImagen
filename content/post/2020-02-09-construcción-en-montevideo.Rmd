@@ -19,7 +19,7 @@ thumbnailImagePosition: left
 
 <!--more-->
 
-<link rel="icon" href="https://github.com/UnaImagen/UnaImagen/blob/master/una_imagen.ico"/>
+<link rel="icon" href="http://www.unaimagen.uy/una_imagen.ico"/>
 
 ```{css, echo=FALSE}
 td {
