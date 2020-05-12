@@ -48,7 +48,7 @@ td {
 })();
 ```
 
-¿Cuánto se construye en Montevideo? ¿Con qué fin?
+**¿Cuánto se construye en Montevideo?** ¡Dale Play al gráfico y enterate!
 
 ```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
@@ -192,7 +192,7 @@ htmltools::div(
 
 Elaborado en base a datos del Instituto Nacional de Estadística (INE).
 
-Foto aérea de Pocitos cortesía de Jimmy Baikovicius. Podes encontrar otras asombrosas fotos de nuestro país en su perfil de [flickr](https://www.flickr.com/photos/jikatu/).
+Foto aérea de Pocitos cortesía de Jimmy Baikovicius. Podés encontrar esta y otras asombrosas fotos de nuestro país en su perfil de [flickr](https://www.flickr.com/photos/jikatu/).
 
 ***
 
@@ -210,5 +210,5 @@ base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
 ```
 
 ```{r}
-base::cat(base::paste0("Ultima revisión: ", format(Sys.time(), "%d de %B de %Y")))
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de %B de %Y")))
 ```
