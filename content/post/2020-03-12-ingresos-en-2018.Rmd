@@ -11,11 +11,34 @@ keywords:
   - tech
 ---
 
-Ingresos promedio en dólares del año 2018, por departamento y barrio para Montevideo.
+Ingresos promedio de los hogares en dólares del año 2018, por departamento y barrio para Montevideo.
 
 <!--more-->
 
-Ingresos promedio en dólares del año 2018, por departamento y barrio para Montevideo. 
+
+<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+
+```{css, echo=FALSE}
+td {
+   
+   white-space: nowrap;
+   text-align: left;
+   float: left;
+   
+}
+
+.miembro img {
+   
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   
+}
+```
+
+
+
+Ingresos promedio de los hogares en dólares del año 2018, por departamento y barrio para Montevideo. 
 
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
@@ -23,7 +46,8 @@ knitr::opts_chunk$set(
    message = FALSE,
    warning = FALSE,
    eval = TRUE,
-   error = FALSE
+   error = FALSE,
+   comment = ""
 )
 library(magrittr, quietly = TRUE)
 ```
@@ -39,9 +63,14 @@ l <- leaflet::leaflet(
 ) %>%
    leaflet::addTiles() %>%
    leaflet::setView(
-      lng = -56.1,
-      lat =  -32,
-      zoom = 7
+      # centrado Uruguay
+      # lng = -56.1,
+      # lat =  -32,
+      # zoom = 7
+      # centrado en Montevideo
+      lng = -56.13,
+      lat =  -34.88,
+      zoom = 12
    ) %>% 
    leaflet::addPolygons(
       fillColor = ~pal(ingUSD),
@@ -86,3 +115,26 @@ widgetframe::frameWidget(l, height = '700')
 ```
 
 Fuente: elaborado en base a la Encuesta Continua de Hogares del 2018 del INE.
+
+Nota: el ingreso está definido sin valor locativo y sin servicio doméstico.
+
+***
+
+Publicación: 
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/LeandroZipitria.jpg"/></td>
+      <td class="miembro"><h6>Leandro Zipitría</h6></td>
+   </tr>
+<table>
+
+
+```{r, include=FALSE}
+base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
+```
+
+```{r}
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de %B de %Y")))
+```
+
