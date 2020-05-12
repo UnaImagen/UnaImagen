@@ -414,7 +414,7 @@ htmltools::div(
 
 **¿Querés saber más?**
 
-Vistiá mi App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppEUTIC/). Tú elegís las preguntas, el App te da las respuestas.
+Visitá mi App haciendo click en el siguiente [link](https://daczarne.shinyapps.io/AppEUTIC/). Tú elegís las preguntas, la App te da las respuestas.
 
 Foto de los palmares de Rocha tomada del [portal oficial de turismo en Rocha](http://turismorocha.gub.uy/atractivos/naturaleza/palmares-de-rocha).
 
