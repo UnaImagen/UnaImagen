@@ -15,6 +15,27 @@ Densidad poblacional (población por kilómetro cuadrado) según zona censal. En
 
 <!--more-->
 
+<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+
+```{css, echo=FALSE}
+td {
+   
+   white-space: nowrap;
+   text-align: left;
+   float: left;
+   
+}
+
+.miembro img {
+   
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   
+}
+```
+
+
 Densidad poblacional (población por kilómetro cuadrado) según zona censal. En base al Censo 2011 de población del INE.
 
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
@@ -23,7 +44,8 @@ knitr::opts_chunk$set(
    message = FALSE,
    warning = FALSE,
    eval = TRUE,
-   error = FALSE
+   error = FALSE,
+   comment = ""
 )
 library(magrittr, quietly = TRUE)
 ```
@@ -38,7 +60,13 @@ pal <- leaflet::colorBin("RdYlBu", domain = ShapeCenso2011$personaskm, bins = cu
 ```{r mapa_densidad_poblacional}
 l <- leaflet::leaflet(ShapeCenso2011) %>%
    leaflet::addTiles() %>%
-   leaflet::setView(-56.1, -32, zoom = 7)  %>%
+   leaflet::setView(      
+      # muestra todo el país
+      #-56.1, -32, zoom = 7
+      # centrado en Montevideo
+      lng = -56.13,
+      lat =  -34.88,
+      zoom = 12)  %>%
    leaflet::addPolygons(
       fillColor = ~pal(personaskm),
       weight = 2,
@@ -106,3 +134,24 @@ Notas: la construcción de los intervalos busco diferenciar aquellos segmentos c
 <br>
 
 La distribución de la cantidad de personas por kilómetro cuadrado --censurada en 30.000-- se puede ver [aqui](https://raw.githubusercontent.com/UnaImagen/UnaImagen/master/DataBases/Censo2011/DistribucionPobKm2.jpeg).
+
+***
+
+Publicación: 
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/LeandroZipitria.jpg"/></td>
+      <td class="miembro"><h6>Leandro Zipitría</h6></td>
+   </tr>
+<table>
+
+
+```{r, include=FALSE}
+base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
+```
+
+```{r}
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de %B de %Y")))
+```
+
