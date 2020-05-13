@@ -1,0 +1,139 @@
+---
+title: "¿Cuántos bebés nacen por cesárea en Uruguay?"
+author: "Lucila Bonilla"
+date: "2020-05-13"
+slug: cesareas-ASSE
+categories: []
+tags: 
+ - salud
+ - uruguay
+keywords:
+ - tech
+ 
+---
+
+Índice de Cesáreas en hospitales públicos en 2019, por departamento.
+
+<!--more-->
+
+
+<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+
+```{css, echo=FALSE}
+td {
+   
+   white-space: nowrap;
+   text-align: left;
+   float: left;
+   
+}
+.miembro img {
+   
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   
+}
+```
+
+Índice de Cesáreas en hospitales públicos en 2019, por departamento.
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+   echo = FALSE,
+   message = FALSE,
+   warning = FALSE,
+   eval = TRUE,
+   error = FALSE,
+   comment = ""
+)
+library(magrittr, quietly = TRUE)
+```
+
+```{r carga_datos}
+mapa <- sf::read_sf(here::here("./DataBases/ASSE/ShapeASSE2019.shp"))
+pal <- leaflet::colorNumeric(palette = "Blues", domain = mapa$ind_ces)
+```
+
+```{r mapa_cesareas}
+l <- leaflet::leaflet(
+   data = mapa
+) %>%
+   leaflet::addTiles() %>%
+   leaflet::setView(
+      #centrado Uruguay
+      lng = -56.1,
+      lat =  -32,
+      zoom = 7
+      # centrado en Montevideo
+      # lng = -56.13,
+      # lat =  -34.88,
+      # zoom = 12
+   ) %>% 
+   leaflet::addPolygons(
+      fillColor = ~pal(ind_ces),
+      weight = 2,
+      opacity = 1,
+      color = "white",
+      dashArray = "3",
+      fillOpacity = 0.7,
+      highlight = leaflet::highlightOptions(
+         weight = 5,
+         color = "#666",
+         dashArray = "",
+         fillOpacity = 0.7,
+         bringToFront = TRUE
+      ),
+      label = base::paste0(
+         dplyr::case_when(
+            stringr::str_to_sentence(mapa$NOMBRE) == "Rio negro" ~ "Río Negro",
+            stringr::str_to_sentence(mapa$NOMBRE) == "Paysandu" ~ "Paysandú",
+            stringr::str_to_sentence(mapa$NOMBRE) == "Tacuarembo" ~ "Tacuarembó",
+            stringr::str_to_sentence(mapa$NOMBRE) == "Cerro largo" ~ "Cerro Largo",
+            stringr::str_to_sentence(mapa$NOMBRE) == "Treinta y tres" ~ "Treinta y Tres",
+            stringr::str_to_sentence(mapa$NOMBRE) == "San jose" ~ "San José",
+            TRUE ~ stringr::str_to_sentence(mapa$NOMBRE)
+         ),
+         ": ",
+         formattable::comma(
+            x = mapa$ind_ces,
+            digits = 0L,
+            big.mark = ".",
+            decimal.mark = ","
+         ),
+         " Valor índice"
+      ),
+      labelOptions = leaflet::labelOptions(
+         style = base::list("font-weight" = "normal", padding = "3px 8px"),
+         textsize = "15px",
+         direction = "auto"
+      )
+   )
+widgetframe::frameWidget(l, height = '700')
+```
+
+Fuente: elaborado en base a Indicadores Asistenciales de ASSE de 2019.
+
+Nota: el Índice de Cesáreas se construye como el número de cesáreas sobre el número de nacimientos en el período. 
+
+***
+
+Publicación: 
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/LucilaBonilla.jpg"/></td>
+      <td class="miembro"><h6>Lucila Bonilla</h6></td>
+   </tr>
+<table>
+
+
+
+
+```{r, include=FALSE}
+base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
+```
+
+```{r}
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de %B de %Y")))
+```
