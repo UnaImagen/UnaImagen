@@ -137,7 +137,7 @@ La distribución de la cantidad de personas por kilómetro cuadrado --censurada 
 
 **¡Ayuda!**
 
-- ¿Qué es un segmento censal? Es el la menor división de territorio en la que se presenta la información estadística de forma de mantener la anonimidad de sus residentes.
+- ¿Qué es un segmento censal? Es la menor división de territorio en la que se presenta la información estadística de forma de mantener la anonimidad de sus residentes.
 
 - ¿Cómo se ordenan los segmentos en cada grupo? Los segmentos censales se pueden ordenar de menor a mayor según la cantidad de personas por kilómetro cuadrado. El primer grupo contiene el 30% de los segmentos censales con menor valor del indicador. El último grupo, el undécimo, contiene al 0,5% de los segmentos censales con mayor número de personas por kilómetro cuadrado.
 
