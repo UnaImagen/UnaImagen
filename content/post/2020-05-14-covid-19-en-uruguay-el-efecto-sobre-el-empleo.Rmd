@@ -1,8 +1,8 @@
 ---
-title: 'Coronavirus en Uruguay: el efecto sobre el empleo'
+title: 'COVID-19 en Uruguay: el efecto sobre el empleo'
 author: Paula Pereda
 date: '2020-05-14'
-slug: coronavirus-en-uruguay-el-efecto-sobre-el-empleo
+slug: covid-19-en-uruguay-el-efecto-sobre-el-empleo
 categories: []
 tags:
   - uruguay   
