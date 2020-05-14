@@ -13,6 +13,10 @@ keywords:
   - tech
 ---
 
+Evolución de las solicitudes mensuales de desempleo en Uruguay (1988-2020)
+
+<!--more-->
+
 <link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
 
 ```{css, echo=FALSE}
