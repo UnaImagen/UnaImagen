@@ -84,7 +84,7 @@ l <- leaflet::leaflet(
          fillOpacity = 0.7,
          bringToFront = TRUE
       ),
-      label = base::paste0(
+label = base::paste0(
          dplyr::case_when(
             stringr::str_to_sentence(mapa$NOMBRE) == "Rio negro" ~ "Río Negro",
             stringr::str_to_sentence(mapa$NOMBRE) == "Paysandu" ~ "Paysandú",
@@ -95,14 +95,8 @@ l <- leaflet::leaflet(
             TRUE ~ stringr::str_to_sentence(mapa$NOMBRE)
          ),
          ": ",
-         formattable::comma(
-            x = mapa$ind_ces,
-            digits = 0L,
-            big.mark = ".",
-            decimal.mark = ","
+         paste0(mapa$ind_ces, "%")
          ),
-         " Valor índice"
-      ),
       labelOptions = leaflet::labelOptions(
          style = base::list("font-weight" = "normal", padding = "3px 8px"),
          textsize = "15px",
@@ -114,7 +108,7 @@ widgetframe::frameWidget(l, height = '700')
 
 Fuente: elaborado en base a Indicadores Asistenciales de ASSE de 2019.
 
-Nota: el Índice de Cesáreas se construye como el número de cesáreas sobre el número de nacimientos en el período. 
+Nota: el Índice de Cesáreas se construye como el número de cesáreas sobre el número de nacimientos en el período*100. 
 
 ***
 
@@ -135,5 +129,5 @@ base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
 ```
 
 ```{r}
-base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de %B de %Y")))
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de Mayo de %Y")))
 ```
