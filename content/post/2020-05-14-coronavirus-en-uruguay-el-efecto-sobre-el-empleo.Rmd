@@ -1,0 +1,71 @@
+---
+title: 'Coronavirus en Uruguay: el efecto sobre el empleo'
+author: Paula Pereda
+date: '2020-05-14'
+slug: coronavirus-en-uruguay-el-efecto-sobre-el-empleo
+categories: []
+tags:
+  - uruguay   
+  - empleo
+  - economía
+  - seguridad-social
+keywords:
+  - tech
+---
+
+<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+
+```{css, echo=FALSE}
+td {
+   
+   white-space: nowrap;
+   text-align: left;
+   float: left;
+   
+}
+.miembro img {
+   
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   
+}
+```
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+   echo = FALSE,
+   message = FALSE,
+   warning = FALSE,
+   eval = TRUE,
+   error = FALSE,
+   comment = ""
+)
+```
+
+<p align="center">
+  <img src="/img/evolucion_sd.gif">
+</p>
+
+***
+
+Publicación: 
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/PaulaPereda.jpg"/></td>
+      <td class="miembro"><h6>Paula Pereda</h6></td>
+   </tr>
+<table>
+
+
+
+
+```{r, include=FALSE}
+base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
+```
+
+```{r}
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de Mayo de %Y")))
+```
+
