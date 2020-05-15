@@ -13,7 +13,7 @@ keywords:
   - tech
 ---
 
-Evolución de las solicitudes mensuales de desempleo en Uruguay (1988-2020) y evolución del ratio entre las solicitudes mensuales de seguro de desempleo y los cotizantes privados mensuales a la seguridad social en Uruguay (1988-2020).
+Evolución de las solicitudes mensuales de desempleo en Uruguay (1988-2020).
 
 <!--more-->
 
@@ -51,9 +51,17 @@ knitr::opts_chunk$set(
   <img src="/img/evolucion_sd.gif">
 </p>
 
+
+Solicitudes mensuales de seguro de desempleo en relación a los cotizantes mensuales a la seguridad social en Uruguay (1988-2020).
+
 <p align="center">
   <img src="/img/evolucion_ratio_sd_cot.gif">
 </p>
+
+Aclaraciones: 
+
+ - Los puestos cotizantes se consideran según mes de pago y solamente para aquellos puestos del tipo "dependientes privados",
+ - Las solicitudes mensuales de seguro de desempleo en relación a los cotizantes mensuales se calcula como la cantidad de solicitudes de desempleo dividida el número de cotizantes. Esto quiere decir, por ejemplo, que el 8,31% de los trabajadores dependientes privados fueron enviados al seguro de paro en marzo de 2020.
 
 ***
 
