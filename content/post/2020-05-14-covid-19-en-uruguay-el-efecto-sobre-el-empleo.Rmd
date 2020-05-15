@@ -13,7 +13,7 @@ keywords:
   - tech
 ---
 
-Evolución de las solicitudes mensuales de desempleo en Uruguay (1988-2020)
+Evolución de las solicitudes mensuales de desempleo en Uruguay (1988-2020) y evolución del ratio entre las solicitudes mensuales de seguro de desempleo y los cotizantes privados mensuales a la seguridad social en Uruguay (1988-2020).
 
 <!--more-->
 
@@ -49,6 +49,10 @@ knitr::opts_chunk$set(
 
 <p align="center">
   <img src="/img/evolucion_sd.gif">
+</p>
+
+<p align="center">
+  <img src="/img/evolucion_ratio_sd_cot.gif">
 </p>
 
 ***
