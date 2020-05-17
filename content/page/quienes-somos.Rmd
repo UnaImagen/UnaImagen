@@ -38,7 +38,7 @@ Lucila es Licenciada en Economía por la UDELAR y próximamente estudiante de Ma
 </div>
 
 <div>
-Daniel es Licenciado en Economía (y próximamente en Estadística también). Ha trabajado en analítica tanto en el sector público como en el privado. Actualmente forma parte del equipo de estadística de PedidosYa.
+Daniel es Licenciado en Economía (y próximamente en Estadística también). Ha trabajado en analítica tanto en el sector público como en el privado. Actualmente forma parte del equipo de estadística de PedidosYa. Su página web está disponible [aquí](https://danielczarnievicz.netlify.app/portfolio/).
 </div>
 
 <br>
