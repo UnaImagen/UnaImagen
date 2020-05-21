@@ -74,7 +74,18 @@ gasoil2 <- dplyr::distinct(gasoilsemana, semanas, anio, .keep_all = TRUE)
 # salvo la base de datos
 saveRDS(gasoil2, here::here("./DataBases/Ancap/gasoil.rds"))
 
+# Creo variables índices
+gasoil2 <- gasoil2[!gasoil2$semanas == 1,] #saco la primer semana
 
+for(i in colnames(gasoil2[-c(22:25)])) {
+  for(j in gasoil2$anio) {
+    z <- (gasoil2[which(gasoil2$semanas ==2 & gasoil2$anio ==j),][i])
+    gasoil2[gasoil2$anio ==j,][i] <- gasoil2[gasoil2$anio ==j,][i] / z[1,1] *100
+  }
+}
+
+# salvo la base de datos
+saveRDS(gasoil2, here::here("./DataBases/Ancap/gasoil.rds"))
 
 # ---------------------------- NAFTA -----------------------------------------------------------------
 
@@ -145,6 +156,20 @@ for(i in colnames(naftasemana[-c(22:25)])) {
 
 # me quedo con una observacion por semana
 nafta2 <- dplyr::distinct(naftasemana, semanas, anio, .keep_all = TRUE)
+
+# salvo la base de datos
+saveRDS(nafta2, here::here("./DataBases/Ancap/nafta.rds"))
+
+
+# Creo variables índices
+nafta2 <- nafta2[!nafta2$semanas == 1,] #saco la primer semana
+
+for(i in colnames(nafta2[-c(22:25)])) {
+  for(j in nafta2$anio) {
+    z <- (nafta2[which(nafta2$semanas ==2 & nafta2$anio ==j),][i])
+    nafta2[nafta2$anio ==j,][i] <- nafta2[nafta2$anio ==j,][i] / z[1,1] *100
+  }
+}
 
 # salvo la base de datos
 saveRDS(nafta2, here::here("./DataBases/Ancap/nafta.rds"))
