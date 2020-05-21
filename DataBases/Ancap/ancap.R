@@ -1,0 +1,75 @@
+
+
+
+# Gas Oil -----------------------------------------------------------------
+
+
+gasoil <- readxl::read_excel("Dropbox/Docs/github/UnaImagen/DataBases/Ancap/Ventas Diarias Gas Oil-Gasolinas desde 01012018.xlsx", sheet = "Gasoil")
+gasoil <- gasoil[-c(1:4),]
+
+# saca depto
+depto <- c("Depto.: ")
+gasoil[,1] <- as.data.frame(sapply(gasoil[,1], function(x)
+  gsub(paste(depto, collapse = '|'), '', x)))
+
+# saca Año/Mes
+texto <- c("Año/Mes: ")
+gasoil[1,] <- as.data.frame(t(sapply(gasoil[1,], function(x)
+  gsub(paste(texto, collapse = '|'), '', x))))
+
+# creo serie año/mes/dia
+am <- as.data.frame(t(gasoil[1,]), row.names = F)
+n <- nrow(am)
+for (i in 2:n) {
+  if  (is.na(am$V1[i])) {
+    am$V1[i] = am$V1[i-1]
+  } else {
+    am$V1[i] = am$V1[i]
+  }
+}
+#am$V1 <- as.character(as.factor(am$V1))
+dia <- as.data.frame(t(gasoil[2,]), row.names = F)
+amdia <- as.data.frame(paste(am$V1,dia$V1, sep = "/"))
+colnames(amdia)[1] <- "fecha"
+amdia$fecha <- as.Date(amdia$fecha, format("%Y/%m/%d"))
+rm(am,dia) # borra auxiliares
+gasoil <- gasoil[-2,]
+
+gasoil <- as.data.frame(t(gasoil), row.names = F) # Transpose data frame
+gasoil$V1 <- amdia$fecha # agrega fecha
+rm(amdia)
+
+# Agrego nombres
+names(gasoil) <- lapply(gasoil[1,], as.character)
+colnames(gasoil)[1] <- "fecha"
+colnames(gasoil)[2] <- "dia_semana"
+gasoil <- gasoil[-1,]
+
+
+
+# Creo variables ----------------------------------------------------------
+
+
+# transformo los numeros de factores a numerico
+gasoil$semanas <- aweek::date2week(gasoil$fecha, numeric = T, factor = T)
+gasoilsemana <- gasoil[,-c(1,2,25)]
+gasoilsemana <- as.data.frame(apply(gasoilsemana, 2, function(x) as.numeric(as.character(x))))
+gasoilsemana$fecha <- gasoil$fecha
+gasoilsemana$semanas <- gasoil$semanas
+gasoilsemana$dia_semana <- gasoil$dia_semana
+
+# calculo la suma para cada departamento
+gasoilsemana$anio <- as.factor(as.character(format(gasoilsemana$fecha,"%Y")))
+gasoilsemana$semanas <- as.factor(as.numeric(gasoilsemana$semanas))
+
+for(i in colnames(gasoilsemana[-c(22:25)])) {
+   gasoilsemana[i] <- ave(gasoilsemana[i],
+                          gasoilsemana[,c("anio","semanas")],
+                          FUN = function(x) colSums(x, na.rm = T))
+}
+
+# me quedo con una observacion por semana
+gasoil2 <- dplyr::distinct(gasoilsemana, semanas, anio, .keep_all = TRUE)
+
+# salvo la base de datos
+saveRDS(gasoil2, "")
