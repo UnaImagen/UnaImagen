@@ -87,6 +87,22 @@ for(i in colnames(gasoil2[-c(22:25)])) {
 # salvo la base de datos
 saveRDS(gasoil2, here::here("./DataBases/Ancap/gasoil.rds"))
 
+
+# agrego fechas
+gasoil <- readRDS(here::here("./DataBases/Ancap/gasoil.rds"))
+gasoil$coronavirus <- ifelse(gasoil$anio == 2020 &
+                               as.numeric(as.factor(gasoil$semanas)) > 11, 1, 0)
+gasoil$turismo <- ifelse(gasoil$anio == 2020 &
+                           as.numeric(as.factor(gasoil$semanas)) == 15 |
+                           gasoil$anio == 2019 &
+                           as.numeric(as.factor(gasoil$semanas)) == 16 |
+                           gasoil$anio == 2018 &
+                           as.numeric(as.factor(gasoil$semanas)) == 13, 1, 0)
+
+# salvo la base de datos
+saveRDS(gasoil, here::here("./DataBases/Ancap/gasoil.rds"))
+
+
 # ---------------------------- NAFTA -----------------------------------------------------------------
 
 
@@ -173,3 +189,18 @@ for(i in colnames(nafta2[-c(22:25)])) {
 
 # salvo la base de datos
 saveRDS(nafta2, here::here("./DataBases/Ancap/nafta.rds"))
+
+
+# agrego fechas
+nafta <- readRDS(here::here("./DataBases/Ancap/nafta.rds"))
+nafta$coronavirus <- ifelse(nafta$anio == 2020 &
+                               as.numeric(as.factor(nafta$semanas)) > 11, 1, 0)
+nafta$turismo <- ifelse(nafta$anio == 2020 &
+                           as.numeric(as.factor(nafta$semanas)) == 15 |
+                           nafta$anio == 2019 &
+                           as.numeric(as.factor(nafta$semanas)) == 16 |
+                           nafta$anio == 2018 &
+                           as.numeric(as.factor(nafta$semanas)) == 13, 1, 0)
+
+# salvo la base de datos
+saveRDS(nafta, here::here("./DataBases/Ancap/nafta.rds"))
