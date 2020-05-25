@@ -1,7 +1,7 @@
 # ---------------------------- Gas Oil -------------------------------------------
 
-gasoil <- readxl::read_excel(here::here("./DataBases/Ancap/AncapData.xlsx"), sheet = "Gasoil")
-gasoil <- gasoil[-c(1:4),]
+gasoil <- readxl::read_excel(here::here("./DataBases/Ancap/AncapData.xlsx"), sheet = "Gasoil", skip = 4) %>%
+  dplyr::slice(-(25:26))
 
 # saca depto
 depto <- c("Depto.: ")
@@ -23,6 +23,9 @@ for (i in 2:n) {
     am$V1[i] = am$V1[i]
   }
 }
+
+
+
 #am$V1 <- as.character(as.factor(am$V1))
 dia <- as.data.frame(t(gasoil[2,]), row.names = F)
 amdia <- as.data.frame(paste(am$V1,dia$V1, sep = "/"))
@@ -66,7 +69,7 @@ for(i in colnames(gasoilsemana[-c(22:25)])) {
 gasoil2 <- dplyr::distinct(gasoilsemana, semanas, anio, .keep_all = TRUE)
 
 # salvo la base de datos
-saveRDS(gasoil2, here::here("./DataBases/Ancap/gasoil.rds"))
+saveRDS(gasoil2, here::here("./DataBases/Ancap/gasoil_new.rds"))
 
 # Creo variables índices
 gasoil2 <- gasoil2[!gasoil2$semanas == 1,] #saco la primer semana
@@ -79,11 +82,11 @@ for(i in colnames(gasoil2[-c(22:25)])) {
 }
 
 # salvo la base de datos
-saveRDS(gasoil2, here::here("./DataBases/Ancap/gasoil.rds"))
+saveRDS(gasoil2, here::here("./DataBases/Ancap/gasoil_new.rds"))
 
 
 # agrego fechas
-gasoil <- readRDS(here::here("./DataBases/Ancap/gasoil.rds"))
+gasoil <- readRDS(here::here("./DataBases/Ancap/gasoil_new.rds"))
 gasoil$coronavirus <- ifelse(gasoil$anio == 2020 &
                                as.numeric(as.factor(gasoil$semanas)) > 11, 1, 0)
 gasoil$turismo <- ifelse(gasoil$anio == 2020 &
@@ -94,7 +97,7 @@ gasoil$turismo <- ifelse(gasoil$anio == 2020 &
                            as.numeric(as.factor(gasoil$semanas)) == 13, 1, 0)
 
 # salvo la base de datos
-saveRDS(gasoil, here::here("./DataBases/Ancap/gasoil.rds"))
+saveRDS(gasoil, here::here("./DataBases/Ancap/gasoil_new.rds"))
 
 
 # ---------------------------- NAFTA -----------------------------------------------------------------
@@ -198,3 +201,5 @@ nafta$turismo <- ifelse(nafta$anio == 2020 &
 
 # salvo la base de datos
 saveRDS(nafta, here::here("./DataBases/Ancap/nafta.rds"))
+
+
