@@ -103,8 +103,8 @@ saveRDS(gasoil, here::here("./DataBases/Ancap/gasoil_new.rds"))
 # ---------------------------- NAFTA -----------------------------------------------------------------
 
 
-nafta <- readxl::read_excel(here::here("./DataBases/Ancap/AncapData.xlsx"), sheet = "Gasolinas")
-nafta <- nafta[-c(1:4),]
+nafta <- readxl::read_excel(here::here("./DataBases/Ancap/AncapData.xlsx"), sheet = "Gasolinas", skip = 4) %>%
+  dplyr::slice(-(25:26))
 
 # saca depto
 depto <- c("Depto.: ")
@@ -171,7 +171,7 @@ for(i in colnames(naftasemana[-c(22:25)])) {
 nafta2 <- dplyr::distinct(naftasemana, semanas, anio, .keep_all = TRUE)
 
 # salvo la base de datos
-saveRDS(nafta2, here::here("./DataBases/Ancap/nafta.rds"))
+saveRDS(nafta2, here::here("./DataBases/Ancap/nafta_new.rds"))
 
 
 # Creo variables índices
@@ -185,11 +185,11 @@ for(i in colnames(nafta2[-c(22:25)])) {
 }
 
 # salvo la base de datos
-saveRDS(nafta2, here::here("./DataBases/Ancap/nafta.rds"))
+saveRDS(nafta2, here::here("./DataBases/Ancap/nafta_new.rds"))
 
 
 # agrego fechas
-nafta <- readRDS(here::here("./DataBases/Ancap/nafta.rds"))
+nafta <- readRDS(here::here("./DataBases/Ancap/nafta_new.rds"))
 nafta$coronavirus <- ifelse(nafta$anio == 2020 &
                                as.numeric(as.factor(nafta$semanas)) > 11, 1, 0)
 nafta$turismo <- ifelse(nafta$anio == 2020 &
@@ -200,6 +200,6 @@ nafta$turismo <- ifelse(nafta$anio == 2020 &
                            as.numeric(as.factor(nafta$semanas)) == 13, 1, 0)
 
 # salvo la base de datos
-saveRDS(nafta, here::here("./DataBases/Ancap/nafta.rds"))
+saveRDS(nafta, here::here("./DataBases/Ancap/nafta_new.rds"))
 
 
