@@ -1,0 +1,55 @@
+library(hrbrthemes)
+library(tidyverse)
+
+las_que_no <-  c("semanas", "fecha", "dia_semana", "anio", "coronavirus", "turismo")
+
+nafta <- readRDS("DataBases/Ancap/nafta.rds") %>%
+   pivot_longer(- all_of(las_que_no), names_to = "departamento", values_to = "valor") %>%
+   mutate(combustible = "nafta")
+
+gasoil <- readRDS("DataBases/Ancap/gasoil.rds") %>%
+   pivot_longer(- all_of(las_que_no), names_to = "departamento", values_to = "valor") %>%
+   mutate(combustible = "gasoil")
+
+combustibles <- nafta %>%
+   bind_rows(gasoil)
+
+combustibles_aux <- combustibles %>%
+   filter(anio != 2020) %>%
+   group_by(semanas, combustible, departamento) %>%
+   summarise(coronavirus = first(coronavirus),
+             valor = mean(valor)) %>%
+   mutate(anio = "2018-2019")
+
+combustible_total <- combustibles %>%
+   filter(anio == 2020) %>%
+   select(anio, semanas, combustible, departamento, coronavirus, valor) %>%
+   bind_rows(combustibles_aux) %>%
+   mutate(semanas = as.numeric(semanas))
+
+plot <- combustible_total %>%
+   filter(combustible == "nafta") %>%
+   filter(departamento == "Total x Dia") %>%
+   filter(semanas < 21) %>%
+   ggplot(aes(semanas, valor, group = anio, color = anio)) +
+   geom_point() +
+   geom_line() +
+   scale_color_manual(values = c("2018-2019" = "#628098", "2020" = "#9AB5EF")) +
+   geom_segment(aes(x = 12, xend = 12, y = 0, yend = 87.5), inherit.aes = FALSE, color = "#cccccc") +
+   annotate("text", x = 12, y = 90, label = "COVID-19", color = "#2b2b2b", family = "Arial Narrow") +
+   labs(title = "Evolución de las ventas semanales de nafta (2018 - 2020)",
+        subtitle = "Índice 100 = segunda semana de cada año.",
+        caption = "Fuente: elaboración propia en base a datos de ANCAP.",
+        x = "Semanas",
+        y = "Índice",
+        color = "Año") +
+   theme_ipsum() +
+   theme(axis.text.y = element_text(size = 12),
+         axis.title.x = element_text(size = 12),
+         axis.text.x = element_text(size = 12),
+         axis.title.y = element_text(size = 12),
+         legend.title = element_text(size = 12),
+         legend.text = element_text(size = 12))
+
+ggsave("combustibles.png", plot = plot, path = "static/img", dpi = 550, width = 10)
+
