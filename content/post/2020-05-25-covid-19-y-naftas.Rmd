@@ -1,17 +1,16 @@
 ---
 title: 'COVID-19 en Uruguay: el efecto sobre la venta de nafta'
-author: 
+author:
 - Lucila Bonilla
 - Paula Pereda
 - Leandro Zipitría
 date: '2020-05-25'
+keywords: tech
 slug: covid-19-y-naftas
-categories: []
 tags:
-  - economía
-  - uruguay
-keywords:
-  - tech
+- economía
+- uruguay
+categories: []
 ---
 Evolución de las ventas semanales de nafta (2018 - 2020).
 
