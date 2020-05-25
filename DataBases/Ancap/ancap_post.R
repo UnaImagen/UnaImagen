@@ -43,13 +43,17 @@ plot <- combustible_total %>%
         x = "Semanas",
         y = "Índice",
         color = "Año") +
-   theme_ipsum() +
+   theme_ipsum(axis = T, ticks = T) +
    theme(axis.text.y = element_text(size = 12),
          axis.title.x = element_text(size = 12),
          axis.text.x = element_text(size = 12),
          axis.title.y = element_text(size = 12),
          legend.title = element_text(size = 12),
-         legend.text = element_text(size = 12))
+         legend.text = element_text(size = 12),
+         panel.grid.major = element_blank(),
+         panel.grid.minor = element_blank()) +
+   scale_x_continuous(expand = c(0, 0), limits = c(0, NA)) +
+   scale_y_continuous(expand = c(0, 0), limits = c(0, NA))
 
-ggsave("combustibles.png", plot = plot, path = "static/img", dpi = 550, width = 10)
+ggsave("combustibles.png", plot = plot, path = "static/img", dpi = 550, width = 10, height = 6)
 

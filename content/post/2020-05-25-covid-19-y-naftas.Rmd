@@ -1,0 +1,93 @@
+---
+title: 'COVID-19 en Uruguay: el efecto sobre la venta de nafta'
+author: 
+- Lucila Bonilla
+- Paula Pereda
+- Leandro Zipitría
+date: '2020-05-25'
+slug: covid-19-y-naftas
+categories: []
+tags:
+  - economía
+  - uruguay
+keywords:
+  - tech
+---
+Evolución de las ventas semanales de nafta (2018 - 2020).
+
+
+<!--more-->
+
+<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+
+```{css, echo=FALSE}
+td {
+   
+   white-space: nowrap;
+   text-align: left;
+   float: left;
+   
+}
+.miembro img {
+   
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   
+}
+```
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+   echo = FALSE,
+   message = FALSE,
+   warning = FALSE,
+   eval = TRUE,
+   error = FALSE,
+   comment = ""
+)
+```
+
+La siguiente gráfica muestra un índice de la evolución de las ventas de nafta tomando como base la segunda semana del año.
+
+<p align="center">
+  <img src="/img/combustibles.png">
+</p>
+
+Aclaración:
+
+La caída en la semana 17 coincide con un paro de FANCAP en 2018, que [bloqueó el acceso a La Tablada.](https://www.subrayado.com.uy/estaciones-servicio-preven-falta-combustible-paro-y-feriado-n503275)
+
+***
+
+Publicación: 
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/LucilaBonilla.jpg"/></td>
+      <td class="miembro"><h6>Lucila Bonilla</h6></td>
+   </tr>
+<table>
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/PaulaPereda.jpg"/></td>
+      <td class="miembro"><h6>Paula Pereda</h6></td>
+   </tr>
+<table>
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/LeandroZipitria.jpg"/></td>
+      <td class="miembro"><h6>Leandro Zipitría</h6></td>
+   </tr>
+<table>
+
+
+```{r, include=FALSE}
+base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
+```
+
+```{r}
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de Mayo de %Y")))
+```

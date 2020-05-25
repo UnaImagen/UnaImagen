@@ -1,8 +1,4 @@
-
-
-
 # ---------------------------- Gas Oil -------------------------------------------
-
 
 gasoil <- readxl::read_excel(here::here("./DataBases/Ancap/Ventas Diarias Gas Oil-Gasolinas desde 01012018.xlsx"), sheet = "Gasoil")
 gasoil <- gasoil[-c(1:4),]
@@ -44,8 +40,6 @@ names(gasoil) <- lapply(gasoil[1,], as.character)
 colnames(gasoil)[1] <- "fecha"
 colnames(gasoil)[2] <- "dia_semana"
 gasoil <- gasoil[-1,]
-
-
 
 # Creo variables ----------------------------------------------------------
 
