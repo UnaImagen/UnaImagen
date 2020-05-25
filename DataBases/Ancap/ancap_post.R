@@ -41,7 +41,8 @@ plot <- combustible_total %>%
    #annotate("rect", xmin = 13, xmax = 13.99, ymin = 0, ymax = 121.72655, alpha = .1) +
    labs(title = "Evolución de las ventas semanales de nafta (2018 - 2020)",
         subtitle = "Índice 100 = segunda semana de cada año.",
-        caption = "Fuente: elaboración propia en base a datos de ANCAP.",
+        caption = "Fuente: elaboración propia en base a datos de ANCAP.\n
+                   Información actualizada al 19 de mayo de 2020.",
         x = "Semanas",
         y = "Índice",
         color = "Año") +
