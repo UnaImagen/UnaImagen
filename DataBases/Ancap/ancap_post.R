@@ -32,8 +32,8 @@ plot <- combustible_total %>%
    filter(departamento == "Total x Dia") %>%
    filter(semanas < 21) %>%
    ggplot(aes(semanas, valor, group = anio, color = anio)) +
-   geom_point() +
-   geom_line() +
+   geom_point(size = 1.25) +
+   geom_line(size = 1) +
    scale_color_manual(values = c("2018-2019" = "#628098", "2020" = "#9AB5EF")) +
    geom_segment(aes(x = 12, xend = 12, y = 0, yend = 87.5), inherit.aes = FALSE, color = "#cccccc") +
    annotate("text", x = 12, y = 90, label = "COVID-19", color = "#2b2b2b", family = "Arial Narrow") +
