@@ -31,7 +31,7 @@ combustible_total <- combustibles %>%
 plot <- combustible_total %>%
    filter(combustible == "nafta") %>%
    filter(departamento == "Total x Dia") %>%
-   filter(semanas < 21) %>%
+   filter(semanas < 22) %>%
    ggplot(aes(semanas, valor, group = anio, color = anio)) +
    geom_point(size = 1.25) +
    geom_line(size = 1) +
