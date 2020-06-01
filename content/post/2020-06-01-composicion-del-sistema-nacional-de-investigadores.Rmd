@@ -1,5 +1,5 @@
 ---
-title: Composición del Sistema Nacional de Investigadores
+title: 'Brecha de género en investigación en Uruguay'
 author: 'Paula Pereda'
 date: '2020-06-01'
 slug: composición-del-sistema-nacional-de-investigadores
