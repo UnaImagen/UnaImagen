@@ -1,0 +1,91 @@
+---
+title: Composición del Sistema Nacional de Investigadores
+author: 'Paula Pereda'
+date: '2020-06-01'
+slug: composición-del-sistema-nacional-de-investigadores
+categories: []
+tags:
+  - uruguay
+  - investigacion
+keywords:
+  - tech
+---
+
+Distribución por sexo del Sistema Nacional de Investigadores (SNI) por sexo, 2020.
+
+<!--more-->
+
+<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+
+```{css, echo=FALSE}
+td {
+   
+   white-space: nowrap;
+   text-align: left;
+   float: left;
+   
+}
+.miembro img {
+   
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   
+}
+```
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+   echo = FALSE,
+   message = FALSE,
+   warning = FALSE,
+   eval = TRUE,
+   error = FALSE,
+   comment = ""
+)
+```
+
+<p align="center">
+  <img src="/img/sni_2020.png">
+</p>
+
+Investigadores según sexo y área de conocimiento.
+
+<p align="center">
+  <img src="/img/sni_area_2020.png">
+</p>
+
+
+<p align="center">
+  <img src="/img/sni_area_nivel_2020.png">
+</p>
+
+Aclaraciones: 
+
+ - La base fue obtenida en tres etapas: en primer lugar, se extrajeron los datos de los resultados de la última convocatoria del SNI, luego, se _scrappearon_ los datos del SNI sin actualizar por la última convocatoria y por último, se corrigió la base sin actualizar con los resultados de la nueva convocatoria (es decir, ascensos de nivel e ingresos al Sistema). Este método puede inducir a alguna diferencia con la base que mantiene la ANII.
+- Dado que ninguna de las dos bases obtenidas presentaba la variable sexo, se empleó un algoritmo clasificador según el nombre de los investigadores contenido en el paquete [genderizeR](https://github.com/kalimu/genderizeR). La congruencia de este proceso fue chequeada manualmente. 
+- Agradezco a Mateo Barletta por su aporte _scrappeando_ los datos del SNI. 
+
+
+***
+
+Publicación: 
+
+<table>
+   <tr>
+      <td class="miembro"><img src="/img/PaulaPereda.jpg"/></td>
+      <td class="miembro"><h6>Paula Pereda</h6></td>
+   </tr>
+<table>
+
+
+
+
+```{r, include=FALSE}
+base::Sys.setlocale(category = "LC_TIME", locale = "Spanish")
+```
+
+```{r}
+base::cat(base::paste0("Última revisión: ", format(Sys.time(), "%d de junio de %Y")))
+```
+
