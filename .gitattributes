@@ -1,3 +1,3 @@
 *.html linguist-vendored
-themes/*.js linguist-vendored
-themes/*.css linguist-vendored
+themes/hugo-tranquilpeak-theme/*.js linguist-vendored
+themes/hugo-tranquilpeak-theme/*.css linguist-vendored
