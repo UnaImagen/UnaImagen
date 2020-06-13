@@ -1,2 +1,12 @@
 *.html linguist-vendored
 themes/hugo-tranquilpeak-theme/* linguist-vendored
+
+# Source files
+# ============
+*.Rdata text
+*.rdb binary
+*.rds binary
+*.Rd text
+*.Rdx binary
+*.Rmd text
+*.R text
