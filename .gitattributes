@@ -1,2 +1,3 @@
 *.html linguist-vendored
-/themes/*.js linguist-vendored
+themes/*.js linguist-vendored
+themes/*.css linguist-vendored
