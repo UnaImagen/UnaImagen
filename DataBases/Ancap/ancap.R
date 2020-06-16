@@ -1,6 +1,6 @@
 # ---------------------------- Gas Oil -------------------------------------------
-
-gasoil <- readxl::read_excel(here::here("./DataBases/Ancap/AncapData.xlsx"), sheet = "Gasoil", skip = 4) %>%
+library(dplyr)
+gasoil <- readxl::read_excel(here::here("./DataBases/Ancap/ventas-dpto.-gasol.gasoil.-glp-diarias-al-14.06.2020.xlsx"), sheet = "Gasoil", skip = 4) %>%
   dplyr::slice(-(25:26))
 
 # saca depto
@@ -103,7 +103,7 @@ saveRDS(gasoil, here::here("./DataBases/Ancap/gasoil_new.rds"))
 # ---------------------------- NAFTA -----------------------------------------------------------------
 
 
-nafta <- readxl::read_excel(here::here("./DataBases/Ancap/AncapData.xlsx"), sheet = "Gasolinas", skip = 4) %>%
+nafta <- readxl::read_excel(here::here("./DataBases/Ancap/ventas-dpto.-gasol.gasoil.-glp-diarias-al-14.06.2020.xlsx"), sheet = "Gasolinas", skip = 4) %>%
   dplyr::slice(-(25:26))
 
 # saca depto
