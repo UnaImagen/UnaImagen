@@ -24,8 +24,8 @@ themes/hugo-tranquilpeak-theme/layouts/partials/post/meta.html linguist-vendored
 themes/hugo-tranquilpeak-theme/layouts/partials/post/share-options.html linguist-vendored
 themes/hugo-tranquilpeak-theme/layouts/partials/post/tag.html linguist-vendored
 
-themes/hugo-tranquilpeak-theme/layouts/partials/about.html
-themes/hugo-tranquilpeak-theme/layouts/partials/archive-post.html
+themes/hugo-tranquilpeak-theme/layouts/partials/about.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/archive-post.html linguist-vendored
 themes/hugo-tranquilpeak-theme/layouts/partials/cover.html linguist-vendored
 themes/hugo-tranquilpeak-theme/layouts/partials/foot.html linguist-vendored
 themes/hugo-tranquilpeak-theme/layouts/partials/foot_end.html linguist-vendored
