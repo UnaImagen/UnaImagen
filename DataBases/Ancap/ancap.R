@@ -1,6 +1,6 @@
 # ---------------------------- Gas Oil -------------------------------------------
-
-gasoil <- readxl::read_excel(here::here("./DataBases/Ancap/AncapData.xlsx"), sheet = "Gasoil", skip = 4) %>%
+library(dplyr)
+gasoil <- readxl::read_excel(here::here("./DataBases/Ancap/ventas-dpto.-gasol.gasoil.-glp-diarias-al-14.06.2020.xlsx"), sheet = "Gasoil", skip = 4) %>%
   dplyr::slice(-(25:26))
 
 # saca depto
@@ -44,6 +44,7 @@ colnames(gasoil)[1] <- "fecha"
 colnames(gasoil)[2] <- "dia_semana"
 gasoil <- gasoil[-1,]
 
+
 # Creo variables ----------------------------------------------------------
 
 
@@ -54,12 +55,17 @@ gasoilsemana <- as.data.frame(apply(gasoilsemana, 2, function(x) as.numeric(as.c
 gasoilsemana$fecha <- gasoil$fecha
 gasoilsemana$semanas <- gasoil$semanas
 gasoilsemana$dia_semana <- gasoil$dia_semana
-
-# calculo la suma para cada departamento
 gasoilsemana$anio <- as.factor(as.character(format(gasoilsemana$fecha,"%Y")))
 gasoilsemana$semanas <- as.factor(as.numeric(gasoilsemana$semanas))
 
-for(i in colnames(gasoilsemana[-c(22:25)])) {
+gasoilsemana$CANELONES <- gasoilsemana$`CANELONES-BALNEARIO` + gasoilsemana$`CANELONES-RESTO`
+gasoilsemana$`CANELONES-BALNEARIO` <- gasoilsemana$`CANELONES-RESTO` <- NULL
+gasoilsemana <- gasoilsemana[,c(1,24,2:23)]
+
+# calculo la suma para cada departamento
+
+
+for(i in colnames(gasoilsemana[-c(21:24)])) {
    gasoilsemana[i] <- ave(gasoilsemana[i],
                           gasoilsemana[,c("anio","semanas")],
                           FUN = function(x) colSums(x, na.rm = T))
@@ -74,7 +80,7 @@ saveRDS(gasoil2, here::here("./DataBases/Ancap/gasoil_new.rds"))
 # Creo variables índices
 gasoil2 <- gasoil2[!gasoil2$semanas == 1,] #saco la primer semana
 
-for(i in colnames(gasoil2[-c(22:25)])) {
+for(i in colnames(gasoil2[-c(21:24)])) {
   for(j in gasoil2$anio) {
     z <- (gasoil2[which(gasoil2$semanas ==2 & gasoil2$anio ==j),][i])
     gasoil2[gasoil2$anio ==j,][i] <- gasoil2[gasoil2$anio ==j,][i] / z[1,1] *100
@@ -103,7 +109,7 @@ saveRDS(gasoil, here::here("./DataBases/Ancap/gasoil_new.rds"))
 # ---------------------------- NAFTA -----------------------------------------------------------------
 
 
-nafta <- readxl::read_excel(here::here("./DataBases/Ancap/AncapData.xlsx"), sheet = "Gasolinas", skip = 4) %>%
+nafta <- readxl::read_excel(here::here("./DataBases/Ancap/ventas-dpto.-gasol.gasoil.-glp-diarias-al-14.06.2020.xlsx"), sheet = "Gasolinas", skip = 4) %>%
   dplyr::slice(-(25:26))
 
 # saca depto
@@ -156,12 +162,17 @@ naftasemana <- as.data.frame(apply(naftasemana, 2, function(x) as.numeric(as.cha
 naftasemana$fecha <- nafta$fecha
 naftasemana$semanas <- nafta$semanas
 naftasemana$dia_semana <- nafta$dia_semana
-
-# calculo la suma para cada departamento
 naftasemana$anio <- as.factor(as.character(format(naftasemana$fecha,"%Y")))
 naftasemana$semanas <- as.factor(as.numeric(naftasemana$semanas))
 
-for(i in colnames(naftasemana[-c(22:25)])) {
+naftasemana$CANELONES <- naftasemana$`CANELONES-BALNEARIO` + naftasemana$`CANELONES-RESTO`
+naftasemana$`CANELONES-BALNEARIO` <- naftasemana$`CANELONES-RESTO` <- NULL
+naftasemana <- naftasemana[,c(1,24,2:23)]
+
+# calculo la suma para cada departamento
+
+
+for(i in colnames(naftasemana[-c(21:24)])) {
   naftasemana[i] <- ave(naftasemana[i],
                          naftasemana[,c("anio","semanas")],
                          FUN = function(x) colSums(x, na.rm = T))
@@ -177,7 +188,7 @@ saveRDS(nafta2, here::here("./DataBases/Ancap/nafta_new.rds"))
 # Creo variables índices
 nafta2 <- nafta2[!nafta2$semanas == 1,] #saco la primer semana
 
-for(i in colnames(nafta2[-c(22:25)])) {
+for(i in colnames(nafta2[-c(21:24)])) {
   for(j in nafta2$anio) {
     z <- (nafta2[which(nafta2$semanas ==2 & nafta2$anio ==j),][i])
     nafta2[nafta2$anio ==j,][i] <- nafta2[nafta2$anio ==j,][i] / z[1,1] *100
