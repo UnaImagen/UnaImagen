@@ -1,12 +1,336 @@
-*.html linguist-vendored
-themes/hugo-tranquilpeak-theme/* linguist-vendored
+*.Rmd linguist-detectable
 
-# Source files
-# ============
-*.Rdata text
-*.rdb binary
-*.rds binary
-*.Rd text
-*.Rdx binary
-*.Rmd text
-*.R text
+
+
+# Hugo tranquilpeak theme
+
+themes/hugo-tranquilpeak-theme/layouts/_default/list.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/_default/single.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/_default/summary.html linguist-vendored
+
+themes/hugo-tranquilpeak-theme/layouts/partials/internal/date.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/internal/recursive-categories-1.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/internal/recursive-categories-2.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/internal/recursive-categories-full-1.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/internal/recursive-categories-full-2.html linguist-vendored
+
+themes/hugo-tranquilpeak-theme/layouts/partials/post/actions.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/post/category.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/post/disqus.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/post/gallery.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/post/header.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/post/header-cover.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/post/meta.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/post/share-options.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/post/tag.html linguist-vendored
+
+themes/hugo-tranquilpeak-theme/layouts/partials/about.html
+themes/hugo-tranquilpeak-theme/layouts/partials/archive-post.html
+themes/hugo-tranquilpeak-theme/layouts/partials/cover.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/foot.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/foot_end.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/foot_start.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/footer.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/head.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/head_end.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/head_start.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/header.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/menu.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/meta.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/pagination.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/script.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/search.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/partials/sidebar.html linguist-vendored
+
+themes/hugo-tranquilpeak-theme/layouts/shortcodes/alert.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/shortcodes/blockquote.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/shortcodes/codeblock.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/shortcodes/hl-text.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/shortcodes/image.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/shortcodes/jsfiddle.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/shortcodes/pullquote.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/shortcodes/tabbed-codeblock.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/shortcodes/wide-image.html linguist-vendored
+
+themes/hugo-tranquilpeak-theme/layouts/taxonomy/archive.terms.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/taxonomy/category.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/taxonomy/category.terms.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/taxonomy/tag.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/taxonomy/tag.terms.html linguist-vendored
+
+themes/hugo-tranquilpeak-theme/layouts/404.html linguist-vendored
+themes/hugo-tranquilpeak-theme/layouts/index.html linguist-vendored
+
+themes/hugo-tranquilpeak-theme/src/js/about.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/archives-filter.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/categories-filter.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/codeblock-resizer.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/fancybox.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/header.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/image-gallery.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/post-bottom-bar.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/search-modal.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/share-options.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/sidebar.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/smartresize.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/tabbed-codeblocks.js linguist-vendored
+themes/hugo-tranquilpeak-theme/src/js/tags-filter.js linguist-vendored
+
+themes/hugo-tranquilpeak-theme/src/scss/base/_base.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/base/_custom.scss linguist-vendored
+
+themes/hugo-tranquilpeak-theme/src/scss/components/_alert.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_archive.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_box.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_button.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_caption.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_code.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_figure.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_form.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_hide.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_highlight-text.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_icon.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_image-gallery.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_link.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_main-content.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_markdown.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_media.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_modal.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_pagination.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_post.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_post-actions.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_post-header-cover.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_postShorten.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_pullquote.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_share-options-bar.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_tag.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_text.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_tooltip.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/components/_video.scss linguist-vendored
+
+themes/hugo-tranquilpeak-theme/src/scss/layouts/_about.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/layouts/_blog.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/layouts/_bottom-bar.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/layouts/_cover.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/layouts/_footer.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/layouts/_header.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/layouts/_main.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/layouts/_sidebar.scss linguist-vendored
+
+themes/hugo-tranquilpeak-theme/src/scss/pages/_search.scss linguist-vendored
+
+themes/hugo-tranquilpeak-theme/src/scss/themes/_hljs-custom.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/themes/_hljs-tranquilpeak.scss linguist-vendored
+
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_bottom-bar.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_button.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_category.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_form.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_header.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_main.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_opacity.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_post-header-cover.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_prefix.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_share-options-bar.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_sidebar.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/mixins/_tag.scss linguist-vendored
+
+themes/hugo-tranquilpeak-theme/src/scss/utils/_fonts.scss linguist-vendored
+themes/hugo-tranquilpeak-theme/src/scss/utils/_variables.scss linguist-vendored
+
+themes/hugo-tranquilpeak-theme/src/scss/tranquilpeak.scss linguist-vendored
+
+themes/hugo-tranquilpeak-theme/static/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css linguist-vendored
+
+themes/hugo-tranquilpeak-theme/static/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js linguist-vendored
+
+themes/hugo-tranquilpeak-theme/tasks/config/clean.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/config/concat.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/config/cssmin.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/config/exec.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/config/replace.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/config/sails-linker.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/config/sass.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/config/sync.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/config/uglify.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/config/watch.js linguist-vendored
+
+themes/hugo-tranquilpeak-theme/tasks/register/build.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/register/buildProd.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/register/compileAssets.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/register/default.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/register/eslint.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/register/linkAssets.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/register/linkAssetsProd.js linguist-vendored
+themes/hugo-tranquilpeak-theme/tasks/register/syncAssets.js linguist-vendored
+
+themes/hugo-tranquilpeak-theme/tasks/pipeline.js linguist-vendored
+
+themes/hugo-tranquilpeak-theme/Gruntfile.js linguist-vendored
+
+
+
+# Post juntos o separados
+
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/htmlwidgets/htmlwidgets.js linguist-vendored
+
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/jquery/jquery.min.js linguist-vendored
+
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/leaflet/leaflet.css linguist-vendored
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/leaflet/leaflet.js linguist-vendored
+
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/leaflet-binding/leaflet.js linguist-vendored
+
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/leafletfix/leafletfix.css linguist-vendored
+
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/Proj4Leaflet/proj4-compressed.js linguist-vendored
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/Proj4Leaflet/proj4leaflet.js linguist-vendored
+
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/pymjs/pym.v1.js linguist-vendored
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/pymjs/pym.v1.min.js linguist-vendored
+
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/rstudio_leaflet/rstudio_leaflet.css linguist-vendored
+
+static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/widget_mapa_densidad_poblacional.html linguist-vendored
+
+
+
+# Post ingresos en 2018
+
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/htmlwidgets/htmlwidgets.js linguist-vendored
+
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/jquery/jquery.min.js linguist-vendored
+
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/leaflet/leaflet.css linguist-vendored
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/leaflet/leaflet.js linguist-vendored
+
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/leaflet-binding/leaflet.js linguist-vendored
+
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/leafletfix/leafletfix.css linguist-vendored
+
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/Proj4Leaflet/proj4-compressed.js linguist-vendored
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/Proj4Leaflet/proj4leaflet.js linguist-vendored
+
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/pymjs/pym.v1.js linguist-vendored
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/pymjs/pym.v1.min.js linguist-vendored
+
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/rstudio_leaflet/rstudio_leaflet.css linguist-vendored
+
+static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/widget_mapa_ingresos.html linguist-vendored
+
+
+
+# Post indice envejecimiento
+
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/htmlwidgets/htmlwidgets.js linguist-vendored
+
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/jquery/jquery.min.js linguist-vendored
+
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/leaflet/leaflet.css linguist-vendored
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/leaflet/leaflet.js linguist-vendored
+
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/leaflet-binding/leaflet.js linguist-vendored
+
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/leafletfix/leafletfix.css linguist-vendored
+
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/Proj4Leaflet/proj4-compressed.js linguist-vendored
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/Proj4Leaflet/proj4leaflet.js linguist-vendored
+
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/pymjs/pym.v1.js linguist-vendored
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/pymjs/pym.v1.min.js linguist-vendored
+
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/rstudio_leaflet/rstudio_leaflet.css linguist-vendored
+
+static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/widget_mapa_densidad_poblacional.html linguist-vendored
+
+
+
+# Post cesareas ASSE
+
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/htmlwidgets/htmlwidgets.js linguist-vendored
+
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/jquery/jquery.min.js linguist-vendored
+
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/leaflet/leaflet.css linguist-vendored
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/leaflet/leaflet.js linguist-vendored
+
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/leaflet-binding/leaflet.js linguist-vendored
+
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/leafletfix/leafletfix.css linguist-vendored
+
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/Proj4Leaflet/proj4-compressed.js linguist-vendored
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/Proj4Leaflet/proj4leaflet.js linguist-vendored
+
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/pymjs/pym.v1.js linguist-vendored
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/pymjs/pym.v1.min.js linguist-vendored
+
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/rstudio_leaflet/rstudio_leaflet.css linguist-vendored
+
+static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/widget_mapa_cesareas.html linguist-vendored
+
+
+
+# RMarkdown libs
+
+static/rmarkdown-libs/crosstalk/css/crosstalk.css linguist-vendored
+static/rmarkdown-libs/crosstalk/js/crosstalk.js linguist-vendored
+static/rmarkdown-libs/crosstalk/js/crosstalk.js.map linguist-vendored
+static/rmarkdown-libs/crosstalk/js/crosstalk.min.js linguist-vendored
+static/rmarkdown-libs/crosstalk/js/crosstalk.min.js.map linguist-vendored
+
+static/rmarkdown-libs/d3/d3.min.js linguist-vendored
+
+static/rmarkdown-libs/htmlwidgets/htmlwidgets.js linguist-vendored
+
+static/rmarkdown-libs/jquery/jquery.js linguist-vendored
+static/rmarkdown-libs/jquery/jquery.min.js linguist-vendored
+static/rmarkdown-libs/jquery/jquery.min.map linguist-vendored
+
+static/rmarkdown-libs/leaflet/leaflet.css linguist-vendored
+static/rmarkdown-libs/leaflet/leaflet.js linguist-vendored
+
+static/rmarkdown-libs/leaflet-binding/leaflet.js linguist-vendored
+
+static/rmarkdown-libs/leafletfix/leafletfix.css linguist-vendored
+
+static/rmarkdown-libs/plotly-binding/plotly.js linguist-vendored
+
+static/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css linguist-vendored
+
+static/rmarkdown-libs/plotly-locale-es/es.js linguist-vendored
+
+static/rmarkdown-libs/plotly-main/plotly-latest.min.js linguist-vendored
+
+static/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js linguist-vendored
+static/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js linguist-vendored
+
+static/rmarkdown-libs/pymjs/pym.v1.js linguist-vendored
+static/rmarkdown-libs/pymjs/pym.v1.min.js linguist-vendored
+
+static/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css linguist-vendored
+
+static/rmarkdown-libs/sankey/d3-4.5.0/d3.min.js linguist-vendored
+static/rmarkdown-libs/sankey/sankey.js linguist-vendored
+
+static/rmarkdown-libs/sankeyNetwork-binding/sankeyNetwork.js linguist-vendored
+
+static/rmarkdown-libs/typedarray/typedarray.min.js linguist-vendored
+
+static/rmarkdown-libs/widgetframe-binding/widgetframe.js linguist-vendored
+
+
+
+# Site content
+
+content/page/quienes-somos.html linguist-vendored
+
+content/post/2020-02-09-construcción-en-montevideo.html linguist-vendored
+content/post/2020-03-10-juntos-o-separados.html linguist-vendored
+content/post/2020-03-12-ingresos-en-2018.html linguist-vendored
+content/post/2020-04-13-comportamientos-reporductivos.html linguist-vendored
+content/post/2020-04-18-Indice-envejecimiento.html linguist-vendored
+content/post/2020-05-01-tecnologías-de-la-información.html linguist-vendored
+content/post/2020-05-12-cesareas-ASSE.html linguist-vendored
+content/post/2020-05-14-covid-19-en-uruguay-el-efecto-sobre-el-empleo.html linguist-vendored
+content/post/2020-05-25-covid-19-y-naftas.html linguist-vendored
+content/post/2020-06-01-composicion-del-sistema-nacional-de-investigadores.html linguist-vendored
