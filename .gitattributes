@@ -1,5 +1,5 @@
 *.Rmd linguist-detectable
-*.yml linguist-detectable
+.github/workflows/*.yml linguist-detectable
 
 
 # Hugo tranquilpeak theme
