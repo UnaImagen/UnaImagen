@@ -1,5 +1,5 @@
 *.Rmd linguist-detectable
-
+*.yml linguist-detectable
 
 
 # Hugo tranquilpeak theme
@@ -169,7 +169,6 @@ themes/hugo-tranquilpeak-theme/tasks/pipeline.js linguist-vendored
 themes/hugo-tranquilpeak-theme/Gruntfile.js linguist-vendored
 
 
-
 # Post juntos o separados
 
 static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/htmlwidgets/htmlwidgets.js linguist-vendored
@@ -192,7 +191,6 @@ static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs
 static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/leaflet_libs/rstudio_leaflet/rstudio_leaflet.css linguist-vendored
 
 static/post/2020-03-10-juntos-o-separados_files/figure-html/widgets/widget_mapa_densidad_poblacional.html linguist-vendored
-
 
 
 # Post ingresos en 2018
@@ -219,7 +217,6 @@ static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/leaflet_libs/r
 static/post/2020-03-12-ingresos-en-2018_files/figure-html/widgets/widget_mapa_ingresos.html linguist-vendored
 
 
-
 # Post indice envejecimiento
 
 static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_libs/htmlwidgets/htmlwidgets.js linguist-vendored
@@ -244,7 +241,6 @@ static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/leaflet_l
 static/post/2020-04-18-Indice-envejecimiento_files/figure-html/widgets/widget_mapa_densidad_poblacional.html linguist-vendored
 
 
-
 # Post cesareas ASSE
 
 static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/htmlwidgets/htmlwidgets.js linguist-vendored
@@ -267,7 +263,6 @@ static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/pymj
 static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/leaflet_libs/rstudio_leaflet/rstudio_leaflet.css linguist-vendored
 
 static/post/2020-05-12-cesareas-ASSE_files/figure-html/widgets/widget_mapa_cesareas.html linguist-vendored
-
 
 
 # RMarkdown libs
@@ -317,7 +312,6 @@ static/rmarkdown-libs/sankeyNetwork-binding/sankeyNetwork.js linguist-vendored
 static/rmarkdown-libs/typedarray/typedarray.min.js linguist-vendored
 
 static/rmarkdown-libs/widgetframe-binding/widgetframe.js linguist-vendored
-
 
 
 # Site content
