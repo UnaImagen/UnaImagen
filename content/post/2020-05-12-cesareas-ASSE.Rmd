@@ -17,7 +17,7 @@ keywords:
 <!--more-->
 
 
-<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+<link rel="icon" href="https://www.unaimagen.uy/una_imagen.svg"/>
 
 ```{css, echo=FALSE}
 td {

@@ -17,7 +17,7 @@ Evolución de las ventas semanales de nafta (2018 - 2020).
 
 <!--more-->
 
-<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+<link rel="icon" href="https://www.unaimagen.uy/una_imagen.svg"/>
 
 ```{css, echo=FALSE}
 td {

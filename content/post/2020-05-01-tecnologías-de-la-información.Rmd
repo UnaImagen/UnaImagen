@@ -45,7 +45,7 @@ td {
 })();
 ```
 
-¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta de Usos de las Tecnologías de la Información y Comunicación (2016) del Instituto Nacional de Estadística ([INE](http://www.ine.gub.uy/)) y la Agencia de Gobierno Electrónico y Sociedad de la Información y del Conocimiento ([AGESIC](https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/)). 
+¿Qué tecnologías de la información utilizamos los uruguayos? ¿Qué tan seguido utilizamos Internet? ¿Y las redes sociales? Respuestas a esto y mucho más encontrarás en nuestra App. En ella analizamos los resultados de la Encuesta de Usos de las Tecnologías de la Información y Comunicación (2016) del Instituto Nacional de Estadística ([INE](https://www.ine.gub.uy/)) y la Agencia de Gobierno Electrónico y Sociedad de la Información y del Conocimiento ([AGESIC](https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/)). 
 
 ```{r setup,  echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(

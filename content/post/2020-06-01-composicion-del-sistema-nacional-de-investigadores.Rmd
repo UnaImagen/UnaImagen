@@ -15,7 +15,7 @@ Distribución por sexo del Sistema Nacional de Investigadores (SNI) por sexo, 20
 
 <!--more-->
 
-<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+<link rel="icon" href="https://www.unaimagen.uy/una_imagen.svg"/>
 
 ```{css, echo=FALSE}
 td {

@@ -16,7 +16,7 @@ Ingresos promedio de los hogares en dólares del año 2018, por departamento y b
 <!--more-->
 
 
-<link rel="icon" href="http://www.unaimagen.uy/una_imagen.svg"/>
+<link rel="icon" href="https://www.unaimagen.uy/una_imagen.svg"/>
 
 ```{css, echo=FALSE}
 td {
